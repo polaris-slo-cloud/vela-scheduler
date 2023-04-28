@@ -6,7 +6,7 @@ The Edge-to-Cloud continuum may span hundreds of thousands of nodes and can be f
 Vela Scheduler can be run as an arbitrary number of instances.
 To be compatible with the Vela Scheduler, each cluster must run the Vela Cluster Agent, which is the only interface needed by the scheduler to interact with the cluster.
 
-![Vela Scheduler Workflow Overview](./docs/images/vela-scheduler-overview.svg)
+![Vela Scheduler Workflow Overview](./docs/assets/vela-scheduler-overview.svg)
 
 The high-level scheduling workflow of Vela Scheduler is depicted in the diagram above. 
 A user or a system component submits a job to an arbitrary scheduler instance through its Submit Job API, which adds this job to the scheduler’s queue.

@@ -12,7 +12,7 @@ Both consist of the following three major layers:
 2. The *orchestrator-specific Connectors* at the bottom are used by the generic components in the upper layers.
 3. The *plugins* in the top layer realize scheduling and sampling policies.
 
-![Polaris Distributed Scheduling Framework Architecture](./images/architecture.svg)
+![Polaris Distributed Scheduling Framework Architecture](./assets/architecture.svg)
 
 The central part of the architectures is the Vela Scheduler Framework.
 All of its components are completely orchestrator-independent and only the Orchestrator Client needs to be realized by an orchestrator-specific connector.
@@ -39,7 +39,7 @@ However, i
 
 ## 3-Phase Scheduling Workflow
 
-![Vela 3-Phase Scheduling Workflow](./images/scheduling-workflow.png)
+![Vela 3-Phase Scheduling Workflow](./assets/scheduling-workflow.png)
 
 Vela's scheduling workflow consists of three phases: **sampling**, **decision**, and **commit**, as shown in the figure above.
 Each phase supports plugins for implementing most parts of the scheduling logic (see [Sampling-, Decision-, and Commit Pipelines](#sampling--decision--and-commit-pipelines) for the available extension points).
@@ -68,7 +68,7 @@ Only if all three nodes return a scheduling conflict during MultiBind, the pod's
 
 ## Sampling-, Decision-, and Commit Pipelines
 
-![Sampling-, Decision-, and Commit Pipelines](./images/scheduling-and-sampling-pipeline.svg)
+![Sampling-, Decision-, and Commit Pipelines](./assets/scheduling-and-sampling-pipeline.svg)
 
 The Scheduling Pipeline forms the centerpiece of the Polaris Distributed Scheduler and defines the scheduling and decision-making process.
 The pipeline consists of a sequence of stages, as shown in the above diagram, whose business logic is realized by plugins, which enables the realization of different scheduling polices.
