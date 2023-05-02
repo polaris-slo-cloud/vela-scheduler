@@ -1,6 +1,6 @@
 # Vela Scheduler Documentation
 
-This documentation provides a quick overview of the Vela Scheduler and its deployment.
+This documentation describes the Vela Scheduler architecture and the scheduler's deployment.
 
 
 ## Architecture
