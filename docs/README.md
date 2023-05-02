@@ -34,7 +34,7 @@ Thus, the Polaris project contains two scheduler projects:
 - [Vela Scheduler](https://polaris-slo-cloud.github.io/vela-scheduler/): An orchestrator-independent distributed scheduler for the Edge-to-Cloud continuum, with support for multiple clusters.
 
 In code we use `Pod` abstraction, which we borrow from the Kubernetes core libraries (without losing orchestrator independence), to model a job.
-However, i
+In the documentation we use the terms job and pod interchangeably.
 
 
 ## 3-Phase Scheduling Workflow
