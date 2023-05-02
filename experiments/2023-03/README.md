@@ -89,14 +89,13 @@ Since rescheduling attempts are common in distributed schedulers, we consider a 
 
 <figure>
     <img src="./assets/config-tuning-failures-3d.png" alt="Vela Scheduler Workflow Overview" />
-    <figcaption align="center">Fig. 1: Vela Scheduler Workflow Overview</figcaption>
+    <figcaption align="center">Fig. 1: Scheduling Failure Percentages for Configuration Tuning.</figcaption>
 </figure>
 
 Fig. 1 shows the number of scheduling failures as a percentage of the total jobs.
 It is evident that the number of failures decreases as the number of sampled clusters increases, because the scheduler has more nodes to choose from.
 The failures first reach zero at `percentageOfClustersToSample` = 50% and `nodesToSampleBp` = 4%, which is what we will use for the remaining experiments.
 At `percentageOfClustersToSample` = 60% and `nodesToSampleBp` = 4%, there is a single failure, but starting at `percentageOfClustersToSample` = 70%, there are no more failures, which is why we have excluded larger `percentageOfClustersToSample` values from the Figure for clarity.
-The full set of results, including the number of rescheduling attempts, is available in our repository.
 
 
 ### Scalability with Respect to Infrastructure
@@ -127,7 +126,7 @@ This could be alleviated, e.g., by running multiple concurrent scheduler instanc
 
 <figure>
     <img src="./assets/nodes-scalability-commit.png" alt="Commit Times (ms) for Total Nodes." />
-    <figcaption align="center">Fig. 4: Commit Times (ms) for Total Nodes.</figcaption>
+    <figcaption align="center">Fig. 4: Commit Times (ms) at `percentageOfClustersToSample` = 50% and `nodesToSampleBp` = 4% for Total Nodes.</figcaption>
 </figure>
 
 <figure>
@@ -152,7 +151,7 @@ In this experiment we evaluate all results with focus on the scheduler’s throu
 We calculate the throughput by dividing the number of successfully scheduled jobs by the total time the Vela Scheduler was active.
 This time is calculated using the difference between the scheduling finish timestamps of the last successful job and the first successful job.
 We compute this value for every iteration of our experiment and round it to the next integer value, giving us a throughput ranging from 15 jobs/s up to 134 jobs/s.
-The SDPS are the total number number of scheduling attempts irrespective of their results (i.e., success, conflict, try rescheduling due to no nodes found, or failure due to too many rescheduling attempts) divided by the total execution time.
+The SDPS are the total number of scheduling attempts irrespective of their results (i.e., success, conflict, try rescheduling due to no nodes found, or failure due to too many rescheduling attempts) divided by the total execution time.
 The SDPS range from 15 to 817.
 We stopped our experiments at this number, because the simulated cluster resources were getting exhausted, thus, leaving too little space for scheduling other jobs.
 
