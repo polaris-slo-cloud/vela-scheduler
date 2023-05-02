@@ -1,6 +1,7 @@
 # Vela Scheduler
 
 Vela Scheduler is an orchestrator-independent distributed scheduler for the Edge-to-Cloud continuum.
+Detailed design and architecture documentation is available [here](https://github.com/polaris-slo-cloud/vela-scheduler/tree/master/docs).
 
 The Edge-to-Cloud continuum may span hundreds of thousands of nodes and can be formed of multiple Edge and Cloud clusters, which may be operated by different orchestrators, e.g., one cluster could be managed by [Kubernetes](https://kubernetes.io) and another one by [Nomad](https://www.nomadproject.io).
 Vela Scheduler can be run as an arbitrary number of instances.
@@ -17,7 +18,7 @@ The list suitable nodes along with their scores is returned to the scheduler.
 The scheduler may run additional filtering and scoring steps and subsequently chooses the node with the highest score.
 Finally, the scheduler submits the job to the Cluster Agent that is responsible for the chosen node to deploy the job.
 
-## Documentation
+## Design & Documentation
 
 The documentation for the Vela Scheduler is available in the [docs](https://github.com/polaris-slo-cloud/vela-scheduler/tree/master/docs) folder.
 
