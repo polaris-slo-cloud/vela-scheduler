@@ -1,6 +1,6 @@
 # Experiment Results
 
-This page documents the results of an extensive set of experiments conducted using Polaris Scheduler in March 2023.
+This page documents the results of an extensive set of experiments conducted using Vela Scheduler in March 2023.
 This page is partially an extended version of the evaluation presented in the paper "Vela: A 3-Phase Distributed Scheduler for the Edge-Cloud Continuum" submitted to the [2023 IEEE International Conference on Cloud Engineering (IC2E)](https://conferences.computer.org/IC2E/2023/index.html).
 
 The executed [experiments](./README.md) involved a supercluster consisting of 10 subclusters of varying sizes, hosted on 10 VMs.
@@ -10,7 +10,7 @@ Three sets of experiments were run:
 Each experiment iteration runs on a 20k nodes supercluster and creates 11,200 pods with 4 CPUs and 4 GiB RAM (the maximum number of such pods supported in this cluster).
 The aim is to find the lowest configuration values that yield zero scheduling failures.
 
-2. **Scalability with Respect to Infrastructure** using the [scalability-nodes](./README.md#scalability-nodes) suite to assess the scalability of Polaris Scheduler on increasing cluster sizes, specifically 1K, 5K, 10K, 15K, and 20K total nodes.
+2. **Scalability with Respect to Infrastructure** using the [scalability-nodes](./README.md#scalability-nodes) suite to assess the scalability of Vela Scheduler on increasing cluster sizes, specifically 1K, 5K, 10K, 15K, and 20K total nodes.
 
 3. **Scalability with Respect to Workload** using the [scalability-jobs](./README.md#scalability-jobs) suite to stress test the scheduler using a gradually increasing workload on a 20k nodes supercluster.
 
@@ -21,7 +21,7 @@ To set up the clusters in our testbed we use 10 Google Cloud Platform (GCP) VMs 
 Every VM is bootstrapped with Ubuntu 22.04, on top of which we install MicroK8s v1.25.6 to initialize a distinct single node Kubernetes cluster.
 We rely on [fake-kubelet](ttps://github.com/wzshiming/fake-kubelet) to create simulated nodes in each MicroK8s cluster.
 
-Since Polaris Scheduler focuses on the Edge-Cloud continuum, the 10 clusters are intentionally not homogeneous.
+Since Vela Scheduler focuses on the Edge-Cloud continuum, the 10 clusters are intentionally not homogeneous.
 We simulate three Cloud and seven Edge clusters with different types of nodes; the hosting VMs are located in different regions.
 The node details and regions are listed in the table below.
 The scheduler itself is also deployed on a `c2-standard-8` VM and is located in the Zurich region.
