@@ -12,7 +12,7 @@ Both consist of the following three major layers:
 2. The *orchestrator-specific Connectors* at the bottom are used by the generic components in the upper layers.
 3. The *plugins* in the top layer realize scheduling and sampling policies.
 
-![Polaris Distributed Scheduling Framework Architecture](./assets/architecture.svg)
+![Vela Distributed Scheduling Framework Architecture](./assets/architecture.svg)
 
 The central part of the architectures is the Vela Scheduler Framework.
 All of its components are completely orchestrator-independent and only the Orchestrator Client needs to be realized by an orchestrator-specific connector.
