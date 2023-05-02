@@ -49,7 +49,7 @@ Within this instance, the pod is added to the sampling queue.
 Once the pod is dequeued, it enters the sampling phase, where multiple pods can be processed in parallel by a pool of samplers.
 The sampler that took the pod is responsible for executing the **2-Smart Sampling** mechanism, which consists of two steps:
 
-1. The sampler contacts a the Cluster Agents of a configurable percentage of the available clusters (`percentageOfClustersToSample` in the config, sometimes referred to as `Cp` - "clusters percentage") and asks them for node samples, passing along the requirements of the pod to ensure that the Cluster Agents know what needs to be scheduled.
+1. The sampler contacts the Cluster Agents of a configurable percentage of the available clusters (`percentageOfClustersToSample` in the config, sometimes referred to as `Cp` - "clusters percentage") and asks them for node samples, passing along the requirements of the pod to ensure that the Cluster Agents know what needs to be scheduled.
 2. Each Cluster Agent executes its Sampling Pipeline, which obtains a configurable percentage of nodes (`nodesToSampleBp`, also referred to as `Np`) from its Nodes Cache either using random or round-robin sampling and then runs the configured filtering and scoring plugins on these nodes to assess their suitability for the pod. Filter plugins remove nodes that are incapable of hosting a pod and Score plugins assign scores from 0 to 100 to each eligible node (i.e., nodes that have survived filtering), giving higher scores to nodes that are more suitable for the pod.
 
 Once the list of samples has been collected from the chosen clusters, the pod and the merged list of samples are added to the decision pipeline queue.

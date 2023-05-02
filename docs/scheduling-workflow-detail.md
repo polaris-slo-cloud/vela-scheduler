@@ -19,7 +19,7 @@ It uses a `SortPlugin` to establish an order among the incoming pods - only one 
 
 The scheduler maintains a list of `SampleNodesPlugin` objects, which resemble the sampler pool.
 All these objects are of the same type, because only one such plugin can be configured.
-A new pods is dequeued from the sampling queue, whenever there is an idle sampler available.
+A new pod is dequeued from the sampling queue, whenever there is an idle sampler available.
 By default, **2-Smart Sampling** is used, which delegates sampling to a random subset of Cluster Agents, which pick nodes that fulfill the requirements of the pod.
 The high-level algorithm is shown in the figure below.
 To this end, the `RemoteNodesSamplerPlugin` is used at this stage, which relies on the `DefaultRemoteSamplerClientsManager` to contact the `Cp` percent of the remote cluster agents to ask them for node samples.
