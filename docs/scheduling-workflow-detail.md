@@ -6,7 +6,7 @@ This document describes the 3-Phase Scheduling Workflow of Vela Scheduler in mor
 Note that the code uses the name `PolarisScheduler` instead of Vela.
 The packages in the class diagrams below do not resemble actual package names, but are used to indicate whether a type resides within the scheduler or the cluster agent.
 
-# Sampling Phase
+## Sampling Phase
 
 ![Main Interfaces and Classes in Sampling Phase](./assets/sampling-classes.svg)
 
@@ -32,5 +32,23 @@ Each sampling strategy is implemented by a `SamplingStrategyPlugin` - there is o
 This decision was made intentionally to ensure that these plugins can maintain a global state within the cluster agent, e.g., the `RoundRobinSamplingPlugin` has to advance its current index with every request irrespective of the sampling pipeline that issues it, otherwise two subsequent requests from different pipelines would get the same nodes.
 The sampling strategy is used to obtain node samples, which are then evaluated by the filter and score plugins.
 This procedure is carried out in a loop until `Np` eligible nodes have been found or a timeout is reached.
-The final list of sampled nodes is returned to the scheduler, where it is added to the decision pipeline queue.
+The final list of sampled nodes is returned to the scheduler, where it is added to the decision pipeline queue together with the pod.
+
+
+
+## Decision Phase
+
+![Main Interfaces and Classes in Decision Phase](./assets/decision-classes.svg)
+
+Once a pod is dequeued from the decision pipeline queue, it enters the decision phase, whose main interfaces and classes are shown in the class diagram above.
+The `DefaultPolarisScheduler` maintains a set of `DecisionPipeline` instances; whenever a pipeline is free, the next pod is dequeued from the decision pipeline queue.
+Each decision pipeline processes one pod at a time and has its own set of plugin instances, which ensures that no synchronization is needed between the pipelines or scheduler instances during the decision phase.
+
+The plugins follow the same filtering and scoring principle as those in the sampling pipeline, with a Reserve stage added at the end, which allows updating third-party data structures after the target nodes have been chosen.
+While filter and score plugins in the decision pipeline are conceptually the same as those in the sampling pipeline, we maintain these stages in both pipelines, because in the decision pipeline different plugins can be used to enforce global policies that would not be feasible to implement at the Cluster Agent level.
+
+After scoring is completed, the eligible nodes are sorted and the top `m` nodes are picked as commit candidates for the MultiBind mechanism in the commit phase.
+The number `m` is configurable through the `commitCandidateNodes` setting.
+These commit candidates are advanced to the commit phase.
+
 

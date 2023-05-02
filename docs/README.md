@@ -65,6 +65,8 @@ If a scheduling conflict is detected, the pre-reservation of resources in the ca
 Upon a scheduling conflict, the MultiBind mechanism proceeds to the second highest scored node, and if this causes a conflict as well, to the third highest scored node.
 Only if all three nodes return a scheduling conflict during MultiBind, the pod's scheduling workflow ends with a scheduling conflict, thus, causing the pod to be rescheduled, i.e., sent back to the sampling queue.
 
+Details on the implementation can be found in the [3-Phase Scheduling Workflow Implementation](./scheduling-workflow-detail.md) document.
+
 
 ## Sampling-, Decision-, and Commit Pipelines
 
@@ -73,6 +75,8 @@ Only if all three nodes return a scheduling conflict during MultiBind, the pod's
 The Scheduling Pipeline forms the centerpiece of the Polaris Distributed Scheduler and defines the scheduling and decision-making process.
 The pipeline consists of a sequence of stages, as shown in the above diagram, whose business logic is realized by plugins, which enables the realization of different scheduling polices.
 The Sort and Sample Nodes stages support only a single plugin each, while the other stages support multiple plugins.
+
+Details on the implementation can be found in the [3-Phase Scheduling Workflow Implementation](./scheduling-workflow-detail.md) document.
 
 
 ## Deployment
