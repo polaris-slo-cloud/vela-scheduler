@@ -1,12 +1,13 @@
 # Vela Scheduler
 
 Vela Scheduler is an orchestrator-independent distributed scheduler for the Edge-to-Cloud continuum.
+Detailed design and architecture documentation is available [here](./docs).
 
 The Edge-to-Cloud continuum may span hundreds of thousands of nodes and can be formed of multiple Edge and Cloud clusters, which may be operated by different orchestrators, e.g., one cluster could be managed by [Kubernetes](https://kubernetes.io) and another one by [Nomad](https://www.nomadproject.io).
 Vela Scheduler can be run as an arbitrary number of instances.
 To be compatible with the Vela Scheduler, each cluster must run the Vela Cluster Agent, which is the only interface needed by the scheduler to interact with the cluster.
 
-![Vela Scheduler Workflow Overview](./docs/images/vela-scheduler-overview.svg)
+![Vela Scheduler Workflow Overview](./docs/assets/vela-scheduler-overview.svg)
 
 The high-level scheduling workflow of Vela Scheduler is depicted in the diagram above. 
 A user or a system component submits a job to an arbitrary scheduler instance through its Submit Job API, which adds this job to the scheduler’s queue.
@@ -36,9 +37,3 @@ This project is realized in Go 1.19 and relies on Go workspaces to divide code i
 | [`go/k8s-connector`](./go/k8s-connector) | Kubernetes orchestrator connector |
 | [`go/scheduler`](./go/scheduler) | Vela Scheduler executable module |
 | [`testbed`](./testbed) | Scripts and configurations for setting testbeds for experimenting with Vela Scheduler |
-
-
-## Acknowledgement
-
-Vela Scheduler is a fork and evolution of the rainbow-scheduler the [orchestration repository](https://gitlab.com/rainbow-project1/rainbow-orchestration) of the [RAINBOW](https://rainbow-h2020.eu/) project.
-
