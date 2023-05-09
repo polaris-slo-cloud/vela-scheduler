@@ -3,6 +3,7 @@
 ![Vela 3-Phase Scheduling Workflow](./assets/scheduling-workflow.png)
 
 This document describes the 3-Phase Scheduling Workflow of Vela Scheduler in more detail to provide an overview of the involved interfaces and classes (we use the term "class" to refer to Go structs).
+Godoc documentation for the source code is available [here](https://polaris-slo-cloud.github.io/vela-scheduler/godoc/pkg).
 Note that the code uses the name `PolarisScheduler` instead of Vela.
 The packages in the class diagrams below do not resemble actual package names, but are used to indicate whether a type resides within the scheduler or the cluster agent.
 
