@@ -1,14 +1,9 @@
 # More info: https://docs.docker.com/engine/reference/builder/#dockerignore-file
 **/.git*
 !**/.gitkeep
-**/node_modules
 **/dist
 **/tmp
 **/bin
 **/.vscode
 **/*.out
-
-# Backup code from polaris-scheduler v1
-v1-bak/
-
-testbed/
+**/*.test

@@ -36,6 +36,8 @@ Thus, the Polaris project contains two scheduler projects:
 In code we use `Pod` abstraction, which we borrow from the Kubernetes core libraries (without losing orchestrator independence), to model a job.
 In the documentation we use the terms job and pod interchangeably.
 
+Godoc documentation for the source code is available [here](https://polaris-slo-cloud.github.io/vela-scheduler/godoc/pkg).
+
 
 ## 3-Phase Scheduling Workflow
 
