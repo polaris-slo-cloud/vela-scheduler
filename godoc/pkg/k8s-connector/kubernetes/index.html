@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>kubernetes - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="../../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.19.9";</script>
+<script src="../../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="../../index.html">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="../../index.html">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:8080/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package kubernetes
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "k8s-connector/kubernetes"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#LoadKubeconfig">func LoadKubeconfig(pathOverride string, logger *logr.Logger) (*rest.Config, error)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#KubernetesClusterClient">type KubernetesClusterClient</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#KubernetesClusterClientImpl">type KubernetesClusterClientImpl</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewKubernetesClusterClientImpl">func NewKubernetesClusterClientImpl(clusterName string, kubeconfig *rest.Config, parentComponentName string, logger *logr.Logger) (*KubernetesClusterClientImpl, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KubernetesClusterClientImpl.ClientSet">func (c *KubernetesClusterClientImpl) ClientSet() clientset.Interface</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KubernetesClusterClientImpl.ClusterName">func (c *KubernetesClusterClientImpl) ClusterName() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KubernetesClusterClientImpl.CommitSchedulingDecision">func (c *KubernetesClusterClientImpl) CommitSchedulingDecision(ctx context.Context, schedulingDecision *client.ClusterSchedulingDecision) (*client.CommitSchedulingDecisionSuccess, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KubernetesClusterClientImpl.EventRecorder">func (c *KubernetesClusterClientImpl) EventRecorder() record.EventRecorder</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KubernetesClusterClientImpl.FetchNode">func (c *KubernetesClusterClientImpl) FetchNode(ctx context.Context, name string) (*core.Node, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KubernetesClusterClientImpl.FetchPodsScheduledOnNode">func (c *KubernetesClusterClientImpl) FetchPodsScheduledOnNode(ctx context.Context, nodeName string) ([]core.Pod, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#KubernetesClusterClientsManager">type KubernetesClusterClientsManager</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewKubernetesClusterClientsManager">func NewKubernetesClusterClientsManager(clusterConfigs map[string]*rest.Config, parentComponentName string, logger *logr.Logger) (*KubernetesClusterClientsManager, error)</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#KubernetesNodesCache">type KubernetesNodesCache</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewKubernetesNodesCache">func NewKubernetesNodesCache(clusterClient KubernetesClusterClient, updateInterval time.Duration, queueSize int) *KubernetesNodesCache</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KubernetesNodesCache.Nodes">func (knc *KubernetesNodesCache) Nodes() collections.ConcurrentObjectStore[*client.ClusterNode]</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KubernetesNodesCache.QueuePodOnNode">func (knc *KubernetesNodesCache) QueuePodOnNode(pod *core.Pod, nodeName string) client.PodQueuedOnNode</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KubernetesNodesCache.StartWatch">func (knc *KubernetesNodesCache) StartWatch(ctx context.Context) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#KubernetesPodSource">type KubernetesPodSource</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewKubernetesPodSource">func NewKubernetesPodSource(clusterClientsMgr *KubernetesClusterClientsManager, schedConfig *config.SchedulerConfig) *KubernetesPodSource</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KubernetesPodSource.IncomingPods">func (kps *KubernetesPodSource) IncomingPods() chan *pipeline.IncomingPod</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KubernetesPodSource.StartWatching">func (kps *KubernetesPodSource) StartWatching() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KubernetesPodSource.StopWatching">func (kps *KubernetesPodSource) StopWatching() error</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:8080/src/k8s-connector/kubernetes/kubeconfig_utils.go">kubeconfig_utils.go</a>
+			
+				<a href="http://localhost:8080/src/k8s-connector/kubernetes/kubernetes_cluster_client.go">kubernetes_cluster_client.go</a>
+			
+				<a href="http://localhost:8080/src/k8s-connector/kubernetes/kubernetes_cluster_client_impl.go">kubernetes_cluster_client_impl.go</a>
+			
+				<a href="http://localhost:8080/src/k8s-connector/kubernetes/kubernetes_cluster_clients_manager.go">kubernetes_cluster_clients_manager.go</a>
+			
+				<a href="http://localhost:8080/src/k8s-connector/kubernetes/kubernetes_nodes_cache.go">kubernetes_nodes_cache.go</a>
+			
+				<a href="http://localhost:8080/src/k8s-connector/kubernetes/kubernetes_pod_source.go">kubernetes_pod_source.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+			
+			
+			<h2 id="LoadKubeconfig">func <a href="http://localhost:8080/src/k8s-connector/kubernetes/kubeconfig_utils.go?s=433:516#L7">LoadKubeconfig</a>
+				<a class="permalink" href="index.html#LoadKubeconfig">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func LoadKubeconfig(pathOverride <a href="http://localhost:8080/pkg/builtin/#string">string</a>, logger *<a href="http://localhost:8080/pkg/github.com/go-logr/logr/">logr</a>.<a href="http://localhost:8080/pkg/github.com/go-logr/logr/#Logger">Logger</a>) (*<a href="http://localhost:8080/pkg/k8s.io/client-go/rest/">rest</a>.<a href="http://localhost:8080/pkg/k8s.io/client-go/rest/#Config">Config</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>Loads the Kubernetes config.
+If the pathOverride is set, we load the KUBECONFIG from there, otherwise
+we attempt to load it from a pod environment (i.e., when operating inside a cluster).
+If this fails, we try to use the local KUBECONFIG file.
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="KubernetesClusterClient">type <a href="http://localhost:8080/src/k8s-connector/kubernetes/kubernetes_cluster_client.go?s=231:486#L1">KubernetesClusterClient</a>
+				<a class="permalink" href="index.html#KubernetesClusterClient">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Kubernetes-specific extension of the ClusterClient.
+
+			<pre>type KubernetesClusterClient interface {
+    <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/">client</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/#LocalClusterClient">LocalClusterClient</a>
+
+    <span class="comment">// Gets the ClientSet for communicating with a Kubernetes cluster.</span>
+    ClientSet() <a href="http://localhost:8080/pkg/k8s.io/client-go/kubernetes/">clientset</a>.<a href="http://localhost:8080/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>
+
+    <span class="comment">// Gets the EventRecorder for this cluster.</span>
+    EventRecorder() <a href="http://localhost:8080/pkg/k8s.io/client-go/tools/record/">record</a>.<a href="http://localhost:8080/pkg/k8s.io/client-go/tools/record/#EventRecorder">EventRecorder</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="KubernetesClusterClientImpl">type <a href="http://localhost:8080/src/k8s-connector/kubernetes/kubernetes_cluster_client_impl.go?s=844:1009#L23">KubernetesClusterClientImpl</a>
+				<a class="permalink" href="index.html#KubernetesClusterClientImpl">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Default KubernetesClusterClient implementation.
+
+			<pre>type KubernetesClusterClientImpl struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewKubernetesClusterClientImpl">func <a href="http://localhost:8080/src/k8s-connector/kubernetes/kubernetes_cluster_client_impl.go?s=1384:1558#L36">NewKubernetesClusterClientImpl</a>
+					<a class="permalink" href="index.html#NewKubernetesClusterClientImpl">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewKubernetesClusterClientImpl(
+    clusterName <a href="http://localhost:8080/pkg/builtin/#string">string</a>,
+    kubeconfig *<a href="http://localhost:8080/pkg/k8s.io/client-go/rest/">rest</a>.<a href="http://localhost:8080/pkg/k8s.io/client-go/rest/#Config">Config</a>,
+    parentComponentName <a href="http://localhost:8080/pkg/builtin/#string">string</a>,
+    logger *<a href="http://localhost:8080/pkg/github.com/go-logr/logr/">logr</a>.<a href="http://localhost:8080/pkg/github.com/go-logr/logr/#Logger">Logger</a>,
+) (*<a href="index.html#KubernetesClusterClientImpl">KubernetesClusterClientImpl</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>Creates a new KubernetesClusterClientImpl using the specified kubeconfig.
+<p>- clusterName is the name of the cluster to connect to
+- kubeconfig is the respective kubeconfig
+- parentComponentName is the name of the component that creates this client (this is used as the source name in the event recorder)
+- logger the Logger that should be used for logging
+
+				
+				
+			
+
+			
+				
+				<h3 id="KubernetesClusterClientImpl.ClientSet">func (*KubernetesClusterClientImpl) <a href="http://localhost:8080/src/k8s-connector/kubernetes/kubernetes_cluster_client_impl.go?s=2377:2446#L72">ClientSet</a>
+					<a class="permalink" href="index.html#KubernetesClusterClientImpl.ClientSet">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#KubernetesClusterClientImpl">KubernetesClusterClientImpl</a>) ClientSet() <a href="http://localhost:8080/pkg/k8s.io/client-go/kubernetes/">clientset</a>.<a href="http://localhost:8080/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="KubernetesClusterClientImpl.ClusterName">func (*KubernetesClusterClientImpl) <a href="http://localhost:8080/src/k8s-connector/kubernetes/kubernetes_cluster_client_impl.go?s=2291:2349#L68">ClusterName</a>
+					<a class="permalink" href="index.html#KubernetesClusterClientImpl.ClusterName">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#KubernetesClusterClientImpl">KubernetesClusterClientImpl</a>) ClusterName() <a href="http://localhost:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="KubernetesClusterClientImpl.CommitSchedulingDecision">func (*KubernetesClusterClientImpl) <a href="http://localhost:8080/src/k8s-connector/kubernetes/kubernetes_cluster_client_impl.go?s=2579:2765#L80">CommitSchedulingDecision</a>
+					<a class="permalink" href="index.html#KubernetesClusterClientImpl.CommitSchedulingDecision">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#KubernetesClusterClientImpl">KubernetesClusterClientImpl</a>) CommitSchedulingDecision(ctx <a href="http://localhost:8080/pkg/context/">context</a>.<a href="http://localhost:8080/pkg/context/#Context">Context</a>, schedulingDecision *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/">client</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/#ClusterSchedulingDecision">ClusterSchedulingDecision</a>) (*<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/">client</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/#CommitSchedulingDecisionSuccess">CommitSchedulingDecisionSuccess</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="KubernetesClusterClientImpl.EventRecorder">func (*KubernetesClusterClientImpl) <a href="http://localhost:8080/src/k8s-connector/kubernetes/kubernetes_cluster_client_impl.go?s=2475:2549#L76">EventRecorder</a>
+					<a class="permalink" href="index.html#KubernetesClusterClientImpl.EventRecorder">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#KubernetesClusterClientImpl">KubernetesClusterClientImpl</a>) EventRecorder() <a href="http://localhost:8080/pkg/k8s.io/client-go/tools/record/">record</a>.<a href="http://localhost:8080/pkg/k8s.io/client-go/tools/record/#EventRecorder">EventRecorder</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="KubernetesClusterClientImpl.FetchNode">func (*KubernetesClusterClientImpl) <a href="http://localhost:8080/src/k8s-connector/kubernetes/kubernetes_cluster_client_impl.go?s=4363:4464#L134">FetchNode</a>
+					<a class="permalink" href="index.html#KubernetesClusterClientImpl.FetchNode">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#KubernetesClusterClientImpl">KubernetesClusterClientImpl</a>) FetchNode(ctx <a href="http://localhost:8080/pkg/context/">context</a>.<a href="http://localhost:8080/pkg/context/#Context">Context</a>, name <a href="http://localhost:8080/pkg/builtin/#string">string</a>) (*<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/">core</a>.<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/#Node">Node</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="KubernetesClusterClientImpl.FetchPodsScheduledOnNode">func (*KubernetesClusterClientImpl) <a href="http://localhost:8080/src/k8s-connector/kubernetes/kubernetes_cluster_client_impl.go?s=4544:4664#L138">FetchPodsScheduledOnNode</a>
+					<a class="permalink" href="index.html#KubernetesClusterClientImpl.FetchPodsScheduledOnNode">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#KubernetesClusterClientImpl">KubernetesClusterClientImpl</a>) FetchPodsScheduledOnNode(ctx <a href="http://localhost:8080/pkg/context/">context</a>.<a href="http://localhost:8080/pkg/context/#Context">Context</a>, nodeName <a href="http://localhost:8080/pkg/builtin/#string">string</a>) ([]<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/">core</a>.<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/#Pod">Pod</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="KubernetesClusterClientsManager">type <a href="http://localhost:8080/src/k8s-connector/kubernetes/kubernetes_cluster_clients_manager.go?s=278:388#L5">KubernetesClusterClientsManager</a>
+				<a class="permalink" href="index.html#KubernetesClusterClientsManager">&#xb6;</a>
+				
+				
+			</h2>
+			<p>ClusterClientsManager for Kubernetes.
+
+			<pre>type KubernetesClusterClientsManager struct {
+    *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/">client</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/#GenericClusterClientsManager">GenericClusterClientsManager</a>[<a href="index.html#KubernetesClusterClient">KubernetesClusterClient</a>]
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewKubernetesClusterClientsManager">func <a href="http://localhost:8080/src/k8s-connector/kubernetes/kubernetes_cluster_clients_manager.go?s=513:683#L10">NewKubernetesClusterClientsManager</a>
+					<a class="permalink" href="index.html#NewKubernetesClusterClientsManager">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewKubernetesClusterClientsManager(clusterConfigs map[<a href="http://localhost:8080/pkg/builtin/#string">string</a>]*<a href="http://localhost:8080/pkg/k8s.io/client-go/rest/">rest</a>.<a href="http://localhost:8080/pkg/k8s.io/client-go/rest/#Config">Config</a>, parentComponentName <a href="http://localhost:8080/pkg/builtin/#string">string</a>, logger *<a href="http://localhost:8080/pkg/github.com/go-logr/logr/">logr</a>.<a href="http://localhost:8080/pkg/github.com/go-logr/logr/#Logger">Logger</a>) (*<a href="index.html#KubernetesClusterClientsManager">KubernetesClusterClientsManager</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>Creates a new KubernetesClusterClientsManager and initializes it with clients for the specified cluster configurations.
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="KubernetesNodesCache">type <a href="http://localhost:8080/src/k8s-connector/kubernetes/kubernetes_nodes_cache.go?s=990:1310#L37">KubernetesNodesCache</a>
+				<a class="permalink" href="index.html#KubernetesNodesCache">&#xb6;</a>
+				
+				
+			</h2>
+			<p>NodesCache implementation for Kubernetes.
+
+			<pre>type KubernetesNodesCache struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewKubernetesNodesCache">func <a href="http://localhost:8080/src/k8s-connector/kubernetes/kubernetes_nodes_cache.go?s=1312:1452#L49">NewKubernetesNodesCache</a>
+					<a class="permalink" href="index.html#NewKubernetesNodesCache">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewKubernetesNodesCache(
+    clusterClient <a href="index.html#KubernetesClusterClient">KubernetesClusterClient</a>,
+    updateInterval <a href="http://localhost:8080/pkg/time/">time</a>.<a href="http://localhost:8080/pkg/time/#Duration">Duration</a>,
+    queueSize <a href="http://localhost:8080/pkg/builtin/#int">int</a>,
+) *<a href="index.html#KubernetesNodesCache">KubernetesNodesCache</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="KubernetesNodesCache.Nodes">func (*KubernetesNodesCache) <a href="http://localhost:8080/src/k8s-connector/kubernetes/kubernetes_nodes_cache.go?s=1714:1809#L64">Nodes</a>
+					<a class="permalink" href="index.html#KubernetesNodesCache.Nodes">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (knc *<a href="index.html#KubernetesNodesCache">KubernetesNodesCache</a>) Nodes() <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/collections/">collections</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/collections/#ConcurrentObjectStore">ConcurrentObjectStore</a>[*<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/">client</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/#ClusterNode">ClusterNode</a>]</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="KubernetesNodesCache.QueuePodOnNode">func (*KubernetesNodesCache) <a href="http://localhost:8080/src/k8s-connector/kubernetes/kubernetes_nodes_cache.go?s=1833:1935#L68">QueuePodOnNode</a>
+					<a class="permalink" href="index.html#KubernetesNodesCache.QueuePodOnNode">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (knc *<a href="index.html#KubernetesNodesCache">KubernetesNodesCache</a>) QueuePodOnNode(pod *<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/">core</a>.<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/#Pod">Pod</a>, nodeName <a href="http://localhost:8080/pkg/builtin/#string">string</a>) <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/">client</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/#PodQueuedOnNode">PodQueuedOnNode</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="KubernetesNodesCache.StartWatch">func (*KubernetesNodesCache) <a href="http://localhost:8080/src/k8s-connector/kubernetes/kubernetes_nodes_cache.go?s=1987:2057#L72">StartWatch</a>
+					<a class="permalink" href="index.html#KubernetesNodesCache.StartWatch">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (knc *<a href="index.html#KubernetesNodesCache">KubernetesNodesCache</a>) StartWatch(ctx <a href="http://localhost:8080/pkg/context/">context</a>.<a href="http://localhost:8080/pkg/context/#Context">Context</a>) <a href="http://localhost:8080/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="KubernetesPodSource">type <a href="http://localhost:8080/src/k8s-connector/kubernetes/kubernetes_pod_source.go?s=449:704#L12">KubernetesPodSource</a>
+				<a class="permalink" href="index.html#KubernetesPodSource">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type KubernetesPodSource struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewKubernetesPodSource">func <a href="http://localhost:8080/src/k8s-connector/kubernetes/kubernetes_pod_source.go?s=800:937#L21">NewKubernetesPodSource</a>
+					<a class="permalink" href="index.html#NewKubernetesPodSource">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewKubernetesPodSource(clusterClientsMgr *<a href="index.html#KubernetesClusterClientsManager">KubernetesClusterClientsManager</a>, schedConfig *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/config/">config</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/config/#SchedulerConfig">SchedulerConfig</a>) *<a href="index.html#KubernetesPodSource">KubernetesPodSource</a></pre>
+				<p>Creates a new KubernetesPodSource for all clusters in the specified ClusterClientsManager.
+
+				
+				
+			
+
+			
+				
+				<h3 id="KubernetesPodSource.IncomingPods">func (*KubernetesPodSource) <a href="http://localhost:8080/src/k8s-connector/kubernetes/kubernetes_pod_source.go?s=2110:2183#L63">IncomingPods</a>
+					<a class="permalink" href="index.html#KubernetesPodSource.IncomingPods">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (kps *<a href="index.html#KubernetesPodSource">KubernetesPodSource</a>) IncomingPods() chan *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#IncomingPod">IncomingPod</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="KubernetesPodSource.StartWatching">func (*KubernetesPodSource) <a href="http://localhost:8080/src/k8s-connector/kubernetes/kubernetes_pod_source.go?s=1331:1384#L32">StartWatching</a>
+					<a class="permalink" href="index.html#KubernetesPodSource.StartWatching">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (kps *<a href="index.html#KubernetesPodSource">KubernetesPodSource</a>) StartWatching() <a href="http://localhost:8080/pkg/builtin/#error">error</a></pre>
+				<p>Creates the channel available through IncomingPods() and starts watching for pods.
+
+				
+				
+				
+			
+				
+				<h3 id="KubernetesPodSource.StopWatching">func (*KubernetesPodSource) <a href="http://localhost:8080/src/k8s-connector/kubernetes/kubernetes_pod_source.go?s=2019:2071#L58">StopWatching</a>
+					<a class="permalink" href="index.html#KubernetesPodSource.StopWatching">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (kps *<a href="index.html#KubernetesPodSource">KubernetesPodSource</a>) StopWatching() <a href="http://localhost:8080/pkg/builtin/#error">error</a></pre>
+				<p>Stops watching for pods and closes the channel available through IncomingPods().
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.19.9.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:8080/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

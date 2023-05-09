@@ -22,6 +22,8 @@ Finally, the scheduler submits the job to the Cluster Agent that is responsible 
 
 The documentation for the Vela Scheduler is available in the [docs](https://github.com/polaris-slo-cloud/vela-scheduler/tree/master/docs) folder.
 
+Godoc documentation for the source code is available [here](./godoc/pkg).
+
 
 ## Experiments
 

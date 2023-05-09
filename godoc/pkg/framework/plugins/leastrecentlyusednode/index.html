@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>leastrecentlyusednode - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.19.9";</script>
+<script src="../../../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="../../../index.html">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="../../../index.html">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:8080/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package leastrecentlyusednode
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "framework/plugins/leastrecentlyusednode"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#NewLeastRecentlyUsedNodeClusterAgentPlugin">func NewLeastRecentlyUsedNodeClusterAgentPlugin(configMap config.PluginConfig, clusterAgentServices pipeline.ClusterAgentServices) (pipeline.Plugin, error)</a></dd>
+			
+				
+				<dd><a href="index.html#NewLeastRecentlyUsedNodeSchedulingPlugin">func NewLeastRecentlyUsedNodeSchedulingPlugin(configMap config.PluginConfig, scheduler pipeline.PolarisScheduler) (pipeline.Plugin, error)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#LeastRecentlyUsedNodePlugin">type LeastRecentlyUsedNodePlugin</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LeastRecentlyUsedNodePlugin.Name">func (lru *LeastRecentlyUsedNodePlugin) Name() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LeastRecentlyUsedNodePlugin.NormalizeScores">func (*LeastRecentlyUsedNodePlugin) NormalizeScores(ctx pipeline.SchedulingContext, podInfo *pipeline.PodInfo, scores []pipeline.NodeScore) pipeline.Status</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LeastRecentlyUsedNodePlugin.PreScore">func (lru *LeastRecentlyUsedNodePlugin) PreScore(ctx pipeline.SchedulingContext, podInfo *pipeline.PodInfo, eligibleNodes []*pipeline.NodeInfo) pipeline.Status</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LeastRecentlyUsedNodePlugin.Score">func (lru *LeastRecentlyUsedNodePlugin) Score(ctx pipeline.SchedulingContext, podInfo *pipeline.PodInfo, nodeInfo *pipeline.NodeInfo) (int64, pipeline.Status)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LeastRecentlyUsedNodePlugin.ScoreExtensions">func (lru *LeastRecentlyUsedNodePlugin) ScoreExtensions() pipeline.ScoreExtensions</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:8080/src/framework/plugins/leastrecentlyusednode/least_recently_used_node_plugin.go">least_recently_used_node_plugin.go</a>
+			
+				<a href="http://localhost:8080/src/framework/plugins/leastrecentlyusednode/least_recently_used_node_state.go">least_recently_used_node_state.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span id="PluginName">PluginName</span> = &#34;LeastRecentlyUsedNode&#34;
+)</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="NewLeastRecentlyUsedNodeClusterAgentPlugin">func <a href="http://localhost:8080/src/framework/plugins/leastrecentlyusednode/least_recently_used_node_plugin.go?s=1228:1383#L24">NewLeastRecentlyUsedNodeClusterAgentPlugin</a>
+				<a class="permalink" href="index.html#NewLeastRecentlyUsedNodeClusterAgentPlugin">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func NewLeastRecentlyUsedNodeClusterAgentPlugin(configMap <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/config/">config</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/config/#PluginConfig">PluginConfig</a>, clusterAgentServices <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#ClusterAgentServices">ClusterAgentServices</a>) (<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#Plugin">Plugin</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="NewLeastRecentlyUsedNodeSchedulingPlugin">func <a href="http://localhost:8080/src/framework/plugins/leastrecentlyusednode/least_recently_used_node_plugin.go?s=1038:1176#L20">NewLeastRecentlyUsedNodeSchedulingPlugin</a>
+				<a class="permalink" href="index.html#NewLeastRecentlyUsedNodeSchedulingPlugin">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func NewLeastRecentlyUsedNodeSchedulingPlugin(configMap <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/config/">config</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/config/#PluginConfig">PluginConfig</a>, scheduler <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#PolarisScheduler">PolarisScheduler</a>) (<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#Plugin">Plugin</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+		
+			
+			
+			<h2 id="LeastRecentlyUsedNodePlugin">type <a href="http://localhost:8080/src/framework/plugins/leastrecentlyusednode/least_recently_used_node_plugin.go?s=993:1036#L17">LeastRecentlyUsedNodePlugin</a>
+				<a class="permalink" href="index.html#LeastRecentlyUsedNodePlugin">&#xb6;</a>
+				
+				
+			</h2>
+			<p>This plugin assigns higher scores to nodes, which have not received a new pod for a longer time,
+i.e., nodes with an older LastPodAddedTimestamp get higher scores.
+
+			<pre>type LeastRecentlyUsedNodePlugin struct {
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="LeastRecentlyUsedNodePlugin.Name">func (*LeastRecentlyUsedNodePlugin) <a href="http://localhost:8080/src/framework/plugins/leastrecentlyusednode/least_recently_used_node_plugin.go?s=1558:1611#L33">Name</a>
+					<a class="permalink" href="index.html#LeastRecentlyUsedNodePlugin.Name">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (lru *<a href="index.html#LeastRecentlyUsedNodePlugin">LeastRecentlyUsedNodePlugin</a>) Name() <a href="http://localhost:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="LeastRecentlyUsedNodePlugin.NormalizeScores">func (*LeastRecentlyUsedNodePlugin) <a href="http://localhost:8080/src/framework/plugins/leastrecentlyusednode/least_recently_used_node_plugin.go?s=2421:2576#L60">NormalizeScores</a>
+					<a class="permalink" href="index.html#LeastRecentlyUsedNodePlugin.NormalizeScores">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (*<a href="index.html#LeastRecentlyUsedNodePlugin">LeastRecentlyUsedNodePlugin</a>) NormalizeScores(ctx <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#SchedulingContext">SchedulingContext</a>, podInfo *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#PodInfo">PodInfo</a>, scores []<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#NodeScore">NodeScore</a>) <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#Status">Status</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="LeastRecentlyUsedNodePlugin.PreScore">func (*LeastRecentlyUsedNodePlugin) <a href="http://localhost:8080/src/framework/plugins/leastrecentlyusednode/least_recently_used_node_plugin.go?s=1636:1795#L37">PreScore</a>
+					<a class="permalink" href="index.html#LeastRecentlyUsedNodePlugin.PreScore">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (lru *<a href="index.html#LeastRecentlyUsedNodePlugin">LeastRecentlyUsedNodePlugin</a>) PreScore(ctx <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#SchedulingContext">SchedulingContext</a>, podInfo *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#PodInfo">PodInfo</a>, eligibleNodes []*<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#NodeInfo">NodeInfo</a>) <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#Status">Status</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="LeastRecentlyUsedNodePlugin.Score">func (*LeastRecentlyUsedNodePlugin) <a href="http://localhost:8080/src/framework/plugins/leastrecentlyusednode/least_recently_used_node_plugin.go?s=2043:2201#L50">Score</a>
+					<a class="permalink" href="index.html#LeastRecentlyUsedNodePlugin.Score">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (lru *<a href="index.html#LeastRecentlyUsedNodePlugin">LeastRecentlyUsedNodePlugin</a>) Score(ctx <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#SchedulingContext">SchedulingContext</a>, podInfo *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#PodInfo">PodInfo</a>, nodeInfo *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#NodeInfo">NodeInfo</a>) (<a href="http://localhost:8080/pkg/builtin/#int64">int64</a>, <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#Status">Status</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="LeastRecentlyUsedNodePlugin.ScoreExtensions">func (*LeastRecentlyUsedNodePlugin) <a href="http://localhost:8080/src/framework/plugins/leastrecentlyusednode/least_recently_used_node_plugin.go?s=1943:2025#L46">ScoreExtensions</a>
+					<a class="permalink" href="index.html#LeastRecentlyUsedNodePlugin.ScoreExtensions">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (lru *<a href="index.html#LeastRecentlyUsedNodePlugin">LeastRecentlyUsedNodePlugin</a>) ScoreExtensions() <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#ScoreExtensions">ScoreExtensions</a></pre>
+				
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.19.9.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:8080/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>util - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="../../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.19.9";</script>
+<script src="../../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="../../index.html">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="../../index.html">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:8080/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package util
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "framework/util"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#ParseYamlFile">func ParseYamlFile(path string, dest interface{}) error</a></dd>
+			
+				
+				<dd><a href="index.html#SetupSignalHandlingContext">func SetupSignalHandlingContext() context.Context</a></dd>
+			
+			
+				
+				<dd><a href="index.html#NodeEligibilityStats">type NodeEligibilityStats</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Random">type Random</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewCryptoRandom">func NewCryptoRandom() Random</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewDefaultRandom">func NewDefaultRandom() Random</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewMathRandom">func NewMathRandom() Random</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Resources">type Resources</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#CalculateNodeAvailableResources">func CalculateNodeAvailableResources(node *core.Node, assignedPods []core.Pod) *Resources</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#CalculateTotalPodResources">func CalculateTotalPodResources(pod *core.Pod) *Resources</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewResources">func NewResources() *Resources</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewResourcesFromList">func NewResourcesFromList(rl core.ResourceList) *Resources</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Resources.Add">func (r *Resources) Add(other *Resources)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Resources.AddResourceList">func (r *Resources) AddResourceList(rl core.ResourceList)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Resources.DeepCopy">func (r *Resources) DeepCopy() *Resources</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Resources.Equals">func (r *Resources) Equals(other *Resources) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Resources.LessThanOrEqual">func (r *Resources) LessThanOrEqual(other *Resources) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Resources.Subtract">func (r *Resources) Subtract(other *Resources)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Resources.SubtractResourceList">func (r *Resources) SubtractResourceList(rl core.ResourceList)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Stopwatch">type Stopwatch</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewStopwatch">func NewStopwatch() *Stopwatch</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Stopwatch.Duration">func (me *Stopwatch) Duration() time.Duration</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Stopwatch.IsStarted">func (me *Stopwatch) IsStarted() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Stopwatch.IsStopped">func (me *Stopwatch) IsStopped() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Stopwatch.Start">func (me *Stopwatch) Start()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Stopwatch.StartAt">func (me *Stopwatch) StartAt(startTime time.Time)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Stopwatch.StartTime">func (me *Stopwatch) StartTime() time.Time</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Stopwatch.Stop">func (me *Stopwatch) Stop()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Stopwatch.StopTime">func (me *Stopwatch) StopTime() time.Time</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:8080/src/framework/util/node.go">node.go</a>
+			
+				<a href="http://localhost:8080/src/framework/util/pod.go">pod.go</a>
+			
+				<a href="http://localhost:8080/src/framework/util/random.go">random.go</a>
+			
+				<a href="http://localhost:8080/src/framework/util/resources.go">resources.go</a>
+			
+				<a href="http://localhost:8080/src/framework/util/signal-handling.go">signal-handling.go</a>
+			
+				<a href="http://localhost:8080/src/framework/util/stopwatch.go">stopwatch.go</a>
+			
+				<a href="http://localhost:8080/src/framework/util/yaml.go">yaml.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// The state key for storing a NodeEligibilityStats object.</span>
+    <span id="NodeEligibilityStatsInfoStateKey">NodeEligibilityStatsInfoStateKey</span> = &#34;polaris-internal.node-eligibility-stats&#34;
+)</pre>
+			
+				
+				<pre>const (
+    <span class="comment">// StopwatchStateKey can be used as a key in the scheduler&#39;s state data for storing a single Stopwatch.</span>
+    <span id="StopwatchStateKey">StopwatchStateKey</span> = &#34;polaris-internal.stopwatch&#34;
+)</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="ParseYamlFile">func <a href="http://localhost:8080/src/framework/util/yaml.go?s=253:308#L4">ParseYamlFile</a>
+				<a class="permalink" href="index.html#ParseYamlFile">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func ParseYamlFile(path <a href="http://localhost:8080/pkg/builtin/#string">string</a>, dest interface{}) <a href="http://localhost:8080/pkg/builtin/#error">error</a></pre>
+			<p>Loads and parses the YAML file in the specified path and stores the result into the dest object.
+<p>The dest object must not be nil.
+Returns nil on success or an error, if any occurs.
+
+			
+			
+
+		
+			
+			
+			<h2 id="SetupSignalHandlingContext">func <a href="http://localhost:8080/src/framework/util/signal-handling.go?s=226:275#L2">SetupSignalHandlingContext</a>
+				<a class="permalink" href="index.html#SetupSignalHandlingContext">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func SetupSignalHandlingContext() <a href="http://localhost:8080/pkg/context/">context</a>.<a href="http://localhost:8080/pkg/context/#Context">Context</a></pre>
+			<p>Creates a Context that gets cancelled upon an interrupt or TERM signal.
+If the signal is received a second time, the program will be exited immediately.
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="NodeEligibilityStats">type <a href="http://localhost:8080/src/framework/util/node.go?s=258:496#L3">NodeEligibilityStats</a>
+				<a class="permalink" href="index.html#NodeEligibilityStats">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Information about sampled and eligible node counts.
+
+			<pre>type NodeEligibilityStats struct {
+    <span class="comment">// The total number of nodes that were sampled.</span>
+<span id="NodeEligibilityStats.SampledNodesCount"></span>    SampledNodesCount <a href="http://localhost:8080/pkg/builtin/#int">int</a>
+
+    <span class="comment">// The number of nodes that are eligible to host a pod after the Filter stage in the decision pipeline.</span>
+<span id="NodeEligibilityStats.EligibleNodesCount"></span>    EligibleNodesCount <a href="http://localhost:8080/pkg/builtin/#int">int</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Random">type <a href="http://localhost:8080/src/framework/util/random.go?s=338:437#L6">Random</a>
+				<a class="permalink" href="index.html#Random">&#xb6;</a>
+				
+				
+			</h2>
+			<p>A random number generator interface, for easily switching between multiple random number generator implementations.
+Implementations of this interface are generally NOT thread-safe.
+
+			<pre>type Random interface {
+    <span class="comment">// Generates a random integer in the interval [0, max)</span>
+    Int(max <a href="http://localhost:8080/pkg/builtin/#int">int</a>) <a href="http://localhost:8080/pkg/builtin/#int">int</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewCryptoRandom">func <a href="http://localhost:8080/src/framework/util/random.go?s=1378:1407#L43">NewCryptoRandom</a>
+					<a class="permalink" href="index.html#NewCryptoRandom">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewCryptoRandom() <a href="index.html#Random">Random</a></pre>
+				<p>Creates an instance of a Random implementation using the crypto/rand package.
+
+				
+				
+			
+				
+				<h3 id="NewDefaultRandom">func <a href="http://localhost:8080/src/framework/util/random.go?s=500:530#L12">NewDefaultRandom</a>
+					<a class="permalink" href="index.html#NewDefaultRandom">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewDefaultRandom() <a href="index.html#Random">Random</a></pre>
+				<p>Creates an instance of the default Random implementation.
+
+				
+				
+			
+				
+				<h3 id="NewMathRandom">func <a href="http://localhost:8080/src/framework/util/random.go?s=963:990#L25">NewMathRandom</a>
+					<a class="permalink" href="index.html#NewMathRandom">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewMathRandom() <a href="index.html#Random">Random</a></pre>
+				<p>Creates an instance of a Random implementation using the math/rand package,
+seeded using rand.Int63().
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="Resources">type <a href="http://localhost:8080/src/framework/util/resources.go?s=118:507#L1">Resources</a>
+				<a class="permalink" href="index.html#Resources">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Represents a set of resources requested or consumed by a Pod.
+
+			<pre>type Resources struct {
+<span id="Resources.MilliCPU"></span>    MilliCPU          <a href="http://localhost:8080/pkg/builtin/#int64">int64</a>                       `json:&#34;milliCpu&#34; yaml:&#34;milliCpu&#34;`
+<span id="Resources.MemoryBytes"></span>    MemoryBytes       <a href="http://localhost:8080/pkg/builtin/#int64">int64</a>                       `json:&#34;memoryBytes&#34; yaml:&#34;memoryBytes&#34;`
+<span id="Resources.EphemeralStorage"></span>    EphemeralStorage  <a href="http://localhost:8080/pkg/builtin/#int64">int64</a>                       `json:&#34;ephemeralStorage&#34; yaml:&#34;ephemeralStorage&#34;`
+<span id="Resources.ExtendedResources"></span>    ExtendedResources map[<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/">core</a>.<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/#ResourceName">ResourceName</a>]<a href="http://localhost:8080/pkg/builtin/#int64">int64</a> `json:&#34;extendedResources&#34; yaml:&#34;extendedResources&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="CalculateNodeAvailableResources">func <a href="http://localhost:8080/src/framework/util/node.go?s=610:699#L12">CalculateNodeAvailableResources</a>
+					<a class="permalink" href="index.html#CalculateNodeAvailableResources">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func CalculateNodeAvailableResources(node *<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/">core</a>.<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/#Node">Node</a>, assignedPods []<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/">core</a>.<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/#Pod">Pod</a>) *<a href="index.html#Resources">Resources</a></pre>
+				<p>Calculates a node&apos;s available resources, i.e., its total resource - resources used by already assigned pods.
+
+				
+				
+			
+				
+				<h3 id="CalculateTotalPodResources">func <a href="http://localhost:8080/src/framework/util/pod.go?s=139:196#L1">CalculateTotalPodResources</a>
+					<a class="permalink" href="index.html#CalculateTotalPodResources">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func CalculateTotalPodResources(pod *<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/">core</a>.<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/#Pod">Pod</a>) *<a href="index.html#Resources">Resources</a></pre>
+				<p>Calculates the total resource limits across all of the specified pod&apos;s containers.
+
+				
+				
+			
+				
+				<h3 id="NewResources">func <a href="http://localhost:8080/src/framework/util/resources.go?s=551:581#L6">NewResources</a>
+					<a class="permalink" href="index.html#NewResources">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewResources() *<a href="index.html#Resources">Resources</a></pre>
+				<p>Creates a new, empty Resources object.
+
+				
+				
+			
+				
+				<h3 id="NewResourcesFromList">func <a href="http://localhost:8080/src/framework/util/resources.go?s=690:748#L11">NewResourcesFromList</a>
+					<a class="permalink" href="index.html#NewResourcesFromList">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewResourcesFromList(rl <a href="http://localhost:8080/pkg/k8s.io/api/core/v1/">core</a>.<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/#ResourceList">ResourceList</a>) *<a href="index.html#Resources">Resources</a></pre>
+				<p>Creates a Resources object and initializes it with the specified ResourceList.
+
+				
+				
+			
+
+			
+				
+				<h3 id="Resources.Add">func (*Resources) <a href="http://localhost:8080/src/framework/util/resources.go?s=911:952#L18">Add</a>
+					<a class="permalink" href="index.html#Resources.Add">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Resources">Resources</a>) Add(other *<a href="index.html#Resources">Resources</a>)</pre>
+				<p>Adds the values in the specified Resources object to this Resources object.
+
+				
+				
+				
+			
+				
+				<h3 id="Resources.AddResourceList">func (*Resources) <a href="http://localhost:8080/src/framework/util/resources.go?s=1230:1287#L29">AddResourceList</a>
+					<a class="permalink" href="index.html#Resources.AddResourceList">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Resources">Resources</a>) AddResourceList(rl <a href="http://localhost:8080/pkg/k8s.io/api/core/v1/">core</a>.<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/#ResourceList">ResourceList</a>)</pre>
+				<p>Adds the specified ResourceList to this Resources object.
+
+				
+				
+				
+			
+				
+				<h3 id="Resources.DeepCopy">func (*Resources) <a href="http://localhost:8080/src/framework/util/resources.go?s=3801:3842#L124">DeepCopy</a>
+					<a class="permalink" href="index.html#Resources.DeepCopy">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Resources">Resources</a>) DeepCopy() *<a href="index.html#Resources">Resources</a></pre>
+				<p>Creates a deep copy of this Resources object.
+
+				
+				
+				
+			
+				
+				<h3 id="Resources.Equals">func (*Resources) <a href="http://localhost:8080/src/framework/util/resources.go?s=3167:3216#L97">Equals</a>
+					<a class="permalink" href="index.html#Resources.Equals">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Resources">Resources</a>) Equals(other *<a href="index.html#Resources">Resources</a>) <a href="http://localhost:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>Returns true if the values in this object are the same as in the other resources object.
+
+				
+				
+				
+			
+				
+				<h3 id="Resources.LessThanOrEqual">func (*Resources) <a href="http://localhost:8080/src/framework/util/resources.go?s=2566:2624#L73">LessThanOrEqual</a>
+					<a class="permalink" href="index.html#Resources.LessThanOrEqual">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Resources">Resources</a>) LessThanOrEqual(other *<a href="index.html#Resources">Resources</a>) <a href="http://localhost:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>Returns true if all resource numbers expressed by this object are less than or equal to
+the ones expressed in the other object.
+
+				
+				
+				
+			
+				
+				<h3 id="Resources.Subtract">func (*Resources) <a href="http://localhost:8080/src/framework/util/resources.go?s=1705:1751#L45">Subtract</a>
+					<a class="permalink" href="index.html#Resources.Subtract">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Resources">Resources</a>) Subtract(other *<a href="index.html#Resources">Resources</a>)</pre>
+				<p>Subtracts the values in the specified Resources object from this Resources object.
+
+				
+				
+				
+			
+				
+				<h3 id="Resources.SubtractResourceList">func (*Resources) <a href="http://localhost:8080/src/framework/util/resources.go?s=2037:2099#L56">SubtractResourceList</a>
+					<a class="permalink" href="index.html#Resources.SubtractResourceList">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Resources">Resources</a>) SubtractResourceList(rl <a href="http://localhost:8080/pkg/k8s.io/api/core/v1/">core</a>.<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/#ResourceList">ResourceList</a>)</pre>
+				<p>Subtracts the specified ResourceList from this Resources object.
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Stopwatch">type <a href="http://localhost:8080/src/framework/util/stopwatch.go?s=267:366#L3">Stopwatch</a>
+				<a class="permalink" href="index.html#Stopwatch">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Stopwatch can be used to measure the time between two instants.
+
+			<pre>type Stopwatch struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewStopwatch">func <a href="http://localhost:8080/src/framework/util/stopwatch.go?s=409:439#L11">NewStopwatch</a>
+					<a class="permalink" href="index.html#NewStopwatch">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewStopwatch() *<a href="index.html#Stopwatch">Stopwatch</a></pre>
+				<p>NewStopwatch creates a new Stopwatch.
+
+				
+				
+			
+
+			
+				
+				<h3 id="Stopwatch.Duration">func (*Stopwatch) <a href="http://localhost:8080/src/framework/util/stopwatch.go?s=1916:1961#L62">Duration</a>
+					<a class="permalink" href="index.html#Stopwatch.Duration">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (me *<a href="index.html#Stopwatch">Stopwatch</a>) Duration() <a href="http://localhost:8080/pkg/time/">time</a>.<a href="http://localhost:8080/pkg/time/#Duration">Duration</a></pre>
+				<p>Duration returns the duration of the time that was measured by this Stopwatch.
+
+				
+				
+				
+			
+				
+				<h3 id="Stopwatch.IsStarted">func (*Stopwatch) <a href="http://localhost:8080/src/framework/util/stopwatch.go?s=1266:1303#L40">IsStarted</a>
+					<a class="permalink" href="index.html#Stopwatch.IsStarted">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (me *<a href="index.html#Stopwatch">Stopwatch</a>) IsStarted() <a href="http://localhost:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>IsStarted returns true if the stopwatch has been started.
+<p>Note that this is not reset after the stopwatch is stopped.
+A stopped stopwatch has both IsStarted() and IsStopped() return true.
+
+				
+				
+				
+			
+				
+				<h3 id="Stopwatch.IsStopped">func (*Stopwatch) <a href="http://localhost:8080/src/framework/util/stopwatch.go?s=1399:1436#L45">IsStopped</a>
+					<a class="permalink" href="index.html#Stopwatch.IsStopped">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (me *<a href="index.html#Stopwatch">Stopwatch</a>) IsStopped() <a href="http://localhost:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>IsStopped returns true if the stopwatch has already been stopped.
+
+				
+				
+				
+			
+				
+				<h3 id="Stopwatch.Start">func (*Stopwatch) <a href="http://localhost:8080/src/framework/util/stopwatch.go?s=533:561#L16">Start</a>
+					<a class="permalink" href="index.html#Stopwatch.Start">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (me *<a href="index.html#Stopwatch">Stopwatch</a>) Start()</pre>
+				<p>Start sets the current time as the start time of the Stopwatch.
+
+				
+				
+				
+			
+				
+				<h3 id="Stopwatch.StartAt">func (*Stopwatch) <a href="http://localhost:8080/src/framework/util/stopwatch.go?s=682:731#L22">StartAt</a>
+					<a class="permalink" href="index.html#Stopwatch.StartAt">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (me *<a href="index.html#Stopwatch">Stopwatch</a>) StartAt(startTime <a href="http://localhost:8080/pkg/time/">time</a>.<a href="http://localhost:8080/pkg/time/#Time">Time</a>)</pre>
+				<p>StartAt sets the specified time as the start time of the Stopwatch.
+
+				
+				
+				
+			
+				
+				<h3 id="Stopwatch.StartTime">func (*Stopwatch) <a href="http://localhost:8080/src/framework/util/stopwatch.go?s=1585:1627#L51">StartTime</a>
+					<a class="permalink" href="index.html#Stopwatch.StartTime">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (me *<a href="index.html#Stopwatch">Stopwatch</a>) StartTime() <a href="http://localhost:8080/pkg/time/">time</a>.<a href="http://localhost:8080/pkg/time/#Time">Time</a></pre>
+				<p>Returns the start time of this stopwatch.
+Note that this value only makes sense, if the stopwatch has been started.
+
+				
+				
+				
+			
+				
+				<h3 id="Stopwatch.Stop">func (*Stopwatch) <a href="http://localhost:8080/src/framework/util/stopwatch.go?s=990:1017#L31">Stop</a>
+					<a class="permalink" href="index.html#Stopwatch.Stop">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (me *<a href="index.html#Stopwatch">Stopwatch</a>) Stop()</pre>
+				<p>Stop sets the current time as the stop time of the Stopwatch.
+<p>It is explicitly supported to stop a stopwatch multiple times and read the
+duration after every stoppage to get multiple time readings.
+
+				
+				
+				
+			
+				
+				<h3 id="Stopwatch.StopTime">func (*Stopwatch) <a href="http://localhost:8080/src/framework/util/stopwatch.go?s=1771:1812#L57">StopTime</a>
+					<a class="permalink" href="index.html#Stopwatch.StopTime">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (me *<a href="index.html#Stopwatch">Stopwatch</a>) StopTime() <a href="http://localhost:8080/pkg/time/">time</a>.<a href="http://localhost:8080/pkg/time/#Time">Time</a></pre>
+				<p>Returns the stop time of this stopwatch.
+Note that this value only makes sense, if the stopwatch has been stopped.
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.19.9.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:8080/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

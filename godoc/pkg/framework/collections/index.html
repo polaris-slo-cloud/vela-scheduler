@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>collections - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="../../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.19.9";</script>
+<script src="../../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="../../index.html">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="../../index.html">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:8080/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package collections
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "framework/collections"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#AppendToLinkedList">func AppendToLinkedList(dest *list.List, src *list.List)</a></dd>
+			
+				
+				<dd><a href="index.html#ConvertToLinkedList">func ConvertToLinkedList[T any](elements []T) *list.List</a></dd>
+			
+				
+				<dd><a href="index.html#ConvertToSlice">func ConvertToSlice[T any](linkedList *list.List) []T</a></dd>
+			
+				
+				<dd><a href="index.html#StringLessFn">func StringLessFn(itemA string, itemB string) bool</a></dd>
+			
+				
+				<dd><a href="index.html#Swap">func Swap[T any](slice []T, i int, j int)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#ConcurrentObjectStore">type ConcurrentObjectStore</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ConcurrentObjectStoreImpl">type ConcurrentObjectStoreImpl</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewConcurrentObjectStoreImpl">func NewConcurrentObjectStoreImpl[V any]() *ConcurrentObjectStoreImpl[V]</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ConcurrentObjectStoreImpl.ReadLock">func (cos *ConcurrentObjectStoreImpl[V]) ReadLock() ConcurrentObjectStoreReader[V]</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ConcurrentObjectStoreImpl.WriteLock">func (cos *ConcurrentObjectStoreImpl[V]) WriteLock() ConcurrentObjectStoreWriter[V]</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ConcurrentObjectStoreReader">type ConcurrentObjectStoreReader</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ConcurrentObjectStoreWriter">type ConcurrentObjectStoreWriter</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EntityLock">type EntityLock</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EntityLocker">type EntityLocker</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EntityLockerImpl">type EntityLockerImpl</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewEntityLockerImpl">func NewEntityLockerImpl() *EntityLockerImpl</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#EntityLockerImpl.Lock">func (locker *EntityLockerImpl) Lock(name string) EntityLock</a></dd>
+				
+			
+				
+				<dd><a href="index.html#HeapMap">type HeapMap</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#KeyFunc">type KeyFunc</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#LessFunc">type LessFunc</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#MinHeapMap">type MinHeapMap</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewMinHeapMap">func NewMinHeapMap[K ~int | ~string, V any](lessFn LessFunc[V], nilValue V) *MinHeapMap[K, V]</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MinHeapMap.AddOrReplace">func (mh *MinHeapMap[K, V]) AddOrReplace(key K, item V)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MinHeapMap.GetByKey">func (mh *MinHeapMap[K, V]) GetByKey(key K) (V, bool)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MinHeapMap.Len">func (mh *MinHeapMap[K, V]) Len() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MinHeapMap.Peek">func (mh *MinHeapMap[K, V]) Peek() (K, V, bool)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MinHeapMap.Pop">func (mh *MinHeapMap[K, V]) Pop() (K, V, bool)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MinHeapMap.RemoveByKey">func (mh *MinHeapMap[K, V]) RemoveByKey(key K) (V, bool)</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:8080/src/framework/collections/collections_util.go">collections_util.go</a>
+			
+				<a href="http://localhost:8080/src/framework/collections/concurrent_object_store.go">concurrent_object_store.go</a>
+			
+				<a href="http://localhost:8080/src/framework/collections/concurrent_object_store_impl.go">concurrent_object_store_impl.go</a>
+			
+				<a href="http://localhost:8080/src/framework/collections/entity_locker.go">entity_locker.go</a>
+			
+				<a href="http://localhost:8080/src/framework/collections/entity_locker_impl.go">entity_locker_impl.go</a>
+			
+				<a href="http://localhost:8080/src/framework/collections/heap_map.go">heap_map.go</a>
+			
+				<a href="http://localhost:8080/src/framework/collections/heap_map_data.go">heap_map_data.go</a>
+			
+				<a href="http://localhost:8080/src/framework/collections/min_heap_map.go">min_heap_map.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+			
+			
+			<h2 id="AppendToLinkedList">func <a href="http://localhost:8080/src/framework/collections/collections_util.go?s=852:908#L26">AppendToLinkedList</a>
+				<a class="permalink" href="index.html#AppendToLinkedList">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func AppendToLinkedList(dest *<a href="http://localhost:8080/pkg/container/list/">list</a>.<a href="http://localhost:8080/pkg/container/list/#List">List</a>, src *<a href="http://localhost:8080/pkg/container/list/">list</a>.<a href="http://localhost:8080/pkg/container/list/#List">List</a>)</pre>
+			<p>Appends the elements of src to the end of dest, without making any copies.
+
+			
+			
+
+		
+			
+			
+			<h2 id="ConvertToLinkedList">func <a href="http://localhost:8080/src/framework/collections/collections_util.go?s=401:457#L7">ConvertToLinkedList</a>
+				<a class="permalink" href="index.html#ConvertToLinkedList">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func ConvertToLinkedList[T <a href="http://localhost:8080/pkg/builtin/#any">any</a>](elements []T) *<a href="http://localhost:8080/pkg/container/list/">list</a>.<a href="http://localhost:8080/pkg/container/list/#List">List</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="ConvertToSlice">func <a href="http://localhost:8080/src/framework/collections/collections_util.go?s=566:619#L15">ConvertToSlice</a>
+				<a class="permalink" href="index.html#ConvertToSlice">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func ConvertToSlice[T <a href="http://localhost:8080/pkg/builtin/#any">any</a>](linkedList *<a href="http://localhost:8080/pkg/container/list/">list</a>.<a href="http://localhost:8080/pkg/container/list/#List">List</a>) []T</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="StringLessFn">func <a href="http://localhost:8080/src/framework/collections/collections_util.go?s=1181:1231#L40">StringLessFn</a>
+				<a class="permalink" href="index.html#StringLessFn">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func StringLessFn(itemA <a href="http://localhost:8080/pkg/builtin/#string">string</a>, itemB <a href="http://localhost:8080/pkg/builtin/#string">string</a>) <a href="http://localhost:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>LessFunc implementation for strings.
+
+			
+			
+
+		
+			
+			
+			<h2 id="Swap">func <a href="http://localhost:8080/src/framework/collections/collections_util.go?s=1038:1079#L33">Swap</a>
+				<a class="permalink" href="index.html#Swap">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func Swap[T <a href="http://localhost:8080/pkg/builtin/#any">any</a>](slice []T, i <a href="http://localhost:8080/pkg/builtin/#int">int</a>, j <a href="http://localhost:8080/pkg/builtin/#int">int</a>)</pre>
+			<p>Swaps the elements in the positions i and j.
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="ConcurrentObjectStore">type <a href="http://localhost:8080/src/framework/collections/concurrent_object_store.go?s=684:953#L4">ConcurrentObjectStore</a>
+				<a class="permalink" href="index.html#ConcurrentObjectStore">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Provides a thread-safe store for objects that can be accessed by key or index.
+<p>This store is designed for batch access. Thus, its methods obtain a suitable lock and then
+supply a reader or a writer object, which can be used to make multiple reads or writes
+while keeping the lock in-between.
+<p>Note that access through indices is only possible to allow random access
+and round-robin access to the stored objects. There is no particular guaranteed
+order to the objects retrieved by index.
+The only index-related property that is guaranteed is that the order stays the same
+as long as no object is added to or removed from the store.
+
+			<pre>type ConcurrentObjectStore[V <a href="http://localhost:8080/pkg/builtin/#any">any</a>] interface {
+
+    <span class="comment">// Obtains a read lock on the store and returns a reader object.</span>
+    ReadLock() <a href="index.html#ConcurrentObjectStoreReader">ConcurrentObjectStoreReader</a>[V]
+
+    <span class="comment">// Obtains a write lock on the store and returns a writer object.</span>
+    WriteLock() <a href="index.html#ConcurrentObjectStoreWriter">ConcurrentObjectStoreWriter</a>[V]
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ConcurrentObjectStoreImpl">type <a href="http://localhost:8080/src/framework/collections/concurrent_object_store_impl.go?s=577:986#L15">ConcurrentObjectStoreImpl</a>
+				<a class="permalink" href="index.html#ConcurrentObjectStoreImpl">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Implementation of ConcurrentObjectStore.
+
+			<pre>type ConcurrentObjectStoreImpl[V <a href="http://localhost:8080/pkg/builtin/#any">any</a>] struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewConcurrentObjectStoreImpl">func <a href="http://localhost:8080/src/framework/collections/concurrent_object_store_impl.go?s=1018:1090#L34">NewConcurrentObjectStoreImpl</a>
+					<a class="permalink" href="index.html#NewConcurrentObjectStoreImpl">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewConcurrentObjectStoreImpl[V <a href="http://localhost:8080/pkg/builtin/#any">any</a>]() *<a href="index.html#ConcurrentObjectStoreImpl">ConcurrentObjectStoreImpl</a>[V]</pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="ConcurrentObjectStoreImpl.ReadLock">func (*ConcurrentObjectStoreImpl[V]) <a href="http://localhost:8080/src/framework/collections/concurrent_object_store_impl.go?s=1509:1591#L50">ReadLock</a>
+					<a class="permalink" href="index.html#ConcurrentObjectStoreImpl.ReadLock">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (cos *<a href="index.html#ConcurrentObjectStoreImpl">ConcurrentObjectStoreImpl</a>[V]) ReadLock() <a href="index.html#ConcurrentObjectStoreReader">ConcurrentObjectStoreReader</a>[V]</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ConcurrentObjectStoreImpl.WriteLock">func (*ConcurrentObjectStoreImpl[V]) <a href="http://localhost:8080/src/framework/collections/concurrent_object_store_impl.go?s=1635:1718#L55">WriteLock</a>
+					<a class="permalink" href="index.html#ConcurrentObjectStoreImpl.WriteLock">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (cos *<a href="index.html#ConcurrentObjectStoreImpl">ConcurrentObjectStoreImpl</a>[V]) WriteLock() <a href="index.html#ConcurrentObjectStoreWriter">ConcurrentObjectStoreWriter</a>[V]</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ConcurrentObjectStoreReader">type <a href="http://localhost:8080/src/framework/collections/concurrent_object_store.go?s=1027:1486#L14">ConcurrentObjectStoreReader</a>
+				<a class="permalink" href="index.html#ConcurrentObjectStoreReader">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Provides batch access to a ConcurrentObjectStore locked for reading.
+
+			<pre>type ConcurrentObjectStoreReader[V <a href="http://localhost:8080/pkg/builtin/#any">any</a>] interface {
+    <span class="comment">// Gets the object with the specified key.</span>
+    GetByKey(key <a href="http://localhost:8080/pkg/builtin/#string">string</a>) (V, <a href="http://localhost:8080/pkg/builtin/#bool">bool</a>)
+
+    <span class="comment">// Gets the key and the object stored at the specified index.</span>
+    <span class="comment">//</span>
+    <span class="comment">// If the index is out of bounds, the last return value is false.</span>
+    GetByIndex(index <a href="http://localhost:8080/pkg/builtin/#int">int</a>) (<a href="http://localhost:8080/pkg/builtin/#string">string</a>, V, <a href="http://localhost:8080/pkg/builtin/#bool">bool</a>)
+
+    <span class="comment">// Returns the number of objects stored.</span>
+    Len() <a href="http://localhost:8080/pkg/builtin/#int">int</a>
+
+    <span class="comment">// Releases the lock. The store must not be accessed anymore after calling this method.</span>
+    Unlock()
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ConcurrentObjectStoreWriter">type <a href="http://localhost:8080/src/framework/collections/concurrent_object_store.go?s=1560:1886#L31">ConcurrentObjectStoreWriter</a>
+				<a class="permalink" href="index.html#ConcurrentObjectStoreWriter">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Provides batch access to a ConcurrentObjectStore locked for writing.
+
+			<pre>type ConcurrentObjectStoreWriter[V <a href="http://localhost:8080/pkg/builtin/#any">any</a>] interface {
+    <a href="index.html#ConcurrentObjectStoreReader">ConcurrentObjectStoreReader</a>[V]
+
+    <span class="comment">// Stores or updates the object with the specified key.</span>
+    Set(key <a href="http://localhost:8080/pkg/builtin/#string">string</a>, value V)
+
+    <span class="comment">// Removes the object with the specified key.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Returns the object that was stored or false, if the key did not exist.</span>
+    Remove(key <a href="http://localhost:8080/pkg/builtin/#string">string</a>) (V, <a href="http://localhost:8080/pkg/builtin/#bool">bool</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EntityLock">type <a href="http://localhost:8080/src/framework/collections/entity_locker.go?s=662:798#L5">EntityLock</a>
+				<a class="permalink" href="index.html#EntityLock">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Represents ownership of a lock on an entity obtained from an EntityLocker.
+
+			<pre>type EntityLock interface {
+    <span class="comment">// The name of the entity that is covered by this lock.</span>
+    Name() <a href="http://localhost:8080/pkg/builtin/#string">string</a>
+
+    <span class="comment">// Unlocks the entity.</span>
+    Unlock()
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EntityLocker">type <a href="http://localhost:8080/src/framework/collections/entity_locker.go?s=366:582#L1">EntityLocker</a>
+				<a class="permalink" href="index.html#EntityLocker">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Allows obtaining and waiting for locks on entities that do not support locking themselves.
+<p>The entities are identified using their names and the actual objects are not needed for this locker.
+This is useful, e.g., when a node in a cluster needs to be locked - the node can be locked by its name
+before fetching the actual object.
+
+			<pre>type EntityLocker interface {
+    <span class="comment">// Obtains a lock for the entity with the specified name.</span>
+    <span class="comment">// If the entity is already locked, the goroutine will block until the lock becomes available.</span>
+    Lock(name <a href="http://localhost:8080/pkg/builtin/#string">string</a>) <a href="index.html#EntityLock">EntityLock</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EntityLockerImpl">type <a href="http://localhost:8080/src/framework/collections/entity_locker_impl.go?s=176:299#L1">EntityLockerImpl</a>
+				<a class="permalink" href="index.html#EntityLockerImpl">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Default implementation of the EntityLocker.
+
+			<pre>type EntityLockerImpl struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewEntityLockerImpl">func <a href="http://localhost:8080/src/framework/collections/entity_locker_impl.go?s=1277:1321#L34">NewEntityLockerImpl</a>
+					<a class="permalink" href="index.html#NewEntityLockerImpl">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewEntityLockerImpl() *<a href="index.html#EntityLockerImpl">EntityLockerImpl</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="EntityLockerImpl.Lock">func (*EntityLockerImpl) <a href="http://localhost:8080/src/framework/collections/entity_locker_impl.go?s=1800:1860#L55">Lock</a>
+					<a class="permalink" href="index.html#EntityLockerImpl.Lock">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (locker *<a href="index.html#EntityLockerImpl">EntityLockerImpl</a>) Lock(name <a href="http://localhost:8080/pkg/builtin/#string">string</a>) <a href="index.html#EntityLock">EntityLock</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="HeapMap">type <a href="http://localhost:8080/src/framework/collections/heap_map.go?s=267:1080#L1">HeapMap</a>
+				<a class="permalink" href="index.html#HeapMap">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Defines the interface for a Heap data structure that establishes the
+heap property based on the item values, but allows accessing items also through keys,
+which are not related to the heap property.
+This allows, e.g., updating items.
+
+			<pre>type HeapMap[K ~<a href="http://localhost:8080/pkg/builtin/#int">int</a> | ~<a href="http://localhost:8080/pkg/builtin/#string">string</a>, V <a href="http://localhost:8080/pkg/builtin/#any">any</a>] interface {
+
+    <span class="comment">// Adds the specified item to the heap or updates an existing item, if the key is already present.</span>
+    AddOrReplace(key K, item V)
+
+    <span class="comment">// Returns the top-most item from the heap and removes it.</span>
+    <span class="comment">// If there is no item in the heap, the second return value is false.</span>
+    Pop() (K, V, <a href="http://localhost:8080/pkg/builtin/#bool">bool</a>)
+
+    <span class="comment">// Returns the top-most item from the heap and removes it.</span>
+    <span class="comment">// If there is no item in the heap, the second return value is false.</span>
+    Peek() (K, V, <a href="http://localhost:8080/pkg/builtin/#bool">bool</a>)
+
+    <span class="comment">// Returns the item with the specified key.</span>
+    GetByKey(key K) (V, <a href="http://localhost:8080/pkg/builtin/#bool">bool</a>)
+
+    <span class="comment">// Removes the item with the specified key from the heap and returns it.</span>
+    <span class="comment">// If there is no item in the heap with that key, the second return value is false.</span>
+    RemoveByKey(key K) (V, <a href="http://localhost:8080/pkg/builtin/#bool">bool</a>)
+
+    <span class="comment">// Gets the number of items currently in the heap.</span>
+    Len() <a href="http://localhost:8080/pkg/builtin/#int">int</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="KeyFunc">type <a href="http://localhost:8080/src/framework/collections/collections_util.go?s=337:399#L5">KeyFunc</a>
+				<a class="permalink" href="index.html#KeyFunc">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Returns the key for the specified value (can be used for maps or similar data structures).
+
+			<pre>type KeyFunc[K ~<a href="http://localhost:8080/pkg/builtin/#int">int</a> | ~<a href="http://localhost:8080/pkg/builtin/#string">string</a>, V <a href="http://localhost:8080/pkg/builtin/#any">any</a>] func(value V) (K, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="LessFunc">type <a href="http://localhost:8080/src/framework/collections/collections_util.go?s=193:241#L2">LessFunc</a>
+				<a class="permalink" href="index.html#LessFunc">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Defines a comparison function that returns true iff itemA is less than itemB, otherwise false.
+
+			<pre>type LessFunc[T <a href="http://localhost:8080/pkg/builtin/#any">any</a>] func(itemA T, itemB T) <a href="http://localhost:8080/pkg/builtin/#bool">bool</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="MinHeapMap">type <a href="http://localhost:8080/src/framework/collections/min_heap_map.go?s=193:297#L2">MinHeapMap</a>
+				<a class="permalink" href="index.html#MinHeapMap">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Implements a HeapMap with the &quot;smallest&quot; item being on top of the heap.
+
+			<pre>type MinHeapMap[K ~<a href="http://localhost:8080/pkg/builtin/#int">int</a> | ~<a href="http://localhost:8080/pkg/builtin/#string">string</a>, V <a href="http://localhost:8080/pkg/builtin/#any">any</a>] struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewMinHeapMap">func <a href="http://localhost:8080/src/framework/collections/min_heap_map.go?s=584:677#L12">NewMinHeapMap</a>
+					<a class="permalink" href="index.html#NewMinHeapMap">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewMinHeapMap[K ~<a href="http://localhost:8080/pkg/builtin/#int">int</a> | ~<a href="http://localhost:8080/pkg/builtin/#string">string</a>, V <a href="http://localhost:8080/pkg/builtin/#any">any</a>](lessFn <a href="index.html#LessFunc">LessFunc</a>[V], nilValue V) *<a href="index.html#MinHeapMap">MinHeapMap</a>[K, V]</pre>
+				<p>Creates a new MinHeap with the specified function LessFunc for comparing items to establish the min heap property.
+<p>The nilValue is required, because even though `any` is defined as interface{}, Go allows also non-pointer types
+types to be used for such generic parameters.
+
+				
+				
+			
+
+			
+				
+				<h3 id="MinHeapMap.AddOrReplace">func (*MinHeapMap[K, V]) <a href="http://localhost:8080/src/framework/collections/min_heap_map.go?s=822:877#L22">AddOrReplace</a>
+					<a class="permalink" href="index.html#MinHeapMap.AddOrReplace">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mh *<a href="index.html#MinHeapMap">MinHeapMap</a>[K, V]) AddOrReplace(key K, item V)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="MinHeapMap.GetByKey">func (*MinHeapMap[K, V]) <a href="http://localhost:8080/src/framework/collections/min_heap_map.go?s=1451:1504#L51">GetByKey</a>
+					<a class="permalink" href="index.html#MinHeapMap.GetByKey">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mh *<a href="index.html#MinHeapMap">MinHeapMap</a>[K, V]) GetByKey(key K) (V, <a href="http://localhost:8080/pkg/builtin/#bool">bool</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="MinHeapMap.Len">func (*MinHeapMap[K, V]) <a href="http://localhost:8080/src/framework/collections/min_heap_map.go?s=1022:1059#L31">Len</a>
+					<a class="permalink" href="index.html#MinHeapMap.Len">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mh *<a href="index.html#MinHeapMap">MinHeapMap</a>[K, V]) Len() <a href="http://localhost:8080/pkg/builtin/#int">int</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="MinHeapMap.Peek">func (*MinHeapMap[K, V]) <a href="http://localhost:8080/src/framework/collections/min_heap_map.go?s=1087:1134#L35">Peek</a>
+					<a class="permalink" href="index.html#MinHeapMap.Peek">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mh *<a href="index.html#MinHeapMap">MinHeapMap</a>[K, V]) Peek() (K, V, <a href="http://localhost:8080/pkg/builtin/#bool">bool</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="MinHeapMap.Pop">func (*MinHeapMap[K, V]) <a href="http://localhost:8080/src/framework/collections/min_heap_map.go?s=1254:1300#L43">Pop</a>
+					<a class="permalink" href="index.html#MinHeapMap.Pop">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mh *<a href="index.html#MinHeapMap">MinHeapMap</a>[K, V]) Pop() (K, V, <a href="http://localhost:8080/pkg/builtin/#bool">bool</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="MinHeapMap.RemoveByKey">func (*MinHeapMap[K, V]) <a href="http://localhost:8080/src/framework/collections/min_heap_map.go?s=1610:1666#L59">RemoveByKey</a>
+					<a class="permalink" href="index.html#MinHeapMap.RemoveByKey">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mh *<a href="index.html#MinHeapMap">MinHeapMap</a>[K, V]) RemoveByKey(key K) (V, <a href="http://localhost:8080/pkg/builtin/#bool">bool</a>)</pre>
+				
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.19.9.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:8080/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

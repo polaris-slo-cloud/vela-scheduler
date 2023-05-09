@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>clusteragent - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="../../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.19.9";</script>
+<script src="../../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="../../index.html">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="../../index.html">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:8080/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package clusteragent
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "framework/clusteragent"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#DefaultPolarisClusterAgent">type DefaultPolarisClusterAgent</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewDefaultPolarisClusterAgent">func NewDefaultPolarisClusterAgent(clusterAgentConfig *config.ClusterAgentConfig, ginEngine *gin.Engine, clusterClient client.LocalClusterClient, nodesCache client.NodesCache, pluginRegistry *pipeline.PluginsRegistry[pipeline.ClusterAgentServices], logger *logr.Logger) *DefaultPolarisClusterAgent</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DefaultPolarisClusterAgent.ClusterClient">func (ca *DefaultPolarisClusterAgent) ClusterClient() client.LocalClusterClient</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DefaultPolarisClusterAgent.Config">func (ca *DefaultPolarisClusterAgent) Config() *config.ClusterAgentConfig</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DefaultPolarisClusterAgent.Logger">func (ca *DefaultPolarisClusterAgent) Logger() *logr.Logger</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DefaultPolarisClusterAgent.NodesCache">func (ca *DefaultPolarisClusterAgent) NodesCache() client.NodesCache</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DefaultPolarisClusterAgent.Start">func (ca *DefaultPolarisClusterAgent) Start(ctx context.Context) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PolarisClusterAgent">type PolarisClusterAgent</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PolarisClusterAgentError">type PolarisClusterAgentError</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RemoteClusterAgentClient">type RemoteClusterAgentClient</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewRemoteClusterAgentClient">func NewRemoteClusterAgentClient(clusterName string, clusterConfig *config.RemoteClusterConfig, logger *logr.Logger) *RemoteClusterAgentClient</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#RemoteClusterAgentClient.ClusterName">func (cbc *RemoteClusterAgentClient) ClusterName() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#RemoteClusterAgentClient.CommitSchedulingDecision">func (cbc *RemoteClusterAgentClient) CommitSchedulingDecision(ctx context.Context, schedulingDecision *client.ClusterSchedulingDecision) (*client.CommitSchedulingDecisionSuccess, error)</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:8080/src/framework/clusteragent/default_polaris_cluster_agent.go">default_polaris_cluster_agent.go</a>
+			
+				<a href="http://localhost:8080/src/framework/clusteragent/dto.go">dto.go</a>
+			
+				<a href="http://localhost:8080/src/framework/clusteragent/polaris_cluster_agent.go">polaris_cluster_agent.go</a>
+			
+				<a href="http://localhost:8080/src/framework/clusteragent/remote_cluster_agent_client.go">remote_cluster_agent_client.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// The prefix of all agent endpoints.</span>
+    <span class="comment">// Thus, the agent endpoints are reachable under &#34;/agent/*&#34;</span>
+    <span id="ClusterAgentEndpointsPrefix">ClusterAgentEndpointsPrefix</span> = &#34;agent&#34;
+
+    <span class="comment">// The endpoint name for committing a scheduling decision.</span>
+    <span id="CommitSchedulingDecisionEndpoint">CommitSchedulingDecisionEndpoint</span> = &#34;scheduling-decision&#34;
+)</pre>
+			
+		
+		
+		
+		
+			
+			
+			<h2 id="DefaultPolarisClusterAgent">type <a href="http://localhost:8080/src/framework/clusteragent/default_polaris_cluster_agent.go?s=1325:2298#L30">DefaultPolarisClusterAgent</a>
+				<a class="permalink" href="index.html#DefaultPolarisClusterAgent">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Default, orchestrator-independent implementation of the PolarisClusterAgent.
+<p>This service will expose a REST API at /agent/*
+All orchestrator-specific cluster interactions are handled by the clusterClient.
+
+			<pre>type DefaultPolarisClusterAgent struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewDefaultPolarisClusterAgent">func <a href="http://localhost:8080/src/framework/clusteragent/default_polaris_cluster_agent.go?s=2300:2606#L61">NewDefaultPolarisClusterAgent</a>
+					<a class="permalink" href="index.html#NewDefaultPolarisClusterAgent">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewDefaultPolarisClusterAgent(
+    clusterAgentConfig *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/config/">config</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/config/#ClusterAgentConfig">ClusterAgentConfig</a>,
+    ginEngine *<a href="http://localhost:8080/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="http://localhost:8080/pkg/github.com/gin-gonic/gin/#Engine">Engine</a>,
+    clusterClient <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/">client</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/#LocalClusterClient">LocalClusterClient</a>,
+    nodesCache <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/">client</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/#NodesCache">NodesCache</a>,
+    pluginRegistry *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#PluginsRegistry">PluginsRegistry</a>[<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#ClusterAgentServices">ClusterAgentServices</a>],
+    logger *<a href="http://localhost:8080/pkg/github.com/go-logr/logr/">logr</a>.<a href="http://localhost:8080/pkg/github.com/go-logr/logr/#Logger">Logger</a>,
+) *<a href="index.html#DefaultPolarisClusterAgent">DefaultPolarisClusterAgent</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="DefaultPolarisClusterAgent.ClusterClient">func (*DefaultPolarisClusterAgent) <a href="http://localhost:8080/src/framework/clusteragent/default_polaris_cluster_agent.go?s=3071:3150#L83">ClusterClient</a>
+					<a class="permalink" href="index.html#DefaultPolarisClusterAgent.ClusterClient">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (ca *<a href="index.html#DefaultPolarisClusterAgent">DefaultPolarisClusterAgent</a>) ClusterClient() <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/">client</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/#LocalClusterClient">LocalClusterClient</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DefaultPolarisClusterAgent.Config">func (*DefaultPolarisClusterAgent) <a href="http://localhost:8080/src/framework/clusteragent/default_polaris_cluster_agent.go?s=3181:3254#L87">Config</a>
+					<a class="permalink" href="index.html#DefaultPolarisClusterAgent.Config">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (ca *<a href="index.html#DefaultPolarisClusterAgent">DefaultPolarisClusterAgent</a>) Config() *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/config/">config</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/config/#ClusterAgentConfig">ClusterAgentConfig</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DefaultPolarisClusterAgent.Logger">func (*DefaultPolarisClusterAgent) <a href="http://localhost:8080/src/framework/clusteragent/default_polaris_cluster_agent.go?s=3374:3433#L95">Logger</a>
+					<a class="permalink" href="index.html#DefaultPolarisClusterAgent.Logger">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (ca *<a href="index.html#DefaultPolarisClusterAgent">DefaultPolarisClusterAgent</a>) Logger() *<a href="http://localhost:8080/pkg/github.com/go-logr/logr/">logr</a>.<a href="http://localhost:8080/pkg/github.com/go-logr/logr/#Logger">Logger</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DefaultPolarisClusterAgent.NodesCache">func (*DefaultPolarisClusterAgent) <a href="http://localhost:8080/src/framework/clusteragent/default_polaris_cluster_agent.go?s=3278:3346#L91">NodesCache</a>
+					<a class="permalink" href="index.html#DefaultPolarisClusterAgent.NodesCache">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (ca *<a href="index.html#DefaultPolarisClusterAgent">DefaultPolarisClusterAgent</a>) NodesCache() <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/">client</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/#NodesCache">NodesCache</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DefaultPolarisClusterAgent.Start">func (*DefaultPolarisClusterAgent) <a href="http://localhost:8080/src/framework/clusteragent/default_polaris_cluster_agent.go?s=3457:3527#L99">Start</a>
+					<a class="permalink" href="index.html#DefaultPolarisClusterAgent.Start">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (ca *<a href="index.html#DefaultPolarisClusterAgent">DefaultPolarisClusterAgent</a>) Start(ctx <a href="http://localhost:8080/pkg/context/">context</a>.<a href="http://localhost:8080/pkg/context/#Context">Context</a>) <a href="http://localhost:8080/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PolarisClusterAgent">type <a href="http://localhost:8080/src/framework/clusteragent/polaris_cluster_agent.go?s=231:471#L1">PolarisClusterAgent</a>
+				<a class="permalink" href="index.html#PolarisClusterAgent">&#xb6;</a>
+				
+				
+			</h2>
+			<p>The cluster agent service is responsible for providing a remote polaris-scheduler access to the local cluster.
+
+			<pre>type PolarisClusterAgent interface {
+    <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#ClusterAgentServices">ClusterAgentServices</a>
+
+    <span class="comment">// Starts the cluster agent.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The context can be used to stop the agent.</span>
+    <span class="comment">// Returns nil if the agent has started successfully.</span>
+    Start(ctx <a href="http://localhost:8080/pkg/context/">context</a>.<a href="http://localhost:8080/pkg/context/#Context">Context</a>) <a href="http://localhost:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PolarisClusterAgentError">type <a href="http://localhost:8080/src/framework/clusteragent/dto.go?s=166:265#L1">PolarisClusterAgentError</a>
+				<a class="permalink" href="index.html#PolarisClusterAgentError">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Encapsulates an error response from the PolarisClusterAgent
+
+			<pre>type PolarisClusterAgentError struct {
+<span id="PolarisClusterAgentError.Error"></span>    Error *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/">client</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/#PolarisErrorDto">PolarisErrorDto</a> `json:&#34;error&#34; yaml:&#34;error&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="RemoteClusterAgentClient">type <a href="http://localhost:8080/src/framework/clusteragent/remote_cluster_agent_client.go?s=422:620#L11">RemoteClusterAgentClient</a>
+				<a class="permalink" href="index.html#RemoteClusterAgentClient">&#xb6;</a>
+				
+				
+			</h2>
+			<p>ClusterClient implementation that connects via REST to a remote PolarisClusterAgent.
+
+			<pre>type RemoteClusterAgentClient struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewRemoteClusterAgentClient">func <a href="http://localhost:8080/src/framework/clusteragent/remote_cluster_agent_client.go?s=622:764#L20">NewRemoteClusterAgentClient</a>
+					<a class="permalink" href="index.html#NewRemoteClusterAgentClient">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewRemoteClusterAgentClient(clusterName <a href="http://localhost:8080/pkg/builtin/#string">string</a>, clusterConfig *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/config/">config</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/config/#RemoteClusterConfig">RemoteClusterConfig</a>, logger *<a href="http://localhost:8080/pkg/github.com/go-logr/logr/">logr</a>.<a href="http://localhost:8080/pkg/github.com/go-logr/logr/#Logger">Logger</a>) *<a href="index.html#RemoteClusterAgentClient">RemoteClusterAgentClient</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="RemoteClusterAgentClient.ClusterName">func (*RemoteClusterAgentClient) <a href="http://localhost:8080/src/framework/clusteragent/remote_cluster_agent_client.go?s=1130:1187#L38">ClusterName</a>
+					<a class="permalink" href="index.html#RemoteClusterAgentClient.ClusterName">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (cbc *<a href="index.html#RemoteClusterAgentClient">RemoteClusterAgentClient</a>) ClusterName() <a href="http://localhost:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="RemoteClusterAgentClient.CommitSchedulingDecision">func (*RemoteClusterAgentClient) <a href="http://localhost:8080/src/framework/clusteragent/remote_cluster_agent_client.go?s=1217:1402#L42">CommitSchedulingDecision</a>
+					<a class="permalink" href="index.html#RemoteClusterAgentClient.CommitSchedulingDecision">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (cbc *<a href="index.html#RemoteClusterAgentClient">RemoteClusterAgentClient</a>) CommitSchedulingDecision(ctx <a href="http://localhost:8080/pkg/context/">context</a>.<a href="http://localhost:8080/pkg/context/#Context">Context</a>, schedulingDecision *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/">client</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/#ClusterSchedulingDecision">ClusterSchedulingDecision</a>) (*<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/">client</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/#CommitSchedulingDecisionSuccess">CommitSchedulingDecisionSuccess</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.19.9.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:8080/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

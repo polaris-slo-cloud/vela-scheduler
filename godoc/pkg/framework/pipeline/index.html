@@ -1,0 +1,2015 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>pipeline - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="../../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.19.9";</script>
+<script src="../../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="../../index.html">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="../../index.html">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:8080/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package pipeline
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "framework/pipeline"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#IsSuccessStatus">func IsSuccessStatus(status Status) bool</a></dd>
+			
+				
+				<dd><a href="index.html#ReadTypedStateData">func ReadTypedStateData[T StateData](schedCtx SchedulingContext, key string) (T, bool, error)</a></dd>
+			
+				
+				<dd><a href="index.html#StatusCodeAsString">func StatusCodeAsString(status Status) string</a></dd>
+			
+			
+				
+				<dd><a href="index.html#BindingPipeline">type BindingPipeline</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#BindingPipelinePlugins">type BindingPipelinePlugins</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#BindingPluginsFactory">type BindingPluginsFactory</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#CheckConflictsPlugin">type CheckConflictsPlugin</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ClusterAgentPluginFactoryFunc">type ClusterAgentPluginFactoryFunc</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ClusterAgentServices">type ClusterAgentServices</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#DecisionPipeline">type DecisionPipeline</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#DecisionPipelinePlugins">type DecisionPipelinePlugins</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#FilterPlugin">type FilterPlugin</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#IncomingPod">type IncomingPod</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#NodeInfo">type NodeInfo</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewNodeInfo">func NewNodeInfo(clusterName string, node *client.ClusterNode) *NodeInfo</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#NodeScore">type NodeScore</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Plugin">type Plugin</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PluginFactoryFunc">type PluginFactoryFunc</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PluginsRegistry">type PluginsRegistry</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewPluginsRegistry">func NewPluginsRegistry[O PolarisPluginOwnerServices](factories map[string]PluginFactoryFunc[O]) *PluginsRegistry[O]</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PluginsRegistry.GetPluginFactory">func (pr *PluginsRegistry[O]) GetPluginFactory(pluginName string) PluginFactoryFunc[O]</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PodInfo">type PodInfo</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PodSource">type PodSource</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PolarisNodeSampler">type PolarisNodeSampler</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PolarisPluginOwnerServices">type PolarisPluginOwnerServices</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PolarisScheduler">type PolarisScheduler</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PreFilterPlugin">type PreFilterPlugin</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PreScorePlugin">type PreScorePlugin</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#QueuedPodInfo">type QueuedPodInfo</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewQueuedPodInfo">func NewQueuedPodInfo(pod *core.Pod, ctx SchedulingContext, schedulingRetryCount int) *QueuedPodInfo</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#QueuedPodInfo.GetKey">func (q *QueuedPodInfo) GetKey() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ReservePlugin">type ReservePlugin</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#SampleNodesPlugin">type SampleNodesPlugin</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#SampledPodInfo">type SampledPodInfo</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#SamplingPipeline">type SamplingPipeline</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#SamplingPipelinePlugins">type SamplingPipelinePlugins</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#SamplingPluginsFactory">type SamplingPluginsFactory</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#SamplingScore">type SamplingScore</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#SamplingStrategyPlugin">type SamplingStrategyPlugin</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#SchedulingContext">type SchedulingContext</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewSchedulingContext">func NewSchedulingContext(ctx context.Context) SchedulingContext</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#SchedulingDecision">type SchedulingDecision</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#SchedulingPluginFactoryFunc">type SchedulingPluginFactoryFunc</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#SchedulingPluginsFactory">type SchedulingPluginsFactory</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ScoreExtensions">type ScoreExtensions</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ScorePlugin">type ScorePlugin</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ScorePluginWithExtensions">type ScorePluginWithExtensions</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#SortPlugin">type SortPlugin</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#StateData">type StateData</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Status">type Status</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewInternalErrorStatus">func NewInternalErrorStatus(err error) Status</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewStatus">func NewStatus(code StatusCode, reasons ...string) Status</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewSuccessStatus">func NewSuccessStatus() Status</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#StatusCode">type StatusCode</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:8080/src/framework/pipeline/cluster_agent_services.go">cluster_agent_services.go</a>
+			
+				<a href="http://localhost:8080/src/framework/pipeline/node.go">node.go</a>
+			
+				<a href="http://localhost:8080/src/framework/pipeline/pipelines.go">pipelines.go</a>
+			
+				<a href="http://localhost:8080/src/framework/pipeline/plugin_factories.go">plugin_factories.go</a>
+			
+				<a href="http://localhost:8080/src/framework/pipeline/pod.go">pod.go</a>
+			
+				<a href="http://localhost:8080/src/framework/pipeline/polaris_node_sampler.go">polaris_node_sampler.go</a>
+			
+				<a href="http://localhost:8080/src/framework/pipeline/polaris_scheduler.go">polaris_scheduler.go</a>
+			
+				<a href="http://localhost:8080/src/framework/pipeline/scheduling_context.go">scheduling_context.go</a>
+			
+				<a href="http://localhost:8080/src/framework/pipeline/scheduling_context_impl.go">scheduling_context_impl.go</a>
+			
+				<a href="http://localhost:8080/src/framework/pipeline/status.go">status.go</a>
+			
+				<a href="http://localhost:8080/src/framework/pipeline/status_impl.go">status_impl.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// The minimum node score that may be returned by a ScorePlugin (after NormalizeScore).</span>
+    <span id="MinNodeScore">MinNodeScore</span> <a href="http://localhost:8080/pkg/builtin/#int64">int64</a> = 0
+
+    <span class="comment">// The maximum node score that may be returned by a ScorePlugin (after NormalizeScore).</span>
+    <span id="MaxNodeScore">MaxNodeScore</span> <a href="http://localhost:8080/pkg/builtin/#int64">int64</a> = 100
+
+    <span id="SortStage">SortStage</span>        = &#34;Sort&#34;
+    <span id="SampleNodesStage">SampleNodesStage</span> = &#34;SampleNodes&#34;
+    <span id="PreFilterStage">PreFilterStage</span>   = &#34;PreFilter&#34;
+    <span id="FilterStage">FilterStage</span>      = &#34;Filter&#34;
+    <span id="PreScoreStage">PreScoreStage</span>    = &#34;PreScore&#34;
+    <span id="ScoreStage">ScoreStage</span>       = &#34;Score&#34;
+    <span id="ReserveStage">ReserveStage</span>     = &#34;Reserve&#34;
+
+    <span id="SamplingStrategyStage">SamplingStrategyStage</span> = &#34;SamplingStrategy&#34; <span class="comment">// Sampling pipeline only</span>
+
+    <span class="comment">// Binding Pipeline stages</span>
+    <span id="CheckConflictsStage">CheckConflictsStage</span> = &#34;CheckConflicts&#34;
+)</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="IsSuccessStatus">func <a href="http://localhost:8080/src/framework/pipeline/status.go?s=1972:2012#L52">IsSuccessStatus</a>
+				<a class="permalink" href="index.html#IsSuccessStatus">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func IsSuccessStatus(status <a href="index.html#Status">Status</a>) <a href="http://localhost:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>Returns true if the status represents a Success, otherwise false.
+A nil status also represents a Success.
+
+			
+			
+
+		
+			
+			
+			<h2 id="ReadTypedStateData">func <a href="http://localhost:8080/src/framework/pipeline/scheduling_context_impl.go?s=801:894#L24">ReadTypedStateData</a>
+				<a class="permalink" href="index.html#ReadTypedStateData">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func ReadTypedStateData[T <a href="index.html#StateData">StateData</a>](schedCtx <a href="index.html#SchedulingContext">SchedulingContext</a>, key <a href="http://localhost:8080/pkg/builtin/#string">string</a>) (T, <a href="http://localhost:8080/pkg/builtin/#bool">bool</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>Convenience function to read StateData from a SchedulingContext and casting it to a specific type.
+Returns
+<ul>
+<li>(stateData as T, true, nil) if the key was found
+<li>(zeroValue(T), false, nil) if the key was not found
+<li>(zeroValue(T), true, err) if the key was found, but the value could not be converted to T
+</ul>
+
+			
+			
+
+		
+			
+			
+			<h2 id="StatusCodeAsString">func <a href="http://localhost:8080/src/framework/pipeline/status.go?s=2213:2258#L58">StatusCodeAsString</a>
+				<a class="permalink" href="index.html#StatusCodeAsString">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func StatusCodeAsString(status <a href="index.html#Status">Status</a>) <a href="http://localhost:8080/pkg/builtin/#string">string</a></pre>
+			<p>Returns the string version of the specified Status&apos; statusCode.
+This also works if status is nil (which also represents a Success status).
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="BindingPipeline">type <a href="http://localhost:8080/src/framework/pipeline/pipelines.go?s=12418:12855#L251">BindingPipeline</a>
+				<a class="permalink" href="index.html#BindingPipeline">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Represents an instance of the Polaris ClusterAgent Binding Pipeline, encompassing all its stages.
+<p>A Binding Pipeline executes on a single goroutine and there is only
+a single pod traversing the pipeline at a time.
+
+			<pre>type BindingPipeline interface {
+
+    <span class="comment">// Runs the binding pipeline stages and, if all stages succeed, commits the scheduling decision to the cluster.</span>
+    <span class="comment">// Depending on the outcome of the pipeline, the queuedPod is either committed or removed from the queue.</span>
+    CommitSchedulingDecision(ctx <a href="index.html#SchedulingContext">SchedulingContext</a>, schedDecision *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/">client</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/#ClusterSchedulingDecision">ClusterSchedulingDecision</a>, queuedPod <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/">client</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/#PodQueuedOnNode">PodQueuedOnNode</a>) (*<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/">client</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/#CommitSchedulingDecisionSuccess">CommitSchedulingDecisionSuccess</a>, <a href="index.html#Status">Status</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="BindingPipelinePlugins">type <a href="http://localhost:8080/src/framework/pipeline/plugin_factories.go?s=3382:3459#L83">BindingPipelinePlugins</a>
+				<a class="permalink" href="index.html#BindingPipelinePlugins">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Contains plugin instances for a single BindingPipeline instance.
+<p>If a plugin ties into multiple stages, the same plugin instance is used for all of them.
+
+			<pre>type BindingPipelinePlugins struct {
+<span id="BindingPipelinePlugins.CheckConflicts"></span>    CheckConflicts []<a href="index.html#CheckConflictsPlugin">CheckConflictsPlugin</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="BindingPluginsFactory">type <a href="http://localhost:8080/src/framework/pipeline/plugin_factories.go?s=3501:3732#L88">BindingPluginsFactory</a>
+				<a class="permalink" href="index.html#BindingPluginsFactory">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Used to instantiate binding plugins.
+
+			<pre>type BindingPluginsFactory interface {
+
+    <span class="comment">// Creates a new set of instances of the plugins configured for the binding Pipeline.</span>
+    NewBindingPipelinePlugins(clusterAgentServices <a href="index.html#ClusterAgentServices">ClusterAgentServices</a>) (*<a href="index.html#BindingPipelinePlugins">BindingPipelinePlugins</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="CheckConflictsPlugin">type <a href="http://localhost:8080/src/framework/pipeline/pipelines.go?s=9764:10094#L197">CheckConflictsPlugin</a>
+				<a class="permalink" href="index.html#CheckConflictsPlugin">&#xb6;</a>
+				
+				
+			</h2>
+			<p>A CheckConflictsPlugin is used by the binding pipeline to check if committing this scheduling decision would cause any conflicts
+(e.g., overprovisioning of resources).
+
+			<pre>type CheckConflictsPlugin interface {
+    <a href="index.html#Plugin">Plugin</a>
+
+    <span class="comment">// Checks if committing this scheduling decision would cause any conflicts (e.g., overprovisioning of resources).</span>
+    <span class="comment">// All CheckConflicts plugins must return a success status for the binding to proceed.</span>
+    CheckForConflicts(ctx <a href="index.html#SchedulingContext">SchedulingContext</a>, decision *<a href="index.html#SchedulingDecision">SchedulingDecision</a>) <a href="index.html#Status">Status</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ClusterAgentPluginFactoryFunc">type <a href="http://localhost:8080/src/framework/pipeline/plugin_factories.go?s=1095:1169#L12">ClusterAgentPluginFactoryFunc</a>
+				<a class="permalink" href="index.html#ClusterAgentPluginFactoryFunc">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Defines a factory function for creating plugins for the PolarisClusterAgent, i.e., sampling and binding pipeline plugins.
+
+			<pre>type ClusterAgentPluginFactoryFunc <a href="index.html#PluginFactoryFunc">PluginFactoryFunc</a>[<a href="index.html#ClusterAgentServices">ClusterAgentServices</a>]</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ClusterAgentServices">type <a href="http://localhost:8080/src/framework/pipeline/cluster_agent_services.go?s=267:644#L1">ClusterAgentServices</a>
+				<a class="permalink" href="index.html#ClusterAgentServices">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Provides ClusterAgent plugins access to services that they may use.
+
+			<pre>type ClusterAgentServices interface {
+    <span class="comment">// Gets the config used by this ClusterAgent.</span>
+    Config() *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/config/">config</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/config/#ClusterAgentConfig">ClusterAgentConfig</a>
+
+    <span class="comment">// Gets the LocalClusterClient used by this ClusterAgent.</span>
+    ClusterClient() <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/">client</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/#LocalClusterClient">LocalClusterClient</a>
+
+    <span class="comment">// The nodes cache used by this ClusterAgent.</span>
+    NodesCache() <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/">client</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/#NodesCache">NodesCache</a>
+
+    <span class="comment">// Gets the logger used by this ClusterAgent.</span>
+    Logger() *<a href="http://localhost:8080/pkg/github.com/go-logr/logr/">logr</a>.<a href="http://localhost:8080/pkg/github.com/go-logr/logr/#Logger">Logger</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="DecisionPipeline">type <a href="http://localhost:8080/src/framework/pipeline/pipelines.go?s=10728:11100#L223">DecisionPipeline</a>
+				<a class="permalink" href="index.html#DecisionPipeline">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Represents an instance of the Polaris Scheduler Decision Pipeline,
+encompassing all stages from PreFilter until (including) Reserve.
+<p>A Decision Pipeline executes on a single goroutine and there is only
+a single pod traversing the pipeline at a time.
+
+			<pre>type DecisionPipeline interface {
+
+    <span class="comment">// Executes the Decision Pipeline and returns a sorted list of SchedulingDecisions, i.e., the commit candidates, and a Status.</span>
+    <span class="comment">// The SchedulingDecisions are nil in case the pod could not be scheduled or if an error occurred.</span>
+    DecideCommitCandidates(podInfo *<a href="index.html#SampledPodInfo">SampledPodInfo</a>, commitCandidatesCount <a href="http://localhost:8080/pkg/builtin/#int">int</a>) ([]*<a href="index.html#SchedulingDecision">SchedulingDecision</a>, <a href="index.html#Status">Status</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="DecisionPipelinePlugins">type <a href="http://localhost:8080/src/framework/pipeline/plugin_factories.go?s=1693:1876#L31">DecisionPipelinePlugins</a>
+				<a class="permalink" href="index.html#DecisionPipelinePlugins">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Contains plugin instances for a single DecisionPipeline instance.
+<p>If a plugin ties into multiple stages, e.g., PreFilter, Filter, and Score,
+the same plugin instance is used for all of them.
+
+			<pre>type DecisionPipelinePlugins struct {
+<span id="DecisionPipelinePlugins.PreFilter"></span>    PreFilter []<a href="index.html#PreFilterPlugin">PreFilterPlugin</a>
+
+<span id="DecisionPipelinePlugins.Filter"></span>    Filter []<a href="index.html#FilterPlugin">FilterPlugin</a>
+
+<span id="DecisionPipelinePlugins.PreScore"></span>    PreScore []<a href="index.html#PreScorePlugin">PreScorePlugin</a>
+
+<span id="DecisionPipelinePlugins.Score"></span>    Score []*<a href="index.html#ScorePluginWithExtensions">ScorePluginWithExtensions</a>
+
+<span id="DecisionPipelinePlugins.Reserve"></span>    Reserve []<a href="index.html#ReservePlugin">ReservePlugin</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="FilterPlugin">type <a href="http://localhost:8080/src/framework/pipeline/pipelines.go?s=4774:5272#L105">FilterPlugin</a>
+				<a class="permalink" href="index.html#FilterPlugin">&#xb6;</a>
+				
+				
+			</h2>
+			<p>A FilterPlugin determines if a particular node is suitable for hosting a pod.
+FilterPlugins are called after the PreFilterState.
+At the beginning of the Filter stage all nodes from the SampleNodes stage are used. This list
+may be reduced by every FilterPlugin. Once a node is deemed to be unsuitable to host a pod,
+it is not passed to any other FilterPlugin.
+
+			<pre>type FilterPlugin interface {
+    <a href="index.html#Plugin">Plugin</a>
+
+    <span class="comment">// Filter is called to determine if the pod described by podInfo can be hosted on the node described by NodeInfo.</span>
+    <span class="comment">// The podInfo and nodeInfo objects must be treated as immutable.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Returns a &#34;Success&#34; Status is the node can host the pod, an &#34;Unschedulable&#34; Status if this is not the case,</span>
+    <span class="comment">// or an &#34;InternalError&#34; Status if an unexpected error occurred during evaluation.</span>
+    Filter(ctx <a href="index.html#SchedulingContext">SchedulingContext</a>, podInfo *<a href="index.html#PodInfo">PodInfo</a>, nodeInfo *<a href="index.html#NodeInfo">NodeInfo</a>) <a href="index.html#Status">Status</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="IncomingPod">type <a href="http://localhost:8080/src/framework/pipeline/pod.go?s=928:1078#L28">IncomingPod</a>
+				<a class="permalink" href="index.html#IncomingPod">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Describes a pod that has just been received and that is added to the channel of a PodSource.
+
+			<pre>type IncomingPod struct {
+
+    <span class="comment">// The pod that should be scheduled.</span>
+<span id="IncomingPod.Pod"></span>    Pod *<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/">core</a>.<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/#Pod">Pod</a>
+
+    <span class="comment">// The timestamp, when the pod was received.</span>
+<span id="IncomingPod.ReceivedAt"></span>    ReceivedAt <a href="http://localhost:8080/pkg/time/">time</a>.<a href="http://localhost:8080/pkg/time/#Time">Time</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="NodeInfo">type <a href="http://localhost:8080/src/framework/pipeline/node.go?s=189:596#L1">NodeInfo</a>
+				<a class="permalink" href="index.html#NodeInfo">&#xb6;</a>
+				
+				
+			</h2>
+			<p>NodeInfo stores a ClusterNode and additional scheduling-relevant information about it.
+
+			<pre>type NodeInfo struct {
+
+    <span class="comment">// The Node described by this NodeInfo.</span>
+<span id="NodeInfo.Node"></span>    Node *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/">client</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/#ClusterNode">ClusterNode</a> `json:&#34;node&#34; yaml:&#34;node&#34;`
+
+    <span class="comment">// The accumulated score computed by the Score plugins of the sampling pipeline.</span>
+    <span class="comment">// This is nil if no sampling score plugins are configured.</span>
+<span id="NodeInfo.SamplingScore"></span>    SamplingScore *<a href="index.html#SamplingScore">SamplingScore</a>
+
+    <span class="comment">// The name of the cluster that the node is part of.</span>
+<span id="NodeInfo.ClusterName"></span>    ClusterName <a href="http://localhost:8080/pkg/builtin/#string">string</a> `json:&#34;clusterName&#34; yaml:&#34;clusterName&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewNodeInfo">func <a href="http://localhost:8080/src/framework/pipeline/node.go?s=1163:1235#L27">NewNodeInfo</a>
+					<a class="permalink" href="index.html#NewNodeInfo">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewNodeInfo(clusterName <a href="http://localhost:8080/pkg/builtin/#string">string</a>, node *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/">client</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/#ClusterNode">ClusterNode</a>) *<a href="index.html#NodeInfo">NodeInfo</a></pre>
+				<p>Creates a new NodeInfo object and computes its resources.
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="NodeScore">type <a href="http://localhost:8080/src/framework/pipeline/node.go?s=653:708#L12">NodeScore</a>
+				<a class="permalink" href="index.html#NodeScore">&#xb6;</a>
+				
+				
+			</h2>
+			<p>NodeScore describes the score of a particular node.
+
+			<pre>type NodeScore struct {
+<span id="NodeScore.Node"></span>    Node  *<a href="index.html#NodeInfo">NodeInfo</a>
+<span id="NodeScore.Score"></span>    Score <a href="http://localhost:8080/pkg/builtin/#int64">int64</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Plugin">type <a href="http://localhost:8080/src/framework/pipeline/pipelines.go?s=2857:2992#L60">Plugin</a>
+				<a class="permalink" href="index.html#Plugin">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Plugin is the parent interface for all Polaris pipeline plugins.
+In the Polaris Distributed Scheduling Framework, there are three pipelines:
+<ul>
+<li>Scheduling pipeline
+<li>Sampling pipeline
+<li>Binding pipeline
+</ul>
+<p>The Polaris scheduling pipeline runs as part of the Polaris Scheduler. It is the main pipeline of the Scheduling Framework and is
+responsible for sorting the incoming pods and for each pod obtain node samples from all clusters (using the sampling pipeline in the Cluster Agents),
+and decide on which node to schedule the pod.
+The scheduling pipeline and consists of the following stages:
+<ul>
+<li>Sort (one plugin only)
+<li>SampleNodes (one plugin only)
+<li>PreFilter
+<li>Filter
+<li>PreScore
+<li>Score
+<li>Reserve
+</ul>
+<p>The stages from PreFilter up to (including) Reserve are called the &quot;Decision Pipeline&quot;.
+For Decision Pipeline plugins it is common to tie into multiple stages of the pipeline.
+For each pipeline instance only a single instance of each plugin will be created, even if it ties
+into multiple stages (e.g., PreFilter, Filter, and Score).
+<p>Multiple Decision Pipeline instances may execute in parallel, but each instance will
+execute on a single goroutine and only be traversed by a single pod at a time.
+<p>The Polaris sampling pipeline runs as part of the Polaris Cluster Agent. It is responsible for collecting a set of nodes (the sample),
+which are capable of running the pod, for which they are requested.
+The sampling pipeline consists of the following stages:
+<ul>
+<li>SamplingStrategy (one plugin only)
+<li>PreFilter
+<li>Filter
+<li>PreScore
+<li>Score
+</ul>
+<p>The Polaris binding pipeline runs as part of the Polaris Cluster Agent. It is responsible for detecting any conflicts that a scheduling
+decision may create on the target node (e.g., overprovisioning of resources).
+The binding pipeline consists of the following stages:
+<ul>
+<li>CheckConflicts
+</ul>
+<p>ToDo: Extend binding pipeline with stages that allow provisioning of a volume (this
+may require multiple stages, e.g., before creating the pod in the orchestrator and after creating the pod).
+
+			<pre>type Plugin interface {
+    <span class="comment">// Gets the name of this plugin.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The returned name must be usable as a URI component.</span>
+    Name() <a href="http://localhost:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PluginFactoryFunc">type <a href="http://localhost:8080/src/framework/pipeline/plugin_factories.go?s=694:818#L6">PluginFactoryFunc</a>
+				<a class="permalink" href="index.html#PluginFactoryFunc">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Defines a factory function for creating Polaris plugins with a generic owner services type.
+
+			<pre>type PluginFactoryFunc[O <a href="index.html#PolarisPluginOwnerServices">PolarisPluginOwnerServices</a>] func(pluginConfig <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/config/">config</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/config/#PluginConfig">PluginConfig</a>, ownerServices O) (<a href="index.html#Plugin">Plugin</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PluginsRegistry">type <a href="http://localhost:8080/src/framework/pipeline/plugin_factories.go?s=3930:4033#L96">PluginsRegistry</a>
+				<a class="permalink" href="index.html#PluginsRegistry">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Contains the factory functions for all available plugins.
+The generic type parameter O defines the owner services type of the created plugins (i.e., PolarisScheduler or PolarisNodeSampler).
+
+			<pre>type PluginsRegistry[O <a href="index.html#PolarisPluginOwnerServices">PolarisPluginOwnerServices</a>] struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewPluginsRegistry">func <a href="http://localhost:8080/src/framework/pipeline/plugin_factories.go?s=4035:4151#L100">NewPluginsRegistry</a>
+					<a class="permalink" href="index.html#NewPluginsRegistry">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewPluginsRegistry[O <a href="index.html#PolarisPluginOwnerServices">PolarisPluginOwnerServices</a>](factories map[<a href="http://localhost:8080/pkg/builtin/#string">string</a>]<a href="index.html#PluginFactoryFunc">PluginFactoryFunc</a>[O]) *<a href="index.html#PluginsRegistry">PluginsRegistry</a>[O]</pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="PluginsRegistry.GetPluginFactory">func (*PluginsRegistry[O]) <a href="http://localhost:8080/src/framework/pipeline/plugin_factories.go?s=4348:4434#L108">GetPluginFactory</a>
+					<a class="permalink" href="index.html#PluginsRegistry.GetPluginFactory">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (pr *<a href="index.html#PluginsRegistry">PluginsRegistry</a>[O]) GetPluginFactory(pluginName <a href="http://localhost:8080/pkg/builtin/#string">string</a>) <a href="index.html#PluginFactoryFunc">PluginFactoryFunc</a>[O]</pre>
+				<p>Returns the SchedulingPluginFactoryFunc for the specified plugin name or nil, if no factory is registered for this name.
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PodInfo">type <a href="http://localhost:8080/src/framework/pipeline/pod.go?s=167:400#L1">PodInfo</a>
+				<a class="permalink" href="index.html#PodInfo">&#xb6;</a>
+				
+				
+			</h2>
+			<p>PodInfo stores a Pod and additional pre-computed scheduling-relevant information about it.
+
+			<pre>type PodInfo struct {
+
+    <span class="comment">// The Pod to be scheduled.</span>
+<span id="PodInfo.Pod"></span>    Pod *<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/">core</a>.<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/#Pod">Pod</a> `json:&#34;pod&#34; yaml:&#34;pod&#34;`
+
+    <span class="comment">// The number of times, we had to retry scheduling this pod after committing the scheduling decision had failed.</span>
+<span id="PodInfo.SchedulingRetryCount"></span>    SchedulingRetryCount <a href="http://localhost:8080/pkg/builtin/#int">int</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PodSource">type <a href="http://localhost:8080/src/framework/pipeline/pod.go?s=1155:1296#L38">PodSource</a>
+				<a class="permalink" href="index.html#PodSource">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Supplies new pods that need to be scheduled to the scheduling pipeline.
+
+			<pre>type PodSource interface {
+
+    <span class="comment">// Returns a channel that emits the incoming pods that need to be scheduled.</span>
+    IncomingPods() chan *<a href="index.html#IncomingPod">IncomingPod</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PolarisNodeSampler">type <a href="http://localhost:8080/src/framework/pipeline/polaris_node_sampler.go?s=292:783#L3">PolarisNodeSampler</a>
+				<a class="permalink" href="index.html#PolarisNodeSampler">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Main service that is responsible for sampling nodes.
+<p>This service is responsible for managing the REST interface and the nodes watch.
+
+			<pre>type PolarisNodeSampler interface {
+    <a href="index.html#ClusterAgentServices">ClusterAgentServices</a>
+
+    <span class="comment">// Starts the node sampler service.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Note that, depending on the actual implementation, the REST interface may need to be started by</span>
+    <span class="comment">// the caller after Start() returns.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The context can be used to stop the sampler.</span>
+    <span class="comment">// Returns nil if the sampler has started successfully.</span>
+    Start(ctx <a href="http://localhost:8080/pkg/context/">context</a>.<a href="http://localhost:8080/pkg/context/#Context">Context</a>) <a href="http://localhost:8080/pkg/builtin/#error">error</a>
+
+    <span class="comment">// Gets the sampling strategies available in this sampler.</span>
+    SamplingStrategies() []<a href="index.html#SamplingStrategyPlugin">SamplingStrategyPlugin</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PolarisPluginOwnerServices">type <a href="http://localhost:8080/src/framework/pipeline/plugin_factories.go?s=168:211#L1">PolarisPluginOwnerServices</a>
+				<a class="permalink" href="index.html#PolarisPluginOwnerServices">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Interface for services provided by the owner of a Polaris plugin.
+
+			<pre>type PolarisPluginOwnerServices interface{}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PolarisScheduler">type <a href="http://localhost:8080/src/framework/pipeline/polaris_scheduler.go?s=262:1276#L3">PolarisScheduler</a>
+				<a class="permalink" href="index.html#PolarisScheduler">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Provides access to the polaris-scheduler instance.
+
+			<pre>type PolarisScheduler interface {
+    <span class="comment">// Gets the scheduler configuration.</span>
+    Config() *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/config/">config</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/config/#SchedulerConfig">SchedulerConfig</a>
+
+    <span class="comment">// Gets the ClusterClientsManager for communicating with the node clusters.</span>
+    ClusterClientsManager() <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/">client</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/#ClusterClientsManager">ClusterClientsManager</a>
+
+    <span class="comment">// Starts the scheduling goroutines and then returns nil</span>
+    <span class="comment">// or an error, if any occurred.</span>
+    Start(ctx <a href="http://localhost:8080/pkg/context/">context</a>.<a href="http://localhost:8080/pkg/context/#Context">Context</a>) <a href="http://localhost:8080/pkg/builtin/#error">error</a>
+
+    <span class="comment">// Stops the scheduling goroutines.</span>
+    Stop() <a href="http://localhost:8080/pkg/builtin/#error">error</a>
+
+    <span class="comment">// Gets the logger used by this scheduler.</span>
+    Logger() *<a href="http://localhost:8080/pkg/github.com/go-logr/logr/">logr</a>.<a href="http://localhost:8080/pkg/github.com/go-logr/logr/#Logger">Logger</a>
+
+    <span class="comment">// Returns true if the scheduling process has been started.</span>
+    IsActive() <a href="http://localhost:8080/pkg/builtin/#bool">bool</a>
+
+    <span class="comment">// Returns the number of queued pods.</span>
+    PodsInQueueCount() <a href="http://localhost:8080/pkg/builtin/#int">int</a>
+
+    <span class="comment">// Returns the number of pods, for which nodes are currently being sampled.</span>
+    PodsInNodeSamplingCount() <a href="http://localhost:8080/pkg/builtin/#int">int</a>
+
+    <span class="comment">// Returns the number of pods, for which nodes have been sampled, and which are</span>
+    <span class="comment">// now waiting to enter the decision pipeline.</span>
+    PodsWaitingForDecisionPipelineCount() <a href="http://localhost:8080/pkg/builtin/#int">int</a>
+
+    <span class="comment">// Returns the number of pods currently in the decision pipeline.</span>
+    PodsInDecisionPipelineCount() <a href="http://localhost:8080/pkg/builtin/#int">int</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PreFilterPlugin">type <a href="http://localhost:8080/src/framework/pipeline/pipelines.go?s=4028:4398#L90">PreFilterPlugin</a>
+				<a class="permalink" href="index.html#PreFilterPlugin">&#xb6;</a>
+				
+				
+			</h2>
+			<p>A PreFilterPlugin is called once per Pod and can be used to pre-compute information that will be needed by a FilterPlugin.
+PreFilterPlugins are called after nodes have been sampled.
+
+			<pre>type PreFilterPlugin interface {
+    <a href="index.html#Plugin">Plugin</a>
+
+    <span class="comment">// PreFilter is called once per Pod and can be used to pre-compute information that will be needed by a FilterPlugin.</span>
+    <span class="comment">// The podInfo object must be treated as immutable.</span>
+    <span class="comment">//</span>
+    <span class="comment">// All PreFilterPlugins must return Success, otherwise the pod is marked as Unschedulable.</span>
+    PreFilter(ctx <a href="index.html#SchedulingContext">SchedulingContext</a>, podInfo *<a href="index.html#PodInfo">PodInfo</a>) <a href="index.html#Status">Status</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PreScorePlugin">type <a href="http://localhost:8080/src/framework/pipeline/pipelines.go?s=5441:5965#L118">PreScorePlugin</a>
+				<a class="permalink" href="index.html#PreScorePlugin">&#xb6;</a>
+				
+				
+			</h2>
+			<p>A PreFilterPlugin is called once per Pod, after the Filter stage has completed, and can be used to
+pre-compute information that will be needed by a ScorePlugin.
+
+			<pre>type PreScorePlugin interface {
+    <a href="index.html#Plugin">Plugin</a>
+
+    <span class="comment">// PreScore is called once per Pod and can be used to pre-compute information that will be needed by a ScorePlugin.</span>
+    <span class="comment">// eligibleNodes contains all nodes that have been deemed suitable to host the pod by the Filter stage plugins.</span>
+    <span class="comment">// The podInfo and eligibleNodes objects must be treated as immutable.</span>
+    <span class="comment">//</span>
+    <span class="comment">// All PreScorePlugins must return Success, otherwise the pod is marked as Unschedulable.</span>
+    PreScore(ctx <a href="index.html#SchedulingContext">SchedulingContext</a>, podInfo *<a href="index.html#PodInfo">PodInfo</a>, eligibleNodes []*<a href="index.html#NodeInfo">NodeInfo</a>) <a href="index.html#Status">Status</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="QueuedPodInfo">type <a href="http://localhost:8080/src/framework/pipeline/pod.go?s=448:557#L11">QueuedPodInfo</a>
+				<a class="permalink" href="index.html#QueuedPodInfo">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Represents information about a queued pod.
+
+			<pre>type QueuedPodInfo struct {
+    *<a href="index.html#PodInfo">PodInfo</a>
+
+    <span class="comment">// The SchedulingContext of this queued pod.</span>
+<span id="QueuedPodInfo.Ctx"></span>    Ctx <a href="index.html#SchedulingContext">SchedulingContext</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewQueuedPodInfo">func <a href="http://localhost:8080/src/framework/pipeline/pod.go?s=1599:1699#L51">NewQueuedPodInfo</a>
+					<a class="permalink" href="index.html#NewQueuedPodInfo">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewQueuedPodInfo(pod *<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/">core</a>.<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/#Pod">Pod</a>, ctx <a href="index.html#SchedulingContext">SchedulingContext</a>, schedulingRetryCount <a href="http://localhost:8080/pkg/builtin/#int">int</a>) *<a href="index.html#QueuedPodInfo">QueuedPodInfo</a></pre>
+				<p>Creates a new QueuedPodInfo from a pod.
+
+				
+				
+			
+
+			
+				
+				<h3 id="QueuedPodInfo.GetKey">func (*QueuedPodInfo) <a href="http://localhost:8080/src/framework/pipeline/pod.go?s=1443:1482#L46">GetKey</a>
+					<a class="permalink" href="index.html#QueuedPodInfo.GetKey">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (q *<a href="index.html#QueuedPodInfo">QueuedPodInfo</a>) GetKey() <a href="http://localhost:8080/pkg/builtin/#string">string</a></pre>
+				<p>Returns a key that can be used to identify this pod in a map.
+The key is generated according to the following scheme: &quot;&lt;namespace&gt;.&lt;name&gt;&quot;
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ReservePlugin">type <a href="http://localhost:8080/src/framework/pipeline/pipelines.go?s=7691:8608#L159">ReservePlugin</a>
+				<a class="permalink" href="index.html#ReservePlugin">&#xb6;</a>
+				
+				
+			</h2>
+			<p>A ReservePlugin is called after the scheduling pipeline has chosen the final target node after the Score stage.
+It may be used to update 3rd party data structures.
+<p>ToDo: ReservePlugin_MultiBind - Modify ReservePlugin to account for the new MultiBinding mechanism. Currently the ReserveStage is disabled.
+
+			<pre>type ReservePlugin interface {
+    <a href="index.html#Plugin">Plugin</a>
+
+    <span class="comment">// Reserve is called after the scheduling pipeline has chosen the final target node after the Score stage.</span>
+    <span class="comment">// It may be used to update 3rd party data structures.</span>
+    <span class="comment">// If any ReservePlugin returns a non Success Status, the pod will not be scheduled to that node and</span>
+    <span class="comment">// Unreserve will be called on all ReservePlugins.</span>
+    <span class="comment">// The podInfo object must be treated as immutable.</span>
+    Reserve(ctx <a href="index.html#SchedulingContext">SchedulingContext</a>, podInfo *<a href="index.html#PodInfo">PodInfo</a>, targetNode *<a href="index.html#NodeInfo">NodeInfo</a>) <a href="index.html#Status">Status</a>
+
+    <span class="comment">// Unreserve is called if an error occurs during the Reserve stage or if another ReservePlugin rejects the pod.</span>
+    <span class="comment">// It may be used to update 3rd party data structures.</span>
+    <span class="comment">// This method must be idempotent and may be called by the scheduling pipeline even if Reserve() was not</span>
+    <span class="comment">// previously called.</span>
+    <span class="comment">// The podInfo object must be treated as immutable.</span>
+    Unreserve(ctx <a href="index.html#SchedulingContext">SchedulingContext</a>, podInfo *<a href="index.html#PodInfo">PodInfo</a>, targetNode *<a href="index.html#NodeInfo">NodeInfo</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SampleNodesPlugin">type <a href="http://localhost:8080/src/framework/pipeline/pipelines.go?s=3489:3838#L78">SampleNodesPlugin</a>
+				<a class="permalink" href="index.html#SampleNodesPlugin">&#xb6;</a>
+				
+				
+			</h2>
+			<p>A SampleNodesPlugin is used to obtain a sample of nodes from the entire supercluster as hosting candidates for the pod.
+This plugin is called when a pod enters the scheduling pipeline.
+
+			<pre>type SampleNodesPlugin interface {
+    <a href="index.html#Plugin">Plugin</a>
+
+    <span class="comment">// Samples nodes across the entire supercluster to act as hosting candidates for the pod.</span>
+    <span class="comment">// The podInfo object must be treated as immutable.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Returns an array of NodeInfos that describe the sampled nodes and a Status.</span>
+    SampleNodes(ctx <a href="index.html#SchedulingContext">SchedulingContext</a>, podInfo *<a href="index.html#PodInfo">PodInfo</a>) ([]*<a href="index.html#NodeInfo">NodeInfo</a>, <a href="index.html#Status">Status</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SampledPodInfo">type <a href="http://localhost:8080/src/framework/pipeline/pod.go?s=706:830#L20">SampledPodInfo</a>
+				<a class="permalink" href="index.html#SampledPodInfo">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Represents information about a pod, for which nodes have already been sampled, and
+which is, thus, ready for entering the Decision Pipeline.
+
+			<pre>type SampledPodInfo struct {
+    *<a href="index.html#QueuedPodInfo">QueuedPodInfo</a>
+
+    <span class="comment">// The nodes that have been sampled for this pod.</span>
+<span id="SampledPodInfo.SampledNodes"></span>    SampledNodes []*<a href="index.html#NodeInfo">NodeInfo</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SamplingPipeline">type <a href="http://localhost:8080/src/framework/pipeline/pipelines.go?s=11818:12190#L240">SamplingPipeline</a>
+				<a class="permalink" href="index.html#SamplingPipeline">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Represents an instance of the Polaris ClusterAgent Sampling Pipeline,
+encompassing all its stages.
+<p>A Sampling Pipeline executes on a single goroutine and there is only
+a single pod traversing the pipeline at a time.
+<p>The SamplingStrategyPlugin instances are shared across all pipelines and, thus, must be thread-safe.
+All other plugins execute only on this pipeline&apos;s goroutine.
+The &quot;singleton approach&quot; for SamplingStrategyPlugins is needed to avoid sampling the same nodes in multiple pipeline instances, i.e., if there were multiple instances
+of a deterministic SamplingStrategyPlugin (e.g., Round-Robin sampling), each instance would return the same nodes upon the first invocation.
+
+			<pre>type SamplingPipeline interface {
+
+    <span class="comment">// Executes the sampling pipeline for the specified pod using the specified sampling strategy.</span>
+    <span class="comment">// The number of nodes to be sampled is specified as basis points (bp) of the total number of nodes.</span>
+    SampleNodes(ctx <a href="index.html#SchedulingContext">SchedulingContext</a>, samplingStrategy <a href="index.html#SamplingStrategyPlugin">SamplingStrategyPlugin</a>, podInfo *<a href="index.html#PodInfo">PodInfo</a>, nodesToSampleBp <a href="http://localhost:8080/pkg/builtin/#int">int</a>) ([]*<a href="index.html#NodeInfo">NodeInfo</a>, <a href="index.html#Status">Status</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SamplingPipelinePlugins">type <a href="http://localhost:8080/src/framework/pipeline/plugin_factories.go?s=2609:2766#L60">SamplingPipelinePlugins</a>
+				<a class="permalink" href="index.html#SamplingPipelinePlugins">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Contains plugin instances for a single SamplingPipeline instance.
+<p>If a plugin ties into multiple stages, e.g., PreFilter, Filter, and Score,
+the same plugin instance is used for all of them.
+
+			<pre>type SamplingPipelinePlugins struct {
+<span id="SamplingPipelinePlugins.PreFilter"></span>    PreFilter []<a href="index.html#PreFilterPlugin">PreFilterPlugin</a>
+
+<span id="SamplingPipelinePlugins.Filter"></span>    Filter []<a href="index.html#FilterPlugin">FilterPlugin</a>
+
+<span id="SamplingPipelinePlugins.PreScore"></span>    PreScore []<a href="index.html#PreScorePlugin">PreScorePlugin</a>
+
+<span id="SamplingPipelinePlugins.Score"></span>    Score []*<a href="index.html#ScorePluginWithExtensions">ScorePluginWithExtensions</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SamplingPluginsFactory">type <a href="http://localhost:8080/src/framework/pipeline/plugin_factories.go?s=2809:3217#L71">SamplingPluginsFactory</a>
+				<a class="permalink" href="index.html#SamplingPluginsFactory">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Used to instantiate sampling plugins.
+
+			<pre>type SamplingPluginsFactory interface {
+
+    <span class="comment">// Creates instances of all configured SamplingStrategyPlugins.</span>
+    NewSamplingStrategiesPlugins(clusterAgentServices <a href="index.html#ClusterAgentServices">ClusterAgentServices</a>) ([]<a href="index.html#SamplingStrategyPlugin">SamplingStrategyPlugin</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)
+
+    <span class="comment">// Creates a new set of instances of the plugins configured for the Sampling Pipeline.</span>
+    NewSamplingPipelinePlugins(clusterAgentServices <a href="index.html#ClusterAgentServices">ClusterAgentServices</a>) (*<a href="index.html#SamplingPipelinePlugins">SamplingPipelinePlugins</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SamplingScore">type <a href="http://localhost:8080/src/framework/pipeline/node.go?s=792:1100#L18">SamplingScore</a>
+				<a class="permalink" href="index.html#SamplingScore">&#xb6;</a>
+				
+				
+			</h2>
+			<p>SamplingScore describes the accumulated score from all sampling score plugins.
+
+			<pre>type SamplingScore struct {
+    <span class="comment">// The accumulated score of all sampling score plugins.</span>
+<span id="SamplingScore.AccumulatedScore"></span>    AccumulatedScore <a href="http://localhost:8080/pkg/builtin/#int64">int64</a> `json:&#34;accumulatedScore&#34; yaml:&#34;accumulatedScore&#34;`
+
+    <span class="comment">// The number score plugins that contributed to the accumulated score.</span>
+<span id="SamplingScore.ScorePluginsCount"></span>    ScorePluginsCount <a href="http://localhost:8080/pkg/builtin/#int">int</a> `json:&#34;scorePluginsCount&#34; yaml:&#34;scorePluginsCount&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SamplingStrategyPlugin">type <a href="http://localhost:8080/src/framework/pipeline/pipelines.go?s=9083:9588#L182">SamplingStrategyPlugin</a>
+				<a class="permalink" href="index.html#SamplingStrategyPlugin">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Encapsulates a node sampling strategy in the sampling pipeline.
+<p>A SamplingStrategyPlugin must be thread-safe, because a single instance is shared across all sampling pipelines.
+This &quot;singleton approach&quot; is needed to avoid sampling the same nodes in multiple pipeline instances, i.e., if there were multiple instances
+of a deterministic SamplingStrategyPlugin (e.g., Round-Robin sampling), each instance would return the same nodes upon the first invocation.
+
+			<pre>type SamplingStrategyPlugin interface {
+    <a href="index.html#Plugin">Plugin</a>
+
+    <span class="comment">// Returns the name of the sampling strategy in a URI component compatible form.</span>
+    StrategyName() <a href="http://localhost:8080/pkg/builtin/#string">string</a>
+
+    <span class="comment">// Executes the sampling strategy and returns a sample of nodes and a status.</span>
+    <span class="comment">// The podInfo object must be treated as immutable.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Important: This method may be called concurrently on multiple goroutines, so its implementation must be thread-safe.</span>
+    SampleNodes(ctx <a href="index.html#SchedulingContext">SchedulingContext</a>, podInfo *<a href="index.html#PodInfo">PodInfo</a>, sampleSize <a href="http://localhost:8080/pkg/builtin/#int">int</a>) ([]*<a href="index.html#NodeInfo">NodeInfo</a>, <a href="index.html#Status">Status</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SchedulingContext">type <a href="http://localhost:8080/src/framework/pipeline/scheduling_context.go?s=351:1024#L1">SchedulingContext</a>
+				<a class="permalink" href="index.html#SchedulingContext">&#xb6;</a>
+				
+				
+			</h2>
+			<p>SchedulingContext is used to carry state information between stages of the scheduling pipeline.
+All plugins can access the information in the SchedulingContext - they are all assumed to be trusted.
+
+			<pre>type SchedulingContext interface {
+
+    <span class="comment">// Gets the context.Context that this SchedulingContext is associated with.</span>
+    <span class="comment">//</span>
+    <span class="comment">// This may change between plugin executions, so it should always be read directly</span>
+    <span class="comment">// from the SchedulingContext.</span>
+    <span class="comment">//</span>
+    <span class="comment">// This method is thread-safe.</span>
+    Context() <a href="http://localhost:8080/pkg/context/">context</a>.<a href="http://localhost:8080/pkg/context/#Context">Context</a>
+
+    <span class="comment">// Reads state data from the SchedulingContext.</span>
+    <span class="comment">// Returns the StateData stored under the given key and a boolean indicating if the key was found.</span>
+    <span class="comment">//</span>
+    <span class="comment">// This method is thread-safe.</span>
+    Read(key <a href="http://localhost:8080/pkg/builtin/#string">string</a>) (<a href="index.html#StateData">StateData</a>, <a href="http://localhost:8080/pkg/builtin/#bool">bool</a>)
+
+    <span class="comment">// Writes state data to the SchedulingContext and stores it under the given key.</span>
+    <span class="comment">//</span>
+    <span class="comment">// This method is thread-safe.</span>
+    Write(key <a href="http://localhost:8080/pkg/builtin/#string">string</a>, data <a href="index.html#StateData">StateData</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewSchedulingContext">func <a href="http://localhost:8080/src/framework/pipeline/scheduling_context_impl.go?s=263:327#L10">NewSchedulingContext</a>
+					<a class="permalink" href="index.html#NewSchedulingContext">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewSchedulingContext(ctx <a href="http://localhost:8080/pkg/context/">context</a>.<a href="http://localhost:8080/pkg/context/#Context">Context</a>) <a href="index.html#SchedulingContext">SchedulingContext</a></pre>
+				<p>Creates a new SchedulingContext
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="SchedulingDecision">type <a href="http://localhost:8080/src/framework/pipeline/pipelines.go?s=10163:10461#L206">SchedulingDecision</a>
+				<a class="permalink" href="index.html#SchedulingDecision">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Represents a scheduling decision made by the Decision Pipeline.
+
+			<pre>type SchedulingDecision struct {
+
+    <span class="comment">// The pod, for which the node has been selected.</span>
+<span id="SchedulingDecision.Pod"></span>    Pod *<a href="index.html#PodInfo">PodInfo</a>
+
+    <span class="comment">// The node that has been selected for the pod.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Binding pipeline plugins can assume that this NodeInfo has been updated at the beginning</span>
+    <span class="comment">// of the binding pipeline.</span>
+<span id="SchedulingDecision.TargetNode"></span>    TargetNode *<a href="index.html#NodeInfo">NodeInfo</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SchedulingPluginFactoryFunc">type <a href="http://localhost:8080/src/framework/pipeline/plugin_factories.go?s=900:968#L9">SchedulingPluginFactoryFunc</a>
+				<a class="permalink" href="index.html#SchedulingPluginFactoryFunc">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Defines a factory function for creating Polaris scheduling pipeline plugins.
+
+			<pre>type SchedulingPluginFactoryFunc <a href="index.html#PluginFactoryFunc">PluginFactoryFunc</a>[<a href="index.html#PolarisScheduler">PolarisScheduler</a>]</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SchedulingPluginsFactory">type <a href="http://localhost:8080/src/framework/pipeline/plugin_factories.go?s=1919:2404#L44">SchedulingPluginsFactory</a>
+				<a class="permalink" href="index.html#SchedulingPluginsFactory">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Used to instantiate scheduler plugins
+
+			<pre>type SchedulingPluginsFactory interface {
+
+    <span class="comment">// Creates a new instance of the configured SortPlugin.</span>
+    NewSortPlugin(scheduler <a href="index.html#PolarisScheduler">PolarisScheduler</a>) (<a href="index.html#SortPlugin">SortPlugin</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)
+
+    <span class="comment">// Creates a new instance of the configured SampleNodesPlugin.</span>
+    NewSampleNodesPlugin(scheduler <a href="index.html#PolarisScheduler">PolarisScheduler</a>) (<a href="index.html#SampleNodesPlugin">SampleNodesPlugin</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)
+
+    <span class="comment">// Creates a new set of instances of the plugins configured for the Decision Pipeline.</span>
+    NewDecisionPipelinePlugins(scheduler <a href="index.html#PolarisScheduler">PolarisScheduler</a>) (*<a href="index.html#DecisionPipelinePlugins">DecisionPipelinePlugins</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ScoreExtensions">type <a href="http://localhost:8080/src/framework/pipeline/pipelines.go?s=6030:6461#L130">ScoreExtensions</a>
+				<a class="permalink" href="index.html#ScoreExtensions">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Allows defining optional actions supported by a ScorePlugin
+
+			<pre>type ScoreExtensions interface {
+    <span class="comment">// Called to normalize the node scores returned by the associated ScorePlugin to a range between MinNodeScore and MaxNodeScore.</span>
+    <span class="comment">// This method should update the scores list (without changing the order or the number of elements) and return a Success Status.</span>
+    <span class="comment">// The podInfo object must be treated as immutable.</span>
+    NormalizeScores(ctx <a href="index.html#SchedulingContext">SchedulingContext</a>, podInfo *<a href="index.html#PodInfo">PodInfo</a>, scores []<a href="index.html#NodeScore">NodeScore</a>) <a href="index.html#Status">Status</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ScorePlugin">type <a href="http://localhost:8080/src/framework/pipeline/pipelines.go?s=6831:7373#L142">ScorePlugin</a>
+				<a class="permalink" href="index.html#ScorePlugin">&#xb6;</a>
+				
+				
+			</h2>
+			<p>A ScorePlugin has to assign a score to every node that came out of the Filter stage.
+The scores from all ScorePlugins are accumulated by the scheduling pipeline and used to rank the eligible nodes.
+<p>The node with the highest score is assigned to host the pod.
+If multiple nodes have the same high score, a random node is picked from this set of winners.
+
+			<pre>type ScorePlugin interface {
+    <a href="index.html#Plugin">Plugin</a>
+
+    <span class="comment">// Score needs to compute a score for the node that describes &#34;how suitable&#34; it is to host the pod.</span>
+    <span class="comment">// These scores are used to rank the nodes.</span>
+    <span class="comment">// All ScorePlugins must return a Success Status, otherwise the pod is rejected.</span>
+    <span class="comment">// The podInfo and nodeInfo objects must be treated as immutable.</span>
+    Score(ctx <a href="index.html#SchedulingContext">SchedulingContext</a>, podInfo *<a href="index.html#PodInfo">PodInfo</a>, nodeInfo *<a href="index.html#NodeInfo">NodeInfo</a>) (<a href="http://localhost:8080/pkg/builtin/#int64">int64</a>, <a href="index.html#Status">Status</a>)
+
+    <span class="comment">// Returns the ScoreExtensions, if they are implemented by this plugin, otherwise nil.</span>
+    ScoreExtensions() <a href="index.html#ScoreExtensions">ScoreExtensions</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ScorePluginWithExtensions">type <a href="http://localhost:8080/src/framework/pipeline/plugin_factories.go?s=1223:1488#L15">ScorePluginWithExtensions</a>
+				<a class="permalink" href="index.html#ScorePluginWithExtensions">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Combines a ScorePlugin with its ScoreExtensions.
+
+			<pre>type ScorePluginWithExtensions struct {
+
+    <span class="comment">// The actual score plugin instance.</span>
+    <a href="index.html#ScorePlugin">ScorePlugin</a>
+
+    <span class="comment">// The ScoreExtensions supplied by the ScorePlugin or nil, if the plugin does not have any.</span>
+    <a href="index.html#ScoreExtensions">ScoreExtensions</a>
+
+    <span class="comment">// The weight assigned to this score plugin.</span>
+<span id="ScorePluginWithExtensions.Weight"></span>    Weight <a href="http://localhost:8080/pkg/builtin/#int32">int32</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SortPlugin">type <a href="http://localhost:8080/src/framework/pipeline/pipelines.go?s=3109:3296#L68">SortPlugin</a>
+				<a class="permalink" href="index.html#SortPlugin">&#xb6;</a>
+				
+				
+			</h2>
+			<p>A SortPlugin is used to establish the order, in which incoming pods will be handled by the scheduling pipeline.
+
+			<pre>type SortPlugin interface {
+    <a href="index.html#Plugin">Plugin</a>
+
+    <span class="comment">// Less returns true if podA should be scheduled before podB.</span>
+    <span class="comment">// Otherwise, it returns false.</span>
+    Less(podA *<a href="index.html#QueuedPodInfo">QueuedPodInfo</a>, podB *<a href="index.html#QueuedPodInfo">QueuedPodInfo</a>) <a href="http://localhost:8080/pkg/builtin/#bool">bool</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="StateData">type <a href="http://localhost:8080/src/framework/pipeline/scheduling_context.go?s=119:145#L1">StateData</a>
+				<a class="permalink" href="index.html#StateData">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Generic interface for the state data that can be stored in a SchedulingContext.
+
+			<pre>type StateData interface{}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Status">type <a href="http://localhost:8080/src/framework/pipeline/status.go?s=940:1858#L19">Status</a>
+				<a class="permalink" href="index.html#Status">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Reports the result of a pod&apos;s journey through the Polaris scheduling pipeline.
+A nil Status is also considered a success.
+
+			<pre>type Status interface {
+
+    <span class="comment">// Gets the StatusCode.</span>
+    Code() <a href="index.html#StatusCode">StatusCode</a>
+
+    <span class="comment">// Gets the StatusCode as a string.</span>
+    CodeAsString() <a href="http://localhost:8080/pkg/builtin/#string">string</a>
+
+    <span class="comment">// Gets the error that occurred, if any, otherwise returns nil.</span>
+    Error() <a href="http://localhost:8080/pkg/builtin/#error">error</a>
+
+    <span class="comment">// Gets array of reasons for the current status.</span>
+    <span class="comment">// This may also be nil.</span>
+    Reasons() []<a href="http://localhost:8080/pkg/builtin/#string">string</a>
+
+    <span class="comment">// Gets the plugin that has caused scheduling to fail.</span>
+    <span class="comment">// This is set by the framework and is nil, if all plugins returned success.</span>
+    FailedPlugin() <a href="index.html#Plugin">Plugin</a>
+
+    <span class="comment">// Gets the stage of the scheduling pipeline that caused scheduling to fail.</span>
+    <span class="comment">// This is set by the framework and is an empty string, if all plugins returned success.</span>
+    FailedStage() <a href="http://localhost:8080/pkg/builtin/#string">string</a>
+
+    <span class="comment">// Sets the the plugin that has caused the scheduling pipeline to fail.</span>
+    <span class="comment">// This should be done by the scheduling pipeline only.</span>
+    SetFailedPlugin(plugin <a href="index.html#Plugin">Plugin</a>, stage <a href="http://localhost:8080/pkg/builtin/#string">string</a>)
+
+    <span class="comment">// Gets the reasons for the current status as a single string.</span>
+    Message() <a href="http://localhost:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewInternalErrorStatus">func <a href="http://localhost:8080/src/framework/pipeline/status_impl.go?s=545:590#L26">NewInternalErrorStatus</a>
+					<a class="permalink" href="index.html#NewInternalErrorStatus">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewInternalErrorStatus(err <a href="http://localhost:8080/pkg/builtin/#error">error</a>) <a href="index.html#Status">Status</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewStatus">func <a href="http://localhost:8080/src/framework/pipeline/status_impl.go?s=265:322#L11">NewStatus</a>
+					<a class="permalink" href="index.html#NewStatus">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewStatus(code <a href="index.html#StatusCode">StatusCode</a>, reasons ...<a href="http://localhost:8080/pkg/builtin/#string">string</a>) <a href="index.html#Status">Status</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewSuccessStatus">func <a href="http://localhost:8080/src/framework/pipeline/status_impl.go?s=482:512#L22">NewSuccessStatus</a>
+					<a class="permalink" href="index.html#NewSuccessStatus">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewSuccessStatus() <a href="index.html#Status">Status</a></pre>
+				
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="StatusCode">type <a href="http://localhost:8080/src/framework/pipeline/status.go?s=59:78#L1">StatusCode</a>
+				<a class="permalink" href="index.html#StatusCode">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Describes a polaris-scheduler Status.
+
+			<pre>type StatusCode <a href="http://localhost:8080/pkg/builtin/#int">int</a></pre>
+
+			
+				
+				<pre>const (
+    <span class="comment">// Success means that the plugin has executed correctly and deemed the pod to be schedulable.</span>
+    <span class="comment">// A nil Status is also considered as a Success.</span>
+    <span id="Success">Success</span> <a href="index.html#StatusCode">StatusCode</a> = <a href="http://localhost:8080/pkg/builtin/#iota">iota</a>
+
+    <span class="comment">// Designates an internal plugin error, such as unexpected input, etc.</span>
+    <span class="comment">// This should NOT be used when a pod is deemed to be unschedulable.</span>
+    <span id="InternalError">InternalError</span>
+
+    <span class="comment">// Unschedulable means that the plugin cannot find a node (within the plugin&#39;s scope) to place the pod.</span>
+    <span class="comment">// The Reasons array should be set to the reason for the unschedulability.</span>
+    <span id="Unschedulable">Unschedulable</span>
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.19.9.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:8080/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

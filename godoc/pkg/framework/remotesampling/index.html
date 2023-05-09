@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>remotesampling - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="../../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.19.9";</script>
+<script src="../../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="../../index.html">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="../../index.html">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:8080/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package remotesampling
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "framework/remotesampling"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#CalcRequiredNodesCount">func CalcRequiredNodesCount(request *RemoteNodesSamplerRequest, storeReader collections.ConcurrentObjectStoreReader[*core.Node]) int</a></dd>
+			
+			
+				
+				<dd><a href="index.html#DefaultRemoteSamplerClient">type DefaultRemoteSamplerClient</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewDefaultRemoteSamplerClient">func NewDefaultRemoteSamplerClient(clusterName string, baseURI string, samplingStrategyName string, logger *logr.Logger) *DefaultRemoteSamplerClient</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DefaultRemoteSamplerClient.BaseURI">func (sc *DefaultRemoteSamplerClient) BaseURI() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DefaultRemoteSamplerClient.ClusterName">func (sc *DefaultRemoteSamplerClient) ClusterName() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DefaultRemoteSamplerClient.SampleNodes">func (sc *DefaultRemoteSamplerClient) SampleNodes(ctx context.Context, request *RemoteNodesSamplerRequest) (*RemoteNodesSamplerResponse, *RemoteNodesSamplerError)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DefaultRemoteSamplerClient.SamplingStrategyName">func (sc *DefaultRemoteSamplerClient) SamplingStrategyName() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DefaultRemoteSamplerClientsManager">type DefaultRemoteSamplerClientsManager</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewDefaultRemoteSamplerClientsManager">func NewDefaultRemoteSamplerClientsManager(remoteClusters map[string]*config.RemoteClusterConfig, samplingStrategy string, maxConcurrentRequests int, logger *logr.Logger) *DefaultRemoteSamplerClientsManager</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DefaultRemoteSamplerClientsManager.SampleNodesFromClusters">func (scm *DefaultRemoteSamplerClientsManager) SampleNodesFromClusters(ctx context.Context, request *RemoteNodesSamplerRequest, percentageOfClustersToSample float64) (map[string]*RemoteNodesSamplerResult, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#RemoteNodesSamplerError">type RemoteNodesSamplerError</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RemoteNodesSamplerRequest">type RemoteNodesSamplerRequest</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RemoteNodesSamplerResponse">type RemoteNodesSamplerResponse</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RemoteNodesSamplerResult">type RemoteNodesSamplerResult</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RemoteSamplerClient">type RemoteSamplerClient</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RemoteSamplerClientsManager">type RemoteSamplerClientsManager</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:8080/src/framework/remotesampling/default_remote_sampler_client.go">default_remote_sampler_client.go</a>
+			
+				<a href="http://localhost:8080/src/framework/remotesampling/default_remote_sampler_clients_manager.go">default_remote_sampler_clients_manager.go</a>
+			
+				<a href="http://localhost:8080/src/framework/remotesampling/dto.go">dto.go</a>
+			
+				<a href="http://localhost:8080/src/framework/remotesampling/remote_sampler_client.go">remote_sampler_client.go</a>
+			
+				<a href="http://localhost:8080/src/framework/remotesampling/util.go">util.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+			
+			
+			<h2 id="CalcRequiredNodesCount">func <a href="http://localhost:8080/src/framework/remotesampling/util.go?s=238:375#L1">CalcRequiredNodesCount</a>
+				<a class="permalink" href="index.html#CalcRequiredNodesCount">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func CalcRequiredNodesCount(
+    request *<a href="index.html#RemoteNodesSamplerRequest">RemoteNodesSamplerRequest</a>,
+    storeReader <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/collections/">collections</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/collections/#ConcurrentObjectStoreReader">ConcurrentObjectStoreReader</a>[*<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/">core</a>.<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/#Node">Node</a>],
+) <a href="http://localhost:8080/pkg/builtin/#int">int</a></pre>
+			<p>Calculates the number of nodes that a sample for the specified request needs to contain.
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="DefaultRemoteSamplerClient">type <a href="http://localhost:8080/src/framework/remotesampling/default_remote_sampler_client.go?s=364:592#L14">DefaultRemoteSamplerClient</a>
+				<a class="permalink" href="index.html#DefaultRemoteSamplerClient">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Default implementation of RemoteSamplerClient.
+
+			<pre>type DefaultRemoteSamplerClient struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewDefaultRemoteSamplerClient">func <a href="http://localhost:8080/src/framework/remotesampling/default_remote_sampler_client.go?s=594:749#L23">NewDefaultRemoteSamplerClient</a>
+					<a class="permalink" href="index.html#NewDefaultRemoteSamplerClient">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewDefaultRemoteSamplerClient(
+    clusterName <a href="http://localhost:8080/pkg/builtin/#string">string</a>,
+    baseURI <a href="http://localhost:8080/pkg/builtin/#string">string</a>,
+    samplingStrategyName <a href="http://localhost:8080/pkg/builtin/#string">string</a>,
+    logger *<a href="http://localhost:8080/pkg/github.com/go-logr/logr/">logr</a>.<a href="http://localhost:8080/pkg/github.com/go-logr/logr/#Logger">Logger</a>,
+) *<a href="index.html#DefaultRemoteSamplerClient">DefaultRemoteSamplerClient</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="DefaultRemoteSamplerClient.BaseURI">func (*DefaultRemoteSamplerClient) <a href="http://localhost:8080/src/framework/remotesampling/default_remote_sampler_client.go?s=1173:1227#L46">BaseURI</a>
+					<a class="permalink" href="index.html#DefaultRemoteSamplerClient.BaseURI">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sc *<a href="index.html#DefaultRemoteSamplerClient">DefaultRemoteSamplerClient</a>) BaseURI() <a href="http://localhost:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DefaultRemoteSamplerClient.ClusterName">func (*DefaultRemoteSamplerClient) <a href="http://localhost:8080/src/framework/remotesampling/default_remote_sampler_client.go?s=1252:1310#L50">ClusterName</a>
+					<a class="permalink" href="index.html#DefaultRemoteSamplerClient.ClusterName">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sc *<a href="index.html#DefaultRemoteSamplerClient">DefaultRemoteSamplerClient</a>) ClusterName() <a href="http://localhost:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DefaultRemoteSamplerClient.SampleNodes">func (*DefaultRemoteSamplerClient) <a href="http://localhost:8080/src/framework/remotesampling/default_remote_sampler_client.go?s=1444:1606#L58">SampleNodes</a>
+					<a class="permalink" href="index.html#DefaultRemoteSamplerClient.SampleNodes">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sc *<a href="index.html#DefaultRemoteSamplerClient">DefaultRemoteSamplerClient</a>) SampleNodes(ctx <a href="http://localhost:8080/pkg/context/">context</a>.<a href="http://localhost:8080/pkg/context/#Context">Context</a>, request *<a href="index.html#RemoteNodesSamplerRequest">RemoteNodesSamplerRequest</a>) (*<a href="index.html#RemoteNodesSamplerResponse">RemoteNodesSamplerResponse</a>, *<a href="index.html#RemoteNodesSamplerError">RemoteNodesSamplerError</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DefaultRemoteSamplerClient.SamplingStrategyName">func (*DefaultRemoteSamplerClient) <a href="http://localhost:8080/src/framework/remotesampling/default_remote_sampler_client.go?s=1339:1406#L54">SamplingStrategyName</a>
+					<a class="permalink" href="index.html#DefaultRemoteSamplerClient.SamplingStrategyName">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sc *<a href="index.html#DefaultRemoteSamplerClient">DefaultRemoteSamplerClient</a>) SamplingStrategyName() <a href="http://localhost:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DefaultRemoteSamplerClientsManager">type <a href="http://localhost:8080/src/framework/remotesampling/default_remote_sampler_clients_manager.go?s=722:1020#L22">DefaultRemoteSamplerClientsManager</a>
+				<a class="permalink" href="index.html#DefaultRemoteSamplerClientsManager">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Default implementation of RemoteSamplerClientsManager.
+
+			<pre>type DefaultRemoteSamplerClientsManager struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewDefaultRemoteSamplerClientsManager">func <a href="http://localhost:8080/src/framework/remotesampling/default_remote_sampler_clients_manager.go?s=1518:1731#L49">NewDefaultRemoteSamplerClientsManager</a>
+					<a class="permalink" href="index.html#NewDefaultRemoteSamplerClientsManager">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewDefaultRemoteSamplerClientsManager(
+    remoteClusters map[<a href="http://localhost:8080/pkg/builtin/#string">string</a>]*<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/config/">config</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/config/#RemoteClusterConfig">RemoteClusterConfig</a>,
+    samplingStrategy <a href="http://localhost:8080/pkg/builtin/#string">string</a>,
+    maxConcurrentRequests <a href="http://localhost:8080/pkg/builtin/#int">int</a>,
+    logger *<a href="http://localhost:8080/pkg/github.com/go-logr/logr/">logr</a>.<a href="http://localhost:8080/pkg/github.com/go-logr/logr/#Logger">Logger</a>,
+) *<a href="index.html#DefaultRemoteSamplerClientsManager">DefaultRemoteSamplerClientsManager</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="DefaultRemoteSamplerClientsManager.SampleNodesFromClusters">func (*DefaultRemoteSamplerClientsManager) <a href="http://localhost:8080/src/framework/remotesampling/default_remote_sampler_clients_manager.go?s=2451:2668#L74">SampleNodesFromClusters</a>
+					<a class="permalink" href="index.html#DefaultRemoteSamplerClientsManager.SampleNodesFromClusters">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (scm *<a href="index.html#DefaultRemoteSamplerClientsManager">DefaultRemoteSamplerClientsManager</a>) SampleNodesFromClusters(
+    ctx <a href="http://localhost:8080/pkg/context/">context</a>.<a href="http://localhost:8080/pkg/context/#Context">Context</a>,
+    request *<a href="index.html#RemoteNodesSamplerRequest">RemoteNodesSamplerRequest</a>,
+    percentageOfClustersToSample <a href="http://localhost:8080/pkg/builtin/#float64">float64</a>,
+) (map[<a href="http://localhost:8080/pkg/builtin/#string">string</a>]*<a href="index.html#RemoteNodesSamplerResult">RemoteNodesSamplerResult</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="RemoteNodesSamplerError">type <a href="http://localhost:8080/src/framework/remotesampling/dto.go?s=804:902#L17">RemoteNodesSamplerError</a>
+				<a class="permalink" href="index.html#RemoteNodesSamplerError">&#xb6;</a>
+				
+				
+			</h2>
+			<p>DTO for error responses.
+
+			<pre>type RemoteNodesSamplerError struct {
+<span id="RemoteNodesSamplerError.Error"></span>    Error *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/">client</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/client/#PolarisErrorDto">PolarisErrorDto</a> `json:&#34;error&#34; yaml:&#34;error&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="RemoteNodesSamplerRequest">type <a href="http://localhost:8080/src/framework/remotesampling/dto.go?s=242:582#L1">RemoteNodesSamplerRequest</a>
+				<a class="permalink" href="index.html#RemoteNodesSamplerRequest">&#xb6;</a>
+				
+				
+			</h2>
+			<p>DTO for requesting a nodes sample from a remote nodes sampler.
+
+			<pre>type RemoteNodesSamplerRequest struct {
+
+    <span class="comment">// Information about the pod that should be scheduled.</span>
+<span id="RemoteNodesSamplerRequest.PodInfo"></span>    PodInfo *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#PodInfo">PodInfo</a> `json:&#34;podInfo&#34; yaml:&#34;podInfo&#34;`
+
+    <span class="comment">// The number of nodes to sample defined as basis points (bp) of the total number of nodes.</span>
+    <span class="comment">// 1 bp = 0.01%</span>
+<span id="RemoteNodesSamplerRequest.NodesToSampleBp"></span>    NodesToSampleBp <a href="http://localhost:8080/pkg/builtin/#uint32">uint32</a> `json:&#34;nodesToSampleBp&#34; yaml:&#34;nodesToSampleBp&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="RemoteNodesSamplerResponse">type <a href="http://localhost:8080/src/framework/remotesampling/dto.go?s=637:774#L10">RemoteNodesSamplerResponse</a>
+				<a class="permalink" href="index.html#RemoteNodesSamplerResponse">&#xb6;</a>
+				
+				
+			</h2>
+			<p>DTO for the response from a remote nodes sampler.
+
+			<pre>type RemoteNodesSamplerResponse struct {
+
+    <span class="comment">// The nodes that have been sampled.</span>
+<span id="RemoteNodesSamplerResponse.Nodes"></span>    Nodes []*<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#NodeInfo">NodeInfo</a> `json:&#34;nodes&#34; yaml:&#34;nodes&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="RemoteNodesSamplerResult">type <a href="http://localhost:8080/src/framework/remotesampling/remote_sampler_client.go?s=181:409#L1">RemoteNodesSamplerResult</a>
+				<a class="permalink" href="index.html#RemoteNodesSamplerResult">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Combines a RemoteNodesSamplerResponse and a RemoteNodesSamplerError in one object.
+At all times, only one of its fields is set.
+
+			<pre>type RemoteNodesSamplerResult struct {
+    <span class="comment">// The response from the remote nodes sampler, if the request was successful.</span>
+<span id="RemoteNodesSamplerResult.Response"></span>    Response *<a href="index.html#RemoteNodesSamplerResponse">RemoteNodesSamplerResponse</a>
+
+    <span class="comment">// The error, if the request failed.</span>
+<span id="RemoteNodesSamplerResult.Error"></span>    Error *<a href="index.html#RemoteNodesSamplerError">RemoteNodesSamplerError</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="RemoteSamplerClient">type <a href="http://localhost:8080/src/framework/remotesampling/remote_sampler_client.go?s=609:1114#L11">RemoteSamplerClient</a>
+				<a class="permalink" href="index.html#RemoteSamplerClient">&#xb6;</a>
+				
+				
+			</h2>
+			<p>A client for obtaining node samples from a remote sampler.
+<p>This is intentionally not part of the ClusterClient interface, because ClusterClient
+architecturally resides at a lower level.
+
+			<pre>type RemoteSamplerClient interface {
+
+    <span class="comment">// The name of the cluster, where the remote sampler is running.</span>
+    ClusterName() <a href="http://localhost:8080/pkg/builtin/#string">string</a>
+
+    <span class="comment">// The base URI of the remote sampler.</span>
+    BaseURI() <a href="http://localhost:8080/pkg/builtin/#string">string</a>
+
+    <span class="comment">// The name of the sampling strategy.</span>
+    SamplingStrategyName() <a href="http://localhost:8080/pkg/builtin/#string">string</a>
+
+    <span class="comment">// Executes a request to the remote sampler to obtain a sample of nodes.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Returns a sample of nodes or an error.</span>
+    SampleNodes(ctx <a href="http://localhost:8080/pkg/context/">context</a>.<a href="http://localhost:8080/pkg/context/#Context">Context</a>, request *<a href="index.html#RemoteNodesSamplerRequest">RemoteNodesSamplerRequest</a>) (*<a href="index.html#RemoteNodesSamplerResponse">RemoteNodesSamplerResponse</a>, *<a href="index.html#RemoteNodesSamplerError">RemoteNodesSamplerError</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="RemoteSamplerClientsManager">type <a href="http://localhost:8080/src/framework/remotesampling/remote_sampler_client.go?s=1173:1817#L29">RemoteSamplerClientsManager</a>
+				<a class="permalink" href="index.html#RemoteSamplerClientsManager">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Facilitates the use of multiple RemoteSamplerClients.
+
+			<pre>type RemoteSamplerClientsManager interface {
+
+    <span class="comment">// Executes a request to the specified percentage of all configured remote samplers to obtain node samples.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The percentageOfClustersToSample needs to be specified as a percentage in the range (0.0, 1.0].</span>
+    <span class="comment">//</span>
+    <span class="comment">// Returns a map of responses indexed by cluster name or an error.</span>
+    <span class="comment">// Note that an error is only returned in case of a fatal issue - if single clusters return an error, they will be contained in the results map.</span>
+    SampleNodesFromClusters(ctx <a href="http://localhost:8080/pkg/context/">context</a>.<a href="http://localhost:8080/pkg/context/#Context">Context</a>, request *<a href="index.html#RemoteNodesSamplerRequest">RemoteNodesSamplerRequest</a>, percentageOfClustersToSample <a href="http://localhost:8080/pkg/builtin/#float64">float64</a>) (map[<a href="http://localhost:8080/pkg/builtin/#string">string</a>]*<a href="index.html#RemoteNodesSamplerResult">RemoteNodesSamplerResult</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.19.9.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:8080/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>pluginfactories - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.19.9";</script>
+<script src="../../../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="../../../index.html">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="../../../index.html">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:8080/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package pluginfactories
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "framework/runtime/pluginfactories"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#DefaultBindingPluginsFactory">type DefaultBindingPluginsFactory</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewDefaultBindingPluginsFactory">func NewDefaultBindingPluginsFactory(registry *pipeline.PluginsRegistry[pipeline.ClusterAgentServices]) *DefaultBindingPluginsFactory</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DefaultBindingPluginsFactory.NewBindingPipelinePlugins">func (f *DefaultBindingPluginsFactory) NewBindingPipelinePlugins(clusterAgentServices pipeline.ClusterAgentServices) (*pipeline.BindingPipelinePlugins, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DefaultSamplingPluginsFactory">type DefaultSamplingPluginsFactory</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewDefaultSamplingPluginsFactory">func NewDefaultSamplingPluginsFactory(registry *pipeline.PluginsRegistry[pipeline.ClusterAgentServices]) *DefaultSamplingPluginsFactory</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DefaultSamplingPluginsFactory.NewSamplingPipelinePlugins">func (f *DefaultSamplingPluginsFactory) NewSamplingPipelinePlugins(clusterAgentServices pipeline.ClusterAgentServices) (*pipeline.SamplingPipelinePlugins, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DefaultSamplingPluginsFactory.NewSamplingStrategiesPlugins">func (f *DefaultSamplingPluginsFactory) NewSamplingStrategiesPlugins(clusterAgentServices pipeline.ClusterAgentServices) ([]pipeline.SamplingStrategyPlugin, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DefaultSchedulingPluginsFactory">type DefaultSchedulingPluginsFactory</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewDefaultSchedulingPluginsFactory">func NewDefaultSchedulingPluginsFactory(registry *pipeline.PluginsRegistry[pipeline.PolarisScheduler]) *DefaultSchedulingPluginsFactory</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DefaultSchedulingPluginsFactory.NewDecisionPipelinePlugins">func (f *DefaultSchedulingPluginsFactory) NewDecisionPipelinePlugins(scheduler pipeline.PolarisScheduler) (*pipeline.DecisionPipelinePlugins, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DefaultSchedulingPluginsFactory.NewSampleNodesPlugin">func (f *DefaultSchedulingPluginsFactory) NewSampleNodesPlugin(scheduler pipeline.PolarisScheduler) (pipeline.SampleNodesPlugin, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DefaultSchedulingPluginsFactory.NewSortPlugin">func (f *DefaultSchedulingPluginsFactory) NewSortPlugin(scheduler pipeline.PolarisScheduler) (pipeline.SortPlugin, error)</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:8080/src/framework/runtime/pluginfactories/default_binding_plugins_factory.go">default_binding_plugins_factory.go</a>
+			
+				<a href="http://localhost:8080/src/framework/runtime/pluginfactories/default_sampling_plugins_factory.go">default_sampling_plugins_factory.go</a>
+			
+				<a href="http://localhost:8080/src/framework/runtime/pluginfactories/default_scheduling_plugins_factory.go">default_scheduling_plugins_factory.go</a>
+			
+				<a href="http://localhost:8080/src/framework/runtime/pluginfactories/util.go">util.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="DefaultBindingPluginsFactory">type <a href="http://localhost:8080/src/framework/runtime/pluginfactories/default_binding_plugins_factory.go?s=190:308#L1">DefaultBindingPluginsFactory</a>
+				<a class="permalink" href="index.html#DefaultBindingPluginsFactory">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type DefaultBindingPluginsFactory struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewDefaultBindingPluginsFactory">func <a href="http://localhost:8080/src/framework/runtime/pluginfactories/default_binding_plugins_factory.go?s=310:443#L5">NewDefaultBindingPluginsFactory</a>
+					<a class="permalink" href="index.html#NewDefaultBindingPluginsFactory">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewDefaultBindingPluginsFactory(registry *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#PluginsRegistry">PluginsRegistry</a>[<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#ClusterAgentServices">ClusterAgentServices</a>]) *<a href="index.html#DefaultBindingPluginsFactory">DefaultBindingPluginsFactory</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="DefaultBindingPluginsFactory.NewBindingPipelinePlugins">func (*DefaultBindingPluginsFactory) <a href="http://localhost:8080/src/framework/runtime/pluginfactories/default_binding_plugins_factory.go?s=540:698#L12">NewBindingPipelinePlugins</a>
+					<a class="permalink" href="index.html#DefaultBindingPluginsFactory.NewBindingPipelinePlugins">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (f *<a href="index.html#DefaultBindingPluginsFactory">DefaultBindingPluginsFactory</a>) NewBindingPipelinePlugins(clusterAgentServices <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#ClusterAgentServices">ClusterAgentServices</a>) (*<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#BindingPipelinePlugins">BindingPipelinePlugins</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DefaultSamplingPluginsFactory">type <a href="http://localhost:8080/src/framework/runtime/pluginfactories/default_sampling_plugins_factory.go?s=249:368#L2">DefaultSamplingPluginsFactory</a>
+				<a class="permalink" href="index.html#DefaultSamplingPluginsFactory">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Default implementation of the SamplingPluginsFactory.
+
+			<pre>type DefaultSamplingPluginsFactory struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewDefaultSamplingPluginsFactory">func <a href="http://localhost:8080/src/framework/runtime/pluginfactories/default_sampling_plugins_factory.go?s=370:505#L6">NewDefaultSamplingPluginsFactory</a>
+					<a class="permalink" href="index.html#NewDefaultSamplingPluginsFactory">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewDefaultSamplingPluginsFactory(registry *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#PluginsRegistry">PluginsRegistry</a>[<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#ClusterAgentServices">ClusterAgentServices</a>]) *<a href="index.html#DefaultSamplingPluginsFactory">DefaultSamplingPluginsFactory</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="DefaultSamplingPluginsFactory.NewSamplingPipelinePlugins">func (*DefaultSamplingPluginsFactory) <a href="http://localhost:8080/src/framework/runtime/pluginfactories/default_sampling_plugins_factory.go?s=1254:1415#L26">NewSamplingPipelinePlugins</a>
+					<a class="permalink" href="index.html#DefaultSamplingPluginsFactory.NewSamplingPipelinePlugins">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (f *<a href="index.html#DefaultSamplingPluginsFactory">DefaultSamplingPluginsFactory</a>) NewSamplingPipelinePlugins(clusterAgentServices <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#ClusterAgentServices">ClusterAgentServices</a>) (*<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#SamplingPipelinePlugins">SamplingPipelinePlugins</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DefaultSamplingPluginsFactory.NewSamplingStrategiesPlugins">func (*DefaultSamplingPluginsFactory) <a href="http://localhost:8080/src/framework/runtime/pluginfactories/default_sampling_plugins_factory.go?s=603:766#L13">NewSamplingStrategiesPlugins</a>
+					<a class="permalink" href="index.html#DefaultSamplingPluginsFactory.NewSamplingStrategiesPlugins">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (f *<a href="index.html#DefaultSamplingPluginsFactory">DefaultSamplingPluginsFactory</a>) NewSamplingStrategiesPlugins(clusterAgentServices <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#ClusterAgentServices">ClusterAgentServices</a>) ([]<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#SamplingStrategyPlugin">SamplingStrategyPlugin</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DefaultSchedulingPluginsFactory">type <a href="http://localhost:8080/src/framework/runtime/pluginfactories/default_scheduling_plugins_factory.go?s=263:380#L4">DefaultSchedulingPluginsFactory</a>
+				<a class="permalink" href="index.html#DefaultSchedulingPluginsFactory">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Default implementation of the SchedulingPluginsFactory.
+
+			<pre>type DefaultSchedulingPluginsFactory struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewDefaultSchedulingPluginsFactory">func <a href="http://localhost:8080/src/framework/runtime/pluginfactories/default_scheduling_plugins_factory.go?s=382:517#L8">NewDefaultSchedulingPluginsFactory</a>
+					<a class="permalink" href="index.html#NewDefaultSchedulingPluginsFactory">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewDefaultSchedulingPluginsFactory(registry *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#PluginsRegistry">PluginsRegistry</a>[<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#PolarisScheduler">PolarisScheduler</a>]) *<a href="index.html#DefaultSchedulingPluginsFactory">DefaultSchedulingPluginsFactory</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="DefaultSchedulingPluginsFactory.NewDecisionPipelinePlugins">func (*DefaultSchedulingPluginsFactory) <a href="http://localhost:8080/src/framework/runtime/pluginfactories/default_scheduling_plugins_factory.go?s=1536:1684#L35">NewDecisionPipelinePlugins</a>
+					<a class="permalink" href="index.html#DefaultSchedulingPluginsFactory.NewDecisionPipelinePlugins">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (f *<a href="index.html#DefaultSchedulingPluginsFactory">DefaultSchedulingPluginsFactory</a>) NewDecisionPipelinePlugins(scheduler <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#PolarisScheduler">PolarisScheduler</a>) (*<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#DecisionPipelinePlugins">DecisionPipelinePlugins</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DefaultSchedulingPluginsFactory.NewSampleNodesPlugin">func (*DefaultSchedulingPluginsFactory) <a href="http://localhost:8080/src/framework/runtime/pluginfactories/default_scheduling_plugins_factory.go?s=1059:1194#L25">NewSampleNodesPlugin</a>
+					<a class="permalink" href="index.html#DefaultSchedulingPluginsFactory.NewSampleNodesPlugin">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (f *<a href="index.html#DefaultSchedulingPluginsFactory">DefaultSchedulingPluginsFactory</a>) NewSampleNodesPlugin(scheduler <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#PolarisScheduler">PolarisScheduler</a>) (<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#SampleNodesPlugin">SampleNodesPlugin</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DefaultSchedulingPluginsFactory.NewSortPlugin">func (*DefaultSchedulingPluginsFactory) <a href="http://localhost:8080/src/framework/runtime/pluginfactories/default_scheduling_plugins_factory.go?s=617:738#L15">NewSortPlugin</a>
+					<a class="permalink" href="index.html#DefaultSchedulingPluginsFactory.NewSortPlugin">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (f *<a href="index.html#DefaultSchedulingPluginsFactory">DefaultSchedulingPluginsFactory</a>) NewSortPlugin(scheduler <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#PolarisScheduler">PolarisScheduler</a>) (<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#SortPlugin">SortPlugin</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.19.9.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:8080/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

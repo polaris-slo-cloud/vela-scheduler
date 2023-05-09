@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>remotesampler - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.19.9";</script>
+<script src="../../../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="../../../index.html">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="../../../index.html">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:8080/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package remotesampler
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "framework/plugins/remotesampler"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#NewRemoteNodesSamplerPlugin">func NewRemoteNodesSamplerPlugin(pluginConfig config.PluginConfig, scheduler pipeline.PolarisScheduler) (pipeline.Plugin, error)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#RemoteNodesSamplerPlugin">type RemoteNodesSamplerPlugin</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#RemoteNodesSamplerPlugin.Name">func (rs *RemoteNodesSamplerPlugin) Name() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#RemoteNodesSamplerPlugin.SampleNodes">func (rs *RemoteNodesSamplerPlugin) SampleNodes(ctx pipeline.SchedulingContext, podInfo *pipeline.PodInfo) ([]*pipeline.NodeInfo, pipeline.Status)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#RemoteNodesSamplerPluginConfig">type RemoteNodesSamplerPluginConfig</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:8080/src/framework/plugins/remotesampler/config.go">config.go</a>
+			
+				<a href="http://localhost:8080/src/framework/plugins/remotesampler/remote_nodes_sampler_plugin.go">remote_nodes_sampler_plugin.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span id="DefaultMaxConcurrentRequestsPerInstance">DefaultMaxConcurrentRequestsPerInstance</span> = 50
+    <span id="DefaultPercentageOfClustersToSample">DefaultPercentageOfClustersToSample</span>     = 33
+)</pre>
+			
+				
+				<pre>const (
+    <span id="PluginName">PluginName</span> = &#34;RemoteNodesSampler&#34;
+)</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="NewRemoteNodesSamplerPlugin">func <a href="http://localhost:8080/src/framework/plugins/remotesampler/remote_nodes_sampler_plugin.go?s=722:850#L17">NewRemoteNodesSamplerPlugin</a>
+				<a class="permalink" href="index.html#NewRemoteNodesSamplerPlugin">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func NewRemoteNodesSamplerPlugin(pluginConfig <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/config/">config</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/config/#PluginConfig">PluginConfig</a>, scheduler <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#PolarisScheduler">PolarisScheduler</a>) (<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#Plugin">Plugin</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+		
+			
+			
+			<h2 id="RemoteNodesSamplerPlugin">type <a href="http://localhost:8080/src/framework/plugins/remotesampler/remote_nodes_sampler_plugin.go?s=547:720#L11">RemoteNodesSamplerPlugin</a>
+				<a class="permalink" href="index.html#RemoteNodesSamplerPlugin">&#xb6;</a>
+				
+				
+			</h2>
+			<p>This SampleNodesPlugin contacts a remote sampling services to get the nodes sample.
+
+			<pre>type RemoteNodesSamplerPlugin struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="RemoteNodesSamplerPlugin.Name">func (*RemoteNodesSamplerPlugin) <a href="http://localhost:8080/src/framework/plugins/remotesampler/remote_nodes_sampler_plugin.go?s=1488:1537#L40">Name</a>
+					<a class="permalink" href="index.html#RemoteNodesSamplerPlugin.Name">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (rs *<a href="index.html#RemoteNodesSamplerPlugin">RemoteNodesSamplerPlugin</a>) Name() <a href="http://localhost:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="RemoteNodesSamplerPlugin.SampleNodes">func (*RemoteNodesSamplerPlugin) <a href="http://localhost:8080/src/framework/plugins/remotesampler/remote_nodes_sampler_plugin.go?s=1562:1708#L44">SampleNodes</a>
+					<a class="permalink" href="index.html#RemoteNodesSamplerPlugin.SampleNodes">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (rs *<a href="index.html#RemoteNodesSamplerPlugin">RemoteNodesSamplerPlugin</a>) SampleNodes(ctx <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#SchedulingContext">SchedulingContext</a>, podInfo *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#PodInfo">PodInfo</a>) ([]*<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#NodeInfo">NodeInfo</a>, <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#Status">Status</a>)</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="RemoteNodesSamplerPluginConfig">type <a href="http://localhost:8080/src/framework/plugins/remotesampler/config.go?s=271:976#L1">RemoteNodesSamplerPluginConfig</a>
+				<a class="permalink" href="index.html#RemoteNodesSamplerPluginConfig">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Configuration data for the RemoteNodesSamplerPlugin.
+<p>The remoteClusters configured in the SchedulerConfig are used as sampling targets.
+
+			<pre>type RemoteNodesSamplerPluginConfig struct {
+
+    <span class="comment">// The sampling strategy that should be used.</span>
+    <span class="comment">// This endpoint must be supported by all remove samplers.</span>
+<span id="RemoteNodesSamplerPluginConfig.SamplingStrategy"></span>    SamplingStrategy <a href="http://localhost:8080/pkg/builtin/#string">string</a> `json:&#34;samplingStrategy&#34; yaml:&#34;samplingStrategy&#34;`
+
+    <span class="comment">// The maximum number of concurrent requests to remote samplers that a single instance of the plugin may make.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Default: 50</span>
+<span id="RemoteNodesSamplerPluginConfig.MaxConcurrentRequestsPerInstance"></span>    MaxConcurrentRequestsPerInstance <a href="http://localhost:8080/pkg/builtin/#int32">int32</a> `json:&#34;maxConcurrentRequestsPerInstance&#34; yaml:&#34;maxConcurrentRequestsPerInstance&#34;`
+
+    <span class="comment">// Defines the percentage (from 1-100) of all clusters that should be sampled for a pod.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Default: 33</span>
+<span id="RemoteNodesSamplerPluginConfig.PercentageOfClustersToSample"></span>    PercentageOfClustersToSample <a href="http://localhost:8080/pkg/builtin/#int32">int32</a> `json:&#34;percentageOfClustersToSample&#34; yaml:&#34;percentageOfClustersToSample&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.19.9.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:8080/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

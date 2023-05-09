@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>config - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="../../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.19.9";</script>
+<script src="../../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="../../index.html">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="../../index.html">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:8080/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package config
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "framework/config"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="index.html#ReadInt32FromPluginConfig">func ReadInt32FromPluginConfig(rawConfig PluginConfig, key string) (int32, error)</a></dd>
+			
+				
+				<dd><a href="index.html#ReadStringFromPluginConfig">func ReadStringFromPluginConfig(rawConfig PluginConfig, key string) (string, error)</a></dd>
+			
+				
+				<dd><a href="index.html#ReadStringMapFromPluginConfig">func ReadStringMapFromPluginConfig(rawConfig PluginConfig, key string) (map[string]string, error)</a></dd>
+			
+				
+				<dd><a href="index.html#SetDefaultsClusterAgentConfig">func SetDefaultsClusterAgentConfig(config *ClusterAgentConfig)</a></dd>
+			
+				
+				<dd><a href="index.html#SetDefaultsSchedulerConfig">func SetDefaultsSchedulerConfig(config *SchedulerConfig)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#BindingPluginsList">type BindingPluginsList</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ClusterAgentConfig">type ClusterAgentConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PluginConfig">type PluginConfig</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ReadNestedObjectFromPluginConfig">func ReadNestedObjectFromPluginConfig(rawConfig PluginConfig, key string) (PluginConfig, error)</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PluginListEntry">type PluginListEntry</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PluginsConfigListEntry">type PluginsConfigListEntry</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RemoteClusterConfig">type RemoteClusterConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#SamplingPluginsList">type SamplingPluginsList</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#SchedulerConfig">type SchedulerConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#SchedulerOperatingMode">type SchedulerOperatingMode</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#SchedulingPluginsList">type SchedulingPluginsList</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:8080/src/framework/config/cluster_agent_config.go">cluster_agent_config.go</a>
+			
+				<a href="http://localhost:8080/src/framework/config/plugin_config.go">plugin_config.go</a>
+			
+				<a href="http://localhost:8080/src/framework/config/remote_cluster_config.go">remote_cluster_config.go</a>
+			
+				<a href="http://localhost:8080/src/framework/config/scheduler_config.go">scheduler_config.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span id="DefaultClusterAgentListenAddress">DefaultClusterAgentListenAddress</span> = &#34;0.0.0.0:8081&#34;
+    <span id="DefaultNodesCacheUpdateInterval">DefaultNodesCacheUpdateInterval</span>  = 200
+    <span id="DefaultNodesCacheUpdateQueueSize">DefaultNodesCacheUpdateQueueSize</span> = 1000
+)</pre>
+			
+				
+				<pre>const (
+    <span class="comment">// Default number of nodes to sample = 2%.</span>
+    <span id="DefaultNodesToSampleBp">DefaultNodesToSampleBp</span> <a href="http://localhost:8080/pkg/builtin/#uint32">uint32</a> = 200
+
+    <span class="comment">// Default size of the incoming pods buffer.</span>
+    <span id="DefaultIncomingPodsBufferSize">DefaultIncomingPodsBufferSize</span> <a href="http://localhost:8080/pkg/builtin/#uint32">uint32</a> = 1000
+
+    <span class="comment">// Default number of commit candidate nodes.</span>
+    <span id="DefaultCommitCandidateNodes">DefaultCommitCandidateNodes</span> <a href="http://localhost:8080/pkg/builtin/#uint32">uint32</a> = 3
+
+    <span class="comment">// Default operating mode of the scheduler.</span>
+    <span id="DefaultSchedulerOperatingMode">DefaultSchedulerOperatingMode</span> <a href="index.html#SchedulerOperatingMode">SchedulerOperatingMode</a> = <a href="index.html#MultiCluster">MultiCluster</a>
+
+    <span class="comment">// Default listen address for the submit pod API.</span>
+    <span id="DefaultSubmitPodListenAddress">DefaultSubmitPodListenAddress</span> = &#34;0.0.0.0:8080&#34;
+)</pre>
+			
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				
+				<pre>var (
+    <span id="DefaultParallelSamplingPipelines">DefaultParallelSamplingPipelines</span> <a href="http://localhost:8080/pkg/builtin/#uint32">uint32</a> = <a href="http://localhost:8080/pkg/builtin/#uint32">uint32</a>(<a href="http://localhost:8080/pkg/runtime/">runtime</a>.<a href="http://localhost:8080/pkg/runtime/#NumCPU">NumCPU</a>()) * 10
+    <span id="DefaultParallelBindingPipelines">DefaultParallelBindingPipelines</span>  <a href="http://localhost:8080/pkg/builtin/#uint32">uint32</a> = <a href="http://localhost:8080/pkg/builtin/#uint32">uint32</a>(<a href="http://localhost:8080/pkg/runtime/">runtime</a>.<a href="http://localhost:8080/pkg/runtime/#NumCPU">NumCPU</a>()) * 10
+)</pre>
+			
+				
+				<pre>var (
+    <span class="comment">// Default number of parallel node samplers = number of CPU cores.</span>
+    <span id="DefaultParallelNodeSamplers">DefaultParallelNodeSamplers</span> <a href="http://localhost:8080/pkg/builtin/#uint32">uint32</a> = <a href="http://localhost:8080/pkg/builtin/#uint32">uint32</a>(<a href="http://localhost:8080/pkg/runtime/">runtime</a>.<a href="http://localhost:8080/pkg/runtime/#NumCPU">NumCPU</a>()) * 10
+
+    <span class="comment">// Default number of parallel Scheduling Decision Pipelines = number of CPU cores.</span>
+    <span id="DefaultParallelDecisionPipelines">DefaultParallelDecisionPipelines</span> <a href="http://localhost:8080/pkg/builtin/#uint32">uint32</a> = <a href="http://localhost:8080/pkg/builtin/#uint32">uint32</a>(<a href="http://localhost:8080/pkg/runtime/">runtime</a>.<a href="http://localhost:8080/pkg/runtime/#NumCPU">NumCPU</a>()) * 10
+)</pre>
+			
+		
+		
+			
+			
+			<h2 id="ReadInt32FromPluginConfig">func <a href="http://localhost:8080/src/framework/config/plugin_config.go?s=2442:2523#L71">ReadInt32FromPluginConfig</a>
+				<a class="permalink" href="index.html#ReadInt32FromPluginConfig">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func ReadInt32FromPluginConfig(rawConfig <a href="index.html#PluginConfig">PluginConfig</a>, key <a href="http://localhost:8080/pkg/builtin/#string">string</a>) (<a href="http://localhost:8080/pkg/builtin/#int32">int32</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>Reads an int32 value from the raw plugin config.
+
+			
+			
+
+		
+			
+			
+			<h2 id="ReadStringFromPluginConfig">func <a href="http://localhost:8080/src/framework/config/plugin_config.go?s=2049:2132#L58">ReadStringFromPluginConfig</a>
+				<a class="permalink" href="index.html#ReadStringFromPluginConfig">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func ReadStringFromPluginConfig(rawConfig <a href="index.html#PluginConfig">PluginConfig</a>, key <a href="http://localhost:8080/pkg/builtin/#string">string</a>) (<a href="http://localhost:8080/pkg/builtin/#string">string</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>Reads a string value from the raw plugin config.
+
+			
+			
+
+		
+			
+			
+			<h2 id="ReadStringMapFromPluginConfig">func <a href="http://localhost:8080/src/framework/config/plugin_config.go?s=3259:3356#L97">ReadStringMapFromPluginConfig</a>
+				<a class="permalink" href="index.html#ReadStringMapFromPluginConfig">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func ReadStringMapFromPluginConfig(rawConfig <a href="index.html#PluginConfig">PluginConfig</a>, key <a href="http://localhost:8080/pkg/builtin/#string">string</a>) (map[<a href="http://localhost:8080/pkg/builtin/#string">string</a>]<a href="http://localhost:8080/pkg/builtin/#string">string</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>Reads a string map from the raw plugin config.
+
+			
+			
+
+		
+			
+			
+			<h2 id="SetDefaultsClusterAgentConfig">func <a href="http://localhost:8080/src/framework/config/cluster_agent_config.go?s=2560:2622#L56">SetDefaultsClusterAgentConfig</a>
+				<a class="permalink" href="index.html#SetDefaultsClusterAgentConfig">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func SetDefaultsClusterAgentConfig(config *<a href="index.html#ClusterAgentConfig">ClusterAgentConfig</a>)</pre>
+			<p>Sets the default values in the ClusterAgentConfig for fields that are not set properly.
+
+			
+			
+
+		
+			
+			
+			<h2 id="SetDefaultsSchedulerConfig">func <a href="http://localhost:8080/src/framework/config/scheduler_config.go?s=4869:4925#L110">SetDefaultsSchedulerConfig</a>
+				<a class="permalink" href="index.html#SetDefaultsSchedulerConfig">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func SetDefaultsSchedulerConfig(config *<a href="index.html#SchedulerConfig">SchedulerConfig</a>)</pre>
+			<p>Sets the default values in the SchedulerConfig for fields that are not set properly.
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="BindingPluginsList">type <a href="http://localhost:8080/src/framework/config/plugin_config.go?s=1615:1730#L43">BindingPluginsList</a>
+				<a class="permalink" href="index.html#BindingPluginsList">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Used to configure the plugins in the binding pipeline.
+
+			<pre>type BindingPluginsList struct {
+<span id="BindingPluginsList.CheckConflicts"></span>    CheckConflicts []*<a href="index.html#PluginListEntry">PluginListEntry</a> `json:&#34;checkConflicts&#34; yaml:&#34;checkConflicts&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ClusterAgentConfig">type <a href="http://localhost:8080/src/framework/config/cluster_agent_config.go?s=401:2467#L7">ClusterAgentConfig</a>
+				<a class="permalink" href="index.html#ClusterAgentConfig">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Represents the configuration of a polaris-cluster-agent instance.
+
+			<pre>type ClusterAgentConfig struct {
+
+    <span class="comment">// The list of addresses and ports to listen on in</span>
+    <span class="comment">// the format &#34;&lt;IP&gt;:&lt;PORT&gt;&#34;</span>
+    <span class="comment">//</span>
+    <span class="comment">// Default: [ &#34;0.0.0.0:8081&#34; ]</span>
+<span id="ClusterAgentConfig.ListenOn"></span>    ListenOn []<a href="http://localhost:8080/pkg/builtin/#string">string</a> `json:&#34;listenOn&#34; yaml:&#34;listenOn&#34;`
+
+    <span class="comment">// The update interval for the nodes cache in milliseconds.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Default: 200</span>
+<span id="ClusterAgentConfig.NodesCacheUpdateIntervalMs"></span>    NodesCacheUpdateIntervalMs <a href="http://localhost:8080/pkg/builtin/#uint32">uint32</a> `json:&#34;nodesCacheUpdateIntervalMs&#34; yaml:&#34;nodesCacheUpdateIntervalMs&#34;`
+
+    <span class="comment">// The size of the update queue in the nodes cache.</span>
+    <span class="comment">// The update queue caches watch events that arrive between the update intervals.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Default: 1000</span>
+<span id="ClusterAgentConfig.NodesCacheUpdateQueueSize"></span>    NodesCacheUpdateQueueSize <a href="http://localhost:8080/pkg/builtin/#uint32">uint32</a> `json:&#34;nodesCacheUpdateQueueSize&#34; yaml:&#34;nodesCacheUpdateQueueSize&#34;`
+
+    <span class="comment">// The number of Sampling Pipelines to run in parallel.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Default: number of CPUs * 10</span>
+<span id="ClusterAgentConfig.ParallelSamplingPipelines"></span>    ParallelSamplingPipelines <a href="http://localhost:8080/pkg/builtin/#uint32">uint32</a> `json:&#34;parallelSamplingPipelines&#34; yaml:&#34;parallelSamplingPipelines&#34;`
+
+    <span class="comment">// The number of Binding Pipelines to run in parallel.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Default: number of CPUs * 10</span>
+<span id="ClusterAgentConfig.ParallelBindingPipelines"></span>    ParallelBindingPipelines <a href="http://localhost:8080/pkg/builtin/#uint32">uint32</a> `json:&#34;parallelBindingPipelines&#34; yaml:&#34;parallelBindingPipelines&#34;`
+
+    <span class="comment">// If true, a CommitSchedulingDecision request is considered successful and &#34;cut off&#34; after the binding pipeline completes successfully</span>
+    <span class="comment">// and before the actual commit operation (creation of the pod and the binding) starts.</span>
+    <span class="comment">// The commit operation will be executed asynchronously after the CommitSchedulingDecision response is sent back to the scheduler.</span>
+    <span class="comment">//</span>
+    <span class="comment">// This should be set to true to allow evaluating the performance of polaris-scheduler without bias from a slow orchestrator.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Default: false</span>
+<span id="ClusterAgentConfig.CutoffBeforeCommit"></span>    CutoffBeforeCommit <a href="http://localhost:8080/pkg/builtin/#bool">bool</a> `json:&#34;cutoffBeforeCommit&#34; yaml:&#34;cutoffBeforeCommit&#34;`
+
+    <span class="comment">// The list of plugins for the sampling pipeline.</span>
+<span id="ClusterAgentConfig.SamplingPlugins"></span>    SamplingPlugins <a href="index.html#SamplingPluginsList">SamplingPluginsList</a> `json:&#34;samplingPlugins&#34; yaml:&#34;samplingPlugins&#34;`
+
+    <span class="comment">// The list of plugins for the binding pipeline.</span>
+<span id="ClusterAgentConfig.BindingPlugins"></span>    BindingPlugins <a href="index.html#BindingPluginsList">BindingPluginsList</a> `json:&#34;bindingPlugins&#34; yaml:&#34;bindingPlugins&#34;`
+
+    <span class="comment">// (optional) Allows specifying configuration parameters for each plugin.</span>
+<span id="ClusterAgentConfig.PluginsConfig"></span>    PluginsConfig []*<a href="index.html#PluginsConfigListEntry">PluginsConfigListEntry</a> `json:&#34;pluginsConfig&#34; yaml:&#34;pluginsConfig&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PluginConfig">type <a href="http://localhost:8080/src/framework/config/plugin_config.go?s=80:120#L1">PluginConfig</a>
+				<a class="permalink" href="index.html#PluginConfig">&#xb6;</a>
+				
+				
+			</h2>
+			<p>The base interface for a plugin configuration.
+
+			<pre>type PluginConfig map[<a href="http://localhost:8080/pkg/builtin/#string">string</a>]interface{}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="ReadNestedObjectFromPluginConfig">func <a href="http://localhost:8080/src/framework/config/plugin_config.go?s=2835:2930#L84">ReadNestedObjectFromPluginConfig</a>
+					<a class="permalink" href="index.html#ReadNestedObjectFromPluginConfig">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func ReadNestedObjectFromPluginConfig(rawConfig <a href="index.html#PluginConfig">PluginConfig</a>, key <a href="http://localhost:8080/pkg/builtin/#string">string</a>) (<a href="index.html#PluginConfig">PluginConfig</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>Reads a nested object from the raw plugin config.
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="PluginListEntry">type <a href="http://localhost:8080/src/framework/config/plugin_config.go?s=160:381#L1">PluginListEntry</a>
+				<a class="permalink" href="index.html#PluginListEntry">&#xb6;</a>
+				
+				
+			</h2>
+			<p>A single entry in the PluginsList.
+
+			<pre>type PluginListEntry struct {
+
+    <span class="comment">// The name of the Plugin.</span>
+<span id="PluginListEntry.Name"></span>    Name <a href="http://localhost:8080/pkg/builtin/#string">string</a> `json:&#34;name&#34; yaml:&#34;name&#34;`
+
+    <span class="comment">// The weight of the plugin (applies only to Score plugins).</span>
+    <span class="comment">// Default: 1</span>
+<span id="PluginListEntry.Weight"></span>    Weight <a href="http://localhost:8080/pkg/builtin/#int32">int32</a> `json:&#34;weight&#34; yaml:&#34;weight&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PluginsConfigListEntry">type <a href="http://localhost:8080/src/framework/config/plugin_config.go?s=1798:1995#L48">PluginsConfigListEntry</a>
+				<a class="permalink" href="index.html#PluginsConfigListEntry">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Stores configuration for a specific plugin in the PluginsList.
+
+			<pre>type PluginsConfigListEntry struct {
+
+    <span class="comment">// The name of the Plugin.</span>
+<span id="PluginsConfigListEntry.Name"></span>    Name <a href="http://localhost:8080/pkg/builtin/#string">string</a> `json:&#34;name&#34; yaml:&#34;name&#34;`
+
+    <span class="comment">// Configuration data for the plugin.</span>
+<span id="PluginsConfigListEntry.Config"></span>    Config <a href="index.html#PluginConfig">PluginConfig</a> `json:&#34;config&#34; yaml:&#34;config&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="RemoteClusterConfig">type <a href="http://localhost:8080/src/framework/config/remote_cluster_config.go?s=111:341#L1">RemoteClusterConfig</a>
+				<a class="permalink" href="index.html#RemoteClusterConfig">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Contains all the configuration needed to connect to a remote cluster&apos;s PolarisClusterAgent.
+
+			<pre>type RemoteClusterConfig struct {
+    <span class="comment">// The base URI of the remote cluster&#39;s PolarisClusterAgent.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Example: &#34;https://cluster-a:8081&#34;</span>
+<span id="RemoteClusterConfig.BaseURI"></span>    BaseURI <a href="http://localhost:8080/pkg/builtin/#string">string</a> `json:&#34;baseUri&#34; yaml:&#34;baseUri&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SamplingPluginsList">type <a href="http://localhost:8080/src/framework/config/plugin_config.go?s=977:1555#L27">SamplingPluginsList</a>
+				<a class="permalink" href="index.html#SamplingPluginsList">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Used to configure the plugins used in the sampling pipeline.
+
+			<pre>type SamplingPluginsList struct {
+    <span class="comment">// Only one sampling strategy is used for a pod in the sampling pipeline.</span>
+    <span class="comment">// However, multiple sampling strategy plugins can be configured, which will then be exposed</span>
+    <span class="comment">// as different sampling endpoints.</span>
+<span id="SamplingPluginsList.SamplingStrategies"></span>    SamplingStrategies []*<a href="index.html#PluginListEntry">PluginListEntry</a> `json:&#34;samplingStrategies&#34; yaml:&#34;samplingStrategies&#34;`
+
+<span id="SamplingPluginsList.PreFilter"></span>    PreFilter []*<a href="index.html#PluginListEntry">PluginListEntry</a> `json:&#34;preFilter&#34; yaml:&#34;preFilter&#34;`
+
+<span id="SamplingPluginsList.Filter"></span>    Filter []*<a href="index.html#PluginListEntry">PluginListEntry</a> `json:&#34;filter&#34; yaml:&#34;filter&#34;`
+
+<span id="SamplingPluginsList.PreScore"></span>    PreScore []*<a href="index.html#PluginListEntry">PluginListEntry</a> `json:&#34;preScore&#34; yaml:&#34;preScore&#34;`
+
+<span id="SamplingPluginsList.Score"></span>    Score []*<a href="index.html#PluginListEntry">PluginListEntry</a> `json:&#34;score&#34; yaml:&#34;score&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SchedulerConfig">type <a href="http://localhost:8080/src/framework/config/scheduler_config.go?s=1704:4779#L39">SchedulerConfig</a>
+				<a class="permalink" href="index.html#SchedulerConfig">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Represents the configuration of a polaris-scheduler instance.
+
+			<pre>type SchedulerConfig struct {
+
+    <span class="comment">// The name of this scheduler.</span>
+<span id="SchedulerConfig.SchedulerName"></span>    SchedulerName <a href="http://localhost:8080/pkg/builtin/#string">string</a> `json:&#34;schedulerName&#34; yaml:&#34;schedulerName&#34;`
+
+    <span class="comment">// The number of nodes to sample defined as basis points (bp) of the total number of nodes.</span>
+    <span class="comment">// 1 bp = 0.01%</span>
+    <span class="comment">//</span>
+    <span class="comment">// +kubebuilder:validation:Minimum=0</span>
+    <span class="comment">// +kubebuilder:validation:Maximum=10000</span>
+<span id="SchedulerConfig.NodesToSampleBp"></span>    NodesToSampleBp <a href="http://localhost:8080/pkg/builtin/#uint32">uint32</a> `json:&#34;nodesToSampleBp&#34; yaml:&#34;nodesToSampleBp&#34;`
+
+    <span class="comment">// The number of node samplers to run in parallel.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Default: number of CPU cores.</span>
+<span id="SchedulerConfig.ParallelNodeSamplers"></span>    ParallelNodeSamplers <a href="http://localhost:8080/pkg/builtin/#uint32">uint32</a> `json:&#34;parallelNodeSamplers&#34; yaml:&#34;parallelNodeSamplers&#34;`
+
+    <span class="comment">// The number of Scheduling Decision Pipelines to run in parallel.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Default: number of CPU cores.</span>
+<span id="SchedulerConfig.ParallelDecisionPipelines"></span>    ParallelDecisionPipelines <a href="http://localhost:8080/pkg/builtin/#uint32">uint32</a> `json:&#34;parallelDecisionPipelines&#34; yaml:&#34;parallelDecisionPipelines&#34;`
+
+    <span class="comment">// The size of the buffer used for incoming pods.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Default: 1000</span>
+<span id="SchedulerConfig.IncomingPodsBufferSize"></span>    IncomingPodsBufferSize <a href="http://localhost:8080/pkg/builtin/#uint32">uint32</a> `json:&#34;incomingPodsBufferSize&#34; yaml:&#34;incomingPodsBufferSize&#34;`
+
+    <span class="comment">// The number of candidate nodes that will be picked at the end of the scoring phase.</span>
+    <span class="comment">// The scheduler will try to commit the scheduling decision to the highest scored node.</span>
+    <span class="comment">// If this fails, it will proceed to the node with the second highest score.</span>
+    <span class="comment">// Only after the commit for all these nodes has failed, the pod will be considered as having a scheduling conflict.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Default: 3</span>
+<span id="SchedulerConfig.CommitCandidateNodes"></span>    CommitCandidateNodes <a href="http://localhost:8080/pkg/builtin/#uint32">uint32</a> `json:&#34;commitCandidateNodes&#34; yaml:&#34;commitCandidateNodes&#34;`
+
+    <span class="comment">// Defines the mode (&#34;singleCluster&#34; or &#34;multiCluster&#34;) in which to operate the scheduler.</span>
+    <span class="comment">//</span>
+    <span class="comment">//   - In &#34;singleCluster&#34; mode, the scheduler connects directly interacts with cluster&#39;s orchestrator to</span>
+    <span class="comment">//     get incoming pods and to assign them to nodes.</span>
+    <span class="comment">//   - In &#34;multiCluster&#34; mode, the scheduler can handle multiple clusters (possibly operated by multiple orchestrators)</span>
+    <span class="comment">//     In this mode polaris-scheduler accepts pods through an external API and submits scheduling decisions to the polaris-scheduler-agent</span>
+    <span class="comment">//     running in each cluster.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Default: &#34;multiCluster&#34;</span>
+<span id="SchedulerConfig.OperatingMode"></span>    OperatingMode <a href="index.html#SchedulerOperatingMode">SchedulerOperatingMode</a> `json:&#34;operatingMode&#34; yaml:&#34;operatingMode&#34;`
+
+    <span class="comment">// The list of addresses and ports that the submit pod API should listen on in</span>
+    <span class="comment">// the format &#34;&lt;IP&gt;:&lt;PORT&gt;&#34;</span>
+    <span class="comment">// This setting applies only if &#34;operatingMode&#34; is set to &#34;multiCluster&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Default: [ &#34;0.0.0.0:8080&#34; ]</span>
+<span id="SchedulerConfig.SubmitPodListenOn"></span>    SubmitPodListenOn []<a href="http://localhost:8080/pkg/builtin/#string">string</a> `json:&#34;submitPodListenOn&#34; yaml:&#34;submitPodListenOn&#34;`
+
+    <span class="comment">// The map of remote clusters - only needed if &#34;operatingMode&#34; is &#34;multiCluster&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The key of each item has to be the cluster name.</span>
+    <span class="comment">// Example:</span>
+    <span class="comment">// {</span>
+    <span class="comment">//    &#34;clusterA&#34;: { &#34;baseUri&#34;: &#34;http://sampler.cluster-a:8081/v1&#34; },</span>
+    <span class="comment">//    &#34;clusterB&#34;: { &#34;baseUri&#34;: &#34;https://sampler.cluster-b:8888/v1&#34; }</span>
+    <span class="comment">// }</span>
+<span id="SchedulerConfig.RemoteClusters"></span>    RemoteClusters map[<a href="http://localhost:8080/pkg/builtin/#string">string</a>]*<a href="index.html#RemoteClusterConfig">RemoteClusterConfig</a> `json:&#34;remoteClusters&#34; yaml:&#34;remoteClusters&#34;`
+
+    <span class="comment">// The list of plugins for the scheduling pipeline.</span>
+<span id="SchedulerConfig.Plugins"></span>    Plugins <a href="index.html#SchedulingPluginsList">SchedulingPluginsList</a> `json:&#34;plugins&#34; yaml:&#34;plugins&#34;`
+
+    <span class="comment">// (optional) Allows specifying configuration parameters for each plugin.</span>
+<span id="SchedulerConfig.PluginsConfig"></span>    PluginsConfig []*<a href="index.html#PluginsConfigListEntry">PluginsConfigListEntry</a> `json:&#34;pluginsConfig&#34; yaml:&#34;pluginsConfig&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SchedulerOperatingMode">type <a href="http://localhost:8080/src/framework/config/scheduler_config.go?s=692:726#L6">SchedulerOperatingMode</a>
+				<a class="permalink" href="index.html#SchedulerOperatingMode">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Defines the mode (&quot;singleCluster&quot; or &quot;multiCluster&quot;) in which to operate the scheduler.
+<ul>
+<li>In &quot;singleCluster&quot; mode, the scheduler connects directly interacts with cluster&apos;s orchestrator to
+get incoming pods and to assign them to nodes.
+<li>In &quot;multiCluster&quot; mode, the scheduler can handle multiple clusters (possibly operated by multiple orchestrators)
+In this mode polaris-scheduler accepts pods through an external API and submits scheduling decisions to the polaris-scheduler-agent
+running in each cluster.
+</ul>
+
+			<pre>type SchedulerOperatingMode <a href="http://localhost:8080/pkg/builtin/#string">string</a></pre>
+
+			
+				
+				<pre>const (
+    <span id="SingleCluster">SingleCluster</span> <a href="index.html#SchedulerOperatingMode">SchedulerOperatingMode</a> = &#34;singleCluster&#34;
+    <span id="MultiCluster">MultiCluster</span>  <a href="index.html#SchedulerOperatingMode">SchedulerOperatingMode</a> = &#34;multiCluster&#34;
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SchedulingPluginsList">type <a href="http://localhost:8080/src/framework/config/plugin_config.go?s=449:911#L10">SchedulingPluginsList</a>
+				<a class="permalink" href="index.html#SchedulingPluginsList">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Used to configure the plugins used in the scheduling pipeline.
+
+			<pre>type SchedulingPluginsList struct {
+<span id="SchedulingPluginsList.Sort"></span>    Sort *<a href="index.html#PluginListEntry">PluginListEntry</a> `json:&#34;sort&#34; yaml:&#34;sort&#34;`
+
+<span id="SchedulingPluginsList.SampleNodes"></span>    SampleNodes *<a href="index.html#PluginListEntry">PluginListEntry</a> `json:&#34;sampleNodes&#34; yaml:&#34;sampleNodes&#34;`
+
+<span id="SchedulingPluginsList.PreFilter"></span>    PreFilter []*<a href="index.html#PluginListEntry">PluginListEntry</a> `json:&#34;preFilter&#34; yaml:&#34;preFilter&#34;`
+
+<span id="SchedulingPluginsList.Filter"></span>    Filter []*<a href="index.html#PluginListEntry">PluginListEntry</a> `json:&#34;filter&#34; yaml:&#34;filter&#34;`
+
+<span id="SchedulingPluginsList.PreScore"></span>    PreScore []*<a href="index.html#PluginListEntry">PluginListEntry</a> `json:&#34;preScore&#34; yaml:&#34;preScore&#34;`
+
+<span id="SchedulingPluginsList.Score"></span>    Score []*<a href="index.html#PluginListEntry">PluginListEntry</a> `json:&#34;score&#34; yaml:&#34;score&#34;`
+
+<span id="SchedulingPluginsList.Reserve"></span>    Reserve []*<a href="index.html#PluginListEntry">PluginListEntry</a> `json:&#34;reserve&#34; yaml:&#34;reserve&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.19.9.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:8080/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

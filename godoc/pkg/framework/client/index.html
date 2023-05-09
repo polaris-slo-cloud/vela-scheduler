@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>client - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="../../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.19.9";</script>
+<script src="../../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="../../index.html">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="../../index.html">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:8080/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package client
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "framework/client"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#ClusterClient">type ClusterClient</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ClusterClientsManager">type ClusterClientsManager</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ClusterNode">type ClusterNode</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewClusterNode">func NewClusterNode(node *core.Node) *ClusterNode</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewClusterNodeWithPods">func NewClusterNodeWithPods(node *core.Node, pods []*ClusterPod, queuedPods []*ClusterPod, lastPodAddedTimestamp int64) *ClusterNode</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ClusterNode.ShallowCopy">func (cn *ClusterNode) ShallowCopy() *ClusterNode</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ClusterPod">type ClusterPod</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewClusterPod">func NewClusterPod(pod *core.Pod) *ClusterPod</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ClusterSchedulingDecision">type ClusterSchedulingDecision</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#CommitSchedulingDecisionSuccess">type CommitSchedulingDecisionSuccess</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#CommitSchedulingDecisionTimings">type CommitSchedulingDecisionTimings</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#GenericClusterClientsManager">type GenericClusterClientsManager</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewGenericClusterClientsManager">func NewGenericClusterClientsManager[T ClusterClient](clients map[string]T) *GenericClusterClientsManager[T]</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GenericClusterClientsManager.ClustersCount">func (mgr *GenericClusterClientsManager[T]) ClustersCount() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GenericClusterClientsManager.ForEach">func (mgr *GenericClusterClientsManager[T]) ForEach(fn func(clusterName string, clusterClient ClusterClient) error) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GenericClusterClientsManager.GetClusterClient">func (mgr *GenericClusterClientsManager[T]) GetClusterClient(clusterName string) (ClusterClient, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#LocalClusterClient">type LocalClusterClient</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#NodesCache">type NodesCache</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PodQueuedOnNode">type PodQueuedOnNode</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PolarisErrorDto">type PolarisErrorDto</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewPolarisErrorDto">func NewPolarisErrorDto(err error) *PolarisErrorDto</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PolarisErrorDto.Error">func (e *PolarisErrorDto) Error() string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:8080/src/framework/client/cluster_client.go">cluster_client.go</a>
+			
+				<a href="http://localhost:8080/src/framework/client/generic_cluster_clients_manager.go">generic_cluster_clients_manager.go</a>
+			
+				<a href="http://localhost:8080/src/framework/client/model.go">model.go</a>
+			
+				<a href="http://localhost:8080/src/framework/client/nodes_cache.go">nodes_cache.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="ClusterClient">type <a href="http://localhost:8080/src/framework/client/cluster_client.go?s=131:728#L1">ClusterClient</a>
+				<a class="permalink" href="index.html#ClusterClient">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Represents a client for communicating with a single cluster.
+
+			<pre>type ClusterClient interface {
+    <span class="comment">// Gets the name of the cluster.</span>
+    ClusterName() <a href="http://localhost:8080/pkg/builtin/#string">string</a>
+
+    <span class="comment">// Commits the scheduling decision to the cluster.</span>
+    CommitSchedulingDecision(ctx <a href="http://localhost:8080/pkg/context/">context</a>.<a href="http://localhost:8080/pkg/context/#Context">Context</a>, schedulingDecision *<a href="index.html#ClusterSchedulingDecision">ClusterSchedulingDecision</a>) (*<a href="index.html#CommitSchedulingDecisionSuccess">CommitSchedulingDecisionSuccess</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ClusterClientsManager">type <a href="http://localhost:8080/src/framework/client/cluster_client.go?s=1338:1869#L27">ClusterClientsManager</a>
+				<a class="permalink" href="index.html#ClusterClientsManager">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Manages the clients for multiple clusters.
+
+			<pre>type ClusterClientsManager interface {
+
+    <span class="comment">// Gets the ClusterClient for the specified cluster or an error, if the specified cluster cannot be found.</span>
+    GetClusterClient(clusterName <a href="http://localhost:8080/pkg/builtin/#string">string</a>) (<a href="index.html#ClusterClient">ClusterClient</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)
+
+    <span class="comment">// Gets the number of clusters known to this ClusterClientsManager.</span>
+    ClustersCount() <a href="http://localhost:8080/pkg/builtin/#int">int</a>
+
+    <span class="comment">// Calls the specified function for each cluster.</span>
+    <span class="comment">// If the function returns an error, the iteration is stopped immediately and returns that error.</span>
+    ForEach(fn func(clusterName <a href="http://localhost:8080/pkg/builtin/#string">string</a>, clusterClient <a href="index.html#ClusterClient">ClusterClient</a>) <a href="http://localhost:8080/pkg/builtin/#error">error</a>) <a href="http://localhost:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ClusterNode">type <a href="http://localhost:8080/src/framework/client/model.go?s=537:1648#L12">ClusterNode</a>
+				<a class="permalink" href="index.html#ClusterNode">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Augments a node with information computed by the Polaris Scheduling framework.
+
+			<pre>type ClusterNode struct {
+    *<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/">core</a>.<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/#Node">Node</a> `json:&#34;,inline&#34; yaml:&#34;,inline&#34;`
+
+    <span class="comment">// The pods that are already scheduled on (bound to) this node.</span>
+<span id="ClusterNode.Pods"></span>    Pods []*<a href="index.html#ClusterPod">ClusterPod</a>
+
+    <span class="comment">// The pods that are queued to be bound to this node.</span>
+    <span class="comment">// These pods are currently in the binding pipeline, but their resources are already accounted for in</span>
+    <span class="comment">// the node&#39;s AvailableResources, because committing a scheduling decision may take some time.</span>
+<span id="ClusterNode.QueuedPods"></span>    QueuedPods []*<a href="index.html#ClusterPod">ClusterPod</a>
+
+    <span class="comment">// The resources that are currently available for allocation on the node.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Unlike the Kubernetes Allocatable field, these AvailableResources already accounts for</span>
+    <span class="comment">// resources consumed by other pods.</span>
+<span id="ClusterNode.AvailableResources"></span>    AvailableResources *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/util/">util</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/util/#Resources">Resources</a> `json:&#34;availableResources&#34; yaml:&#34;availableResources&#34;`
+
+    <span class="comment">// The total amount of resources that are available on the node.</span>
+<span id="ClusterNode.TotalResources"></span>    TotalResources *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/util/">util</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/util/#Resources">Resources</a> `json:&#34;totalResources&#34; yaml:&#34;totalResources&#34;`
+
+    <span class="comment">// The Unix timestamp that indicates when the last pod was added to this node.</span>
+    <span class="comment">// If no pods are scheduled on the node, this value is 0.</span>
+<span id="ClusterNode.LastPodAddedTimestamp"></span>    LastPodAddedTimestamp <a href="http://localhost:8080/pkg/builtin/#int64">int64</a> `json:&#34;lastPodAddedTimestamp&#34; yaml:&#34;lastPodAddedTimestamp&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewClusterNode">func <a href="http://localhost:8080/src/framework/client/model.go?s=1764:1813#L38">NewClusterNode</a>
+					<a class="permalink" href="index.html#NewClusterNode">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewClusterNode(node *<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/">core</a>.<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/#Node">Node</a>) *<a href="index.html#ClusterNode">ClusterNode</a></pre>
+				<p>Creates a new cluster node, based on the specified node object, assuming that no pods are scheduled on it yet.
+
+				
+				
+			
+				
+				<h3 id="NewClusterNodeWithPods">func <a href="http://localhost:8080/src/framework/client/model.go?s=2383:2515#L52">NewClusterNodeWithPods</a>
+					<a class="permalink" href="index.html#NewClusterNodeWithPods">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewClusterNodeWithPods(node *<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/">core</a>.<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/#Node">Node</a>, pods []*<a href="index.html#ClusterPod">ClusterPod</a>, queuedPods []*<a href="index.html#ClusterPod">ClusterPod</a>, lastPodAddedTimestamp <a href="http://localhost:8080/pkg/builtin/#int64">int64</a>) *<a href="index.html#ClusterNode">ClusterNode</a></pre>
+				<p>Creates a new cluster node, based on the specified node object and the pods that are already scheduled and queued on it.
+
+				
+				
+			
+
+			
+				
+				<h3 id="ClusterNode.ShallowCopy">func (*ClusterNode) <a href="http://localhost:8080/src/framework/client/model.go?s=3164:3213#L74">ShallowCopy</a>
+					<a class="permalink" href="index.html#ClusterNode.ShallowCopy">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (cn *<a href="index.html#ClusterNode">ClusterNode</a>) ShallowCopy() *<a href="index.html#ClusterNode">ClusterNode</a></pre>
+				<p>Creates a shallow copy of this ClusterNode, i.e., a new object, whose fields point to the same
+objects as the source object.
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ClusterPod">type <a href="http://localhost:8080/src/framework/client/model.go?s=3568:3871#L87">ClusterPod</a>
+				<a class="permalink" href="index.html#ClusterPod">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Condensed information about an existing pod in a cluster.
+
+			<pre>type ClusterPod struct {
+
+    <span class="comment">// The namespace of the pod.</span>
+<span id="ClusterPod.Namespace"></span>    Namespace <a href="http://localhost:8080/pkg/builtin/#string">string</a>
+
+    <span class="comment">// The name of the pod.</span>
+<span id="ClusterPod.Name"></span>    Name <a href="http://localhost:8080/pkg/builtin/#string">string</a>
+
+    <span class="comment">// The total resources consumed by this pod.</span>
+<span id="ClusterPod.TotalResources"></span>    TotalResources *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/util/">util</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/util/#Resources">Resources</a>
+
+<span id="ClusterPod.Affinity"></span>    <span class="comment">// Affinity/anti-affinity information.</span>
+    <span class="comment">// This is nil, if not present on the pod.</span>
+    Affinity *<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/">core</a>.<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/#Affinity">Affinity</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewClusterPod">func <a href="http://localhost:8080/src/framework/client/model.go?s=3937:3982#L104">NewClusterPod</a>
+					<a class="permalink" href="index.html#NewClusterPod">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewClusterPod(pod *<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/">core</a>.<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/#Pod">Pod</a>) *<a href="index.html#ClusterPod">ClusterPod</a></pre>
+				<p>Creates a new ClusterPod, based on the specified pod object.
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="ClusterSchedulingDecision">type <a href="http://localhost:8080/src/framework/client/model.go?s=230:453#L3">ClusterSchedulingDecision</a>
+				<a class="permalink" href="index.html#ClusterSchedulingDecision">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Contains the scheduling decision for a pod within a cluster.
+
+			<pre>type ClusterSchedulingDecision struct {
+    <span class="comment">// The Pod to be scheduled.</span>
+<span id="ClusterSchedulingDecision.Pod"></span>    Pod *<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/">core</a>.<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/#Pod">Pod</a> `json:&#34;pod&#34; yaml:&#34;pod&#34;`
+
+    <span class="comment">// The name of the node, to which the pod has been assigned.</span>
+<span id="ClusterSchedulingDecision.NodeName"></span>    NodeName <a href="http://localhost:8080/pkg/builtin/#string">string</a> `json:&#34;nodeName&#34; yaml:&#34;nodeName&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="CommitSchedulingDecisionSuccess">type <a href="http://localhost:8080/src/framework/client/model.go?s=5464:6027#L140">CommitSchedulingDecisionSuccess</a>
+				<a class="permalink" href="index.html#CommitSchedulingDecisionSuccess">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Encapsulates the success result of committing a SchedulingDecision.
+
+			<pre>type CommitSchedulingDecisionSuccess struct {
+
+    <span class="comment">// The namespace of the pod.</span>
+<span id="CommitSchedulingDecisionSuccess.Namespace"></span>    Namespace <a href="http://localhost:8080/pkg/builtin/#string">string</a> `json:&#34;namespace&#34; yaml:&#34;namespace&#34;`
+
+    <span class="comment">// The name of the pod.</span>
+<span id="CommitSchedulingDecisionSuccess.PodName"></span>    PodName <a href="http://localhost:8080/pkg/builtin/#string">string</a> `json:&#34;podName&#34; yaml:&#34;podName&#34;`
+
+    <span class="comment">// The name of the target node, to which the pod was bound.</span>
+<span id="CommitSchedulingDecisionSuccess.NodeName"></span>    NodeName <a href="http://localhost:8080/pkg/builtin/#string">string</a> `json:&#34;nodeName&#34; yaml:&#34;nodeName&#34;`
+
+<span id="CommitSchedulingDecisionSuccess.Timings"></span>    <span class="comment">// Timings of the commit operation on the polaris-cluster-agent.</span>
+    <span class="comment">// Note that when using a LocalClusterClient, only the CreatePod and CreateBinding fields are filled.</span>
+    Timings *<a href="index.html#CommitSchedulingDecisionTimings">CommitSchedulingDecisionTimings</a> `json:&#34;timings&#34; yaml:&#34;timings&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="CommitSchedulingDecisionTimings">type <a href="http://localhost:8080/src/framework/client/model.go?s=4305:5391#L115">CommitSchedulingDecisionTimings</a>
+				<a class="permalink" href="index.html#CommitSchedulingDecisionTimings">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Describes timings (in milliseconds) of various phases of the CommitSchedulingDecision operation on the polaris-cluster-agent.
+
+			<pre>type CommitSchedulingDecisionTimings struct {
+    <span class="comment">// The time spent in the queue waiting for a binding pipeline to become available.</span>
+<span id="CommitSchedulingDecisionTimings.QueueTime"></span>    QueueTime <a href="http://localhost:8080/pkg/builtin/#int64">int64</a> `json:&#34;queueTime&#34; yaml:&#34;queueTime&#34;`
+
+    <span class="comment">// The time spent waiting for the node to be locked for binding.</span>
+<span id="CommitSchedulingDecisionTimings.NodeLockTime"></span>    NodeLockTime <a href="http://localhost:8080/pkg/builtin/#int64">int64</a> `json:&#34;nodeLockTime&#34; yaml:&#34;nodeLockTime&#34;`
+
+    <span class="comment">// The time it takes to fetch the target node and its assigned pods.</span>
+<span id="CommitSchedulingDecisionTimings.FetchNodeInfo"></span>    FetchNodeInfo <a href="http://localhost:8080/pkg/builtin/#int64">int64</a> `json:&#34;fetchNodeInfo&#34; yaml:&#34;fetchNodeInfo&#34;`
+
+    <span class="comment">// The duration of the binding pipeline</span>
+<span id="CommitSchedulingDecisionTimings.BindingPipeline"></span>    BindingPipeline <a href="http://localhost:8080/pkg/builtin/#int64">int64</a> `json:&#34;bindingPipeline&#34; yaml:&#34;bindingPipeline&#34;`
+
+    <span class="comment">// Commit decision is the entire time it takes to commit a decision using the local cluster client.</span>
+    <span class="comment">// The commit involves CreatePod, CreateBinding, and any calling overheads.</span>
+<span id="CommitSchedulingDecisionTimings.CommitDecision"></span>    CommitDecision <a href="http://localhost:8080/pkg/builtin/#int64">int64</a> `json:&#34;commitDecision&#34; yaml:&#34;commitDecision&#34;`
+
+    <span class="comment">// The duration of the request to create a Pod in the orchestrator.</span>
+<span id="CommitSchedulingDecisionTimings.CreatePod"></span>    CreatePod <a href="http://localhost:8080/pkg/builtin/#int64">int64</a> `json:&#34;createPod&#34; yaml:&#34;createPod&#34;`
+
+    <span class="comment">// The duration of the request to bind the pod to the target node in the orchestrator.</span>
+<span id="CommitSchedulingDecisionTimings.CreateBinding"></span>    CreateBinding <a href="http://localhost:8080/pkg/builtin/#int64">int64</a> `json:&#34;createBinding&#34; yaml:&#34;createBinding&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="GenericClusterClientsManager">type <a href="http://localhost:8080/src/framework/client/generic_cluster_clients_manager.go?s=189:272#L2">GenericClusterClientsManager</a>
+				<a class="permalink" href="index.html#GenericClusterClientsManager">&#xb6;</a>
+				
+				
+			</h2>
+			<p>A generic default implementation of the ClusterClientsManager.
+
+			<pre>type GenericClusterClientsManager[T <a href="index.html#ClusterClient">ClusterClient</a>] struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewGenericClusterClientsManager">func <a href="http://localhost:8080/src/framework/client/generic_cluster_clients_manager.go?s=274:382#L6">NewGenericClusterClientsManager</a>
+					<a class="permalink" href="index.html#NewGenericClusterClientsManager">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewGenericClusterClientsManager[T <a href="index.html#ClusterClient">ClusterClient</a>](clients map[<a href="http://localhost:8080/pkg/builtin/#string">string</a>]T) *<a href="index.html#GenericClusterClientsManager">GenericClusterClientsManager</a>[T]</pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="GenericClusterClientsManager.ClustersCount">func (*GenericClusterClientsManager[T]) <a href="http://localhost:8080/src/framework/client/generic_cluster_clients_manager.go?s=465:528#L13">ClustersCount</a>
+					<a class="permalink" href="index.html#GenericClusterClientsManager.ClustersCount">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mgr *<a href="index.html#GenericClusterClientsManager">GenericClusterClientsManager</a>[T]) ClustersCount() <a href="http://localhost:8080/pkg/builtin/#int">int</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="GenericClusterClientsManager.ForEach">func (*GenericClusterClientsManager[T]) <a href="http://localhost:8080/src/framework/client/generic_cluster_clients_manager.go?s=559:680#L17">ForEach</a>
+					<a class="permalink" href="index.html#GenericClusterClientsManager.ForEach">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mgr *<a href="index.html#GenericClusterClientsManager">GenericClusterClientsManager</a>[T]) ForEach(fn func(clusterName <a href="http://localhost:8080/pkg/builtin/#string">string</a>, clusterClient <a href="index.html#ClusterClient">ClusterClient</a>) <a href="http://localhost:8080/pkg/builtin/#error">error</a>) <a href="http://localhost:8080/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="GenericClusterClientsManager.GetClusterClient">func (*GenericClusterClientsManager[T]) <a href="http://localhost:8080/src/framework/client/generic_cluster_clients_manager.go?s=809:912#L26">GetClusterClient</a>
+					<a class="permalink" href="index.html#GenericClusterClientsManager.GetClusterClient">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mgr *<a href="index.html#GenericClusterClientsManager">GenericClusterClientsManager</a>[T]) GetClusterClient(clusterName <a href="http://localhost:8080/pkg/builtin/#string">string</a>) (<a href="index.html#ClusterClient">ClusterClient</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="LocalClusterClient">type <a href="http://localhost:8080/src/framework/client/cluster_client.go?s=833:1290#L14">LocalClusterClient</a>
+				<a class="permalink" href="index.html#LocalClusterClient">&#xb6;</a>
+				
+				
+			</h2>
+			<p>A superset of ClusterClient with more capabilities and which is only available in the ClusterAgent.
+
+			<pre>type LocalClusterClient interface {
+    <a href="index.html#ClusterClient">ClusterClient</a>
+
+    <span class="comment">// Fetches the node with the specified name.</span>
+    FetchNode(ctx <a href="http://localhost:8080/pkg/context/">context</a>.<a href="http://localhost:8080/pkg/context/#Context">Context</a>, name <a href="http://localhost:8080/pkg/builtin/#string">string</a>) (*<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/">core</a>.<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/#Node">Node</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)
+
+    <span class="comment">// Fetches all pods that are currently scheduled on the node with the specified name.</span>
+    <span class="comment">//</span>
+    <span class="comment">// ToDo: Refactor this into a fetch method with more generic search criteria and maybe return an array of pointers.</span>
+    FetchPodsScheduledOnNode(ctx <a href="http://localhost:8080/pkg/context/">context</a>.<a href="http://localhost:8080/pkg/context/#Context">Context</a>, nodeName <a href="http://localhost:8080/pkg/builtin/#string">string</a>) ([]<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/">core</a>.<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/#Pod">Pod</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="NodesCache">type <a href="http://localhost:8080/src/framework/client/nodes_cache.go?s=818:1439#L10">NodesCache</a>
+				<a class="permalink" href="index.html#NodesCache">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Tracks and caches the full list of nodes in a cluster and their available resources.
+All nodes obtained through the cache must be treated as IMMUTABLE, because they are shared objects.
+If modifications need to be made to a node, a partially deep copy must be made.
+<p>The node objects in the cache are always the most recent ones received through the watch.
+<p>As pods are assigned to nodes by the scheduler, it is recommended to use the QueuePodOnNode() method
+to update the node&apos;s resources in the cache before committing the scheduling decision to the cluster,
+as this may take some time, during which the node&apos;s status in the cache would be outdated.
+
+			<pre>type NodesCache interface {
+    <span class="comment">// Starts watching the nodes.</span>
+    <span class="comment">// This method returns once the initial list has been retrieved and added to the store.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The passed context can be used to stop the watch.</span>
+    StartWatch(ctx <a href="http://localhost:8080/pkg/context/">context</a>.<a href="http://localhost:8080/pkg/context/#Context">Context</a>) <a href="http://localhost:8080/pkg/builtin/#error">error</a>
+
+    <span class="comment">// Gets the cache of all nodes.</span>
+    Nodes() <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/collections/">collections</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/collections/#ConcurrentObjectStore">ConcurrentObjectStore</a>[*<a href="index.html#ClusterNode">ClusterNode</a>]
+
+    <span class="comment">// Adds the pod as to be bound to the specified node and updates the node&#39;s available resources.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Use the returned PodQueuedOnNode to inform the cache of the outcome of the commit scheduling decision operation.</span>
+    QueuePodOnNode(pod *<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/">core</a>.<a href="http://localhost:8080/pkg/k8s.io/api/core/v1/#Pod">Pod</a>, nodeName <a href="http://localhost:8080/pkg/builtin/#string">string</a>) <a href="index.html#PodQueuedOnNode">PodQueuedOnNode</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PodQueuedOnNode">type <a href="http://localhost:8080/src/framework/client/nodes_cache.go?s=1642:2070#L29">PodQueuedOnNode</a>
+				<a class="permalink" href="index.html#PodQueuedOnNode">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Handle to a pod that was queued to be bound to a node.
+This object is returned by NodesCache.QueuePodOnNode() and must be used
+to inform the cache of the final result of the commit operation.
+
+			<pre>type PodQueuedOnNode interface {
+
+    <span class="comment">// The pod that was queued (immutable).</span>
+    Pod() *<a href="index.html#ClusterPod">ClusterPod</a>
+
+    <span class="comment">// The name of the node, on which the pod was queued.</span>
+    NodeName() <a href="http://localhost:8080/pkg/builtin/#string">string</a>
+
+    <span class="comment">// Removes this pod from the node&#39;s queue, without marking it as committed,</span>
+    <span class="comment">// and updates the node&#39;s resources.</span>
+    RemoveFromQueue()
+
+    <span class="comment">// Marks the pod as committed, i.e., moves it from the queue to the list of pods running on the node.</span>
+    MarkAsCommitted()
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PolarisErrorDto">type <a href="http://localhost:8080/src/framework/client/model.go?s=6082:6161#L157">PolarisErrorDto</a>
+				<a class="permalink" href="index.html#PolarisErrorDto">&#xb6;</a>
+				
+				
+			</h2>
+			<p>A generic DTO for transmitting error information.
+
+			<pre>type PolarisErrorDto struct {
+<span id="PolarisErrorDto.Message"></span>    Message <a href="http://localhost:8080/pkg/builtin/#string">string</a> `json:&#34;message&#34; yaml:&#34;message&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewPolarisErrorDto">func <a href="http://localhost:8080/src/framework/client/model.go?s=6163:6214#L161">NewPolarisErrorDto</a>
+					<a class="permalink" href="index.html#NewPolarisErrorDto">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewPolarisErrorDto(err <a href="http://localhost:8080/pkg/builtin/#error">error</a>) *<a href="index.html#PolarisErrorDto">PolarisErrorDto</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="PolarisErrorDto.Error">func (*PolarisErrorDto) <a href="http://localhost:8080/src/framework/client/model.go?s=6325:6365#L169">Error</a>
+					<a class="permalink" href="index.html#PolarisErrorDto.Error">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#PolarisErrorDto">PolarisErrorDto</a>) Error() <a href="http://localhost:8080/pkg/builtin/#string">string</a></pre>
+				<p>Error implements error
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.19.9.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:8080/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

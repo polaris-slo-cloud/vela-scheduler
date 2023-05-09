@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>resourcesfit - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.19.9";</script>
+<script src="../../../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="../../../index.html">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="../../../index.html">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:8080/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package resourcesfit
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "framework/plugins/resourcesfit"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#NewResourcesFitClusterAgentPlugin">func NewResourcesFitClusterAgentPlugin(configMap config.PluginConfig, clusterAgentServices pipeline.ClusterAgentServices) (pipeline.Plugin, error)</a></dd>
+			
+				
+				<dd><a href="index.html#NewResourcesFitSchedulingPlugin">func NewResourcesFitSchedulingPlugin(configMap config.PluginConfig, scheduler pipeline.PolarisScheduler) (pipeline.Plugin, error)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#ResourcesFitPlugin">type ResourcesFitPlugin</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ResourcesFitPlugin.CheckForConflicts">func (rf *ResourcesFitPlugin) CheckForConflicts(ctx pipeline.SchedulingContext, decision *pipeline.SchedulingDecision) pipeline.Status</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ResourcesFitPlugin.Filter">func (rf *ResourcesFitPlugin) Filter(ctx pipeline.SchedulingContext, podInfo *pipeline.PodInfo, nodeInfo *pipeline.NodeInfo) pipeline.Status</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ResourcesFitPlugin.Name">func (rf *ResourcesFitPlugin) Name() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ResourcesFitPlugin.PreFilter">func (*ResourcesFitPlugin) PreFilter(ctx pipeline.SchedulingContext, podInfo *pipeline.PodInfo) pipeline.Status</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ResourcesFitPlugin.Score">func (rf *ResourcesFitPlugin) Score(ctx pipeline.SchedulingContext, podInfo *pipeline.PodInfo, nodeInfo *pipeline.NodeInfo) (int64, pipeline.Status)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ResourcesFitPlugin.ScoreExtensions">func (rf *ResourcesFitPlugin) ScoreExtensions() pipeline.ScoreExtensions</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ResourcesFitScoringMode">type ResourcesFitScoringMode</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:8080/src/framework/plugins/resourcesfit/resources_fit_plugin.go">resources_fit_plugin.go</a>
+			
+				<a href="http://localhost:8080/src/framework/plugins/resourcesfit/resources_fit_state.go">resources_fit_state.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span id="PluginName">PluginName</span> = &#34;ResourcesFit&#34;
+
+    <span class="comment">// Used to configure the scoring mode of the ResourcesFitPlugin.</span>
+    <span class="comment">// The possible options are: LeastAllocated (default) and MostAllocated</span>
+    <span id="ScoringModeKey">ScoringModeKey</span> = &#34;scoringMode&#34;
+)</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="NewResourcesFitClusterAgentPlugin">func <a href="http://localhost:8080/src/framework/plugins/resourcesfit/resources_fit_plugin.go?s=1828:1974#L45">NewResourcesFitClusterAgentPlugin</a>
+				<a class="permalink" href="index.html#NewResourcesFitClusterAgentPlugin">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func NewResourcesFitClusterAgentPlugin(configMap <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/config/">config</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/config/#PluginConfig">PluginConfig</a>, clusterAgentServices <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#ClusterAgentServices">ClusterAgentServices</a>) (<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#Plugin">Plugin</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="NewResourcesFitSchedulingPlugin">func <a href="http://localhost:8080/src/framework/plugins/resourcesfit/resources_fit_plugin.go?s=1652:1781#L41">NewResourcesFitSchedulingPlugin</a>
+				<a class="permalink" href="index.html#NewResourcesFitSchedulingPlugin">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func NewResourcesFitSchedulingPlugin(configMap <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/config/">config</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/config/#PluginConfig">PluginConfig</a>, scheduler <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#PolarisScheduler">PolarisScheduler</a>) (<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#Plugin">Plugin</a>, <a href="http://localhost:8080/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+		
+			
+			
+			<h2 id="ResourcesFitPlugin">type <a href="http://localhost:8080/src/framework/plugins/resourcesfit/resources_fit_plugin.go?s=1595:1650#L37">ResourcesFitPlugin</a>
+				<a class="permalink" href="index.html#ResourcesFitPlugin">&#xb6;</a>
+				
+				
+			</h2>
+			<p>The ResourcesFitPlugin ensures that a node fulfills the resources requirements of a pod.
+It ties into the following pipeline stages:
+- PreFilter
+- Filter
+- Score
+- CheckConflicts
+
+			<pre>type ResourcesFitPlugin struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ResourcesFitPlugin.CheckForConflicts">func (*ResourcesFitPlugin) <a href="http://localhost:8080/src/framework/plugins/resourcesfit/resources_fit_plugin.go?s=3926:4060#L109">CheckForConflicts</a>
+					<a class="permalink" href="index.html#ResourcesFitPlugin.CheckForConflicts">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (rf *<a href="index.html#ResourcesFitPlugin">ResourcesFitPlugin</a>) CheckForConflicts(ctx <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#SchedulingContext">SchedulingContext</a>, decision *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#SchedulingDecision">SchedulingDecision</a>) <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#Status">Status</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ResourcesFitPlugin.Filter">func (*ResourcesFitPlugin) <a href="http://localhost:8080/src/framework/plugins/resourcesfit/resources_fit_plugin.go?s=3001:3141#L84">Filter</a>
+					<a class="permalink" href="index.html#ResourcesFitPlugin.Filter">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (rf *<a href="index.html#ResourcesFitPlugin">ResourcesFitPlugin</a>) Filter(ctx <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#SchedulingContext">SchedulingContext</a>, podInfo *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#PodInfo">PodInfo</a>, nodeInfo *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#NodeInfo">NodeInfo</a>) <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#Status">Status</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ResourcesFitPlugin.Name">func (*ResourcesFitPlugin) <a href="http://localhost:8080/src/framework/plugins/resourcesfit/resources_fit_plugin.go?s=2626:2669#L70">Name</a>
+					<a class="permalink" href="index.html#ResourcesFitPlugin.Name">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (rf *<a href="index.html#ResourcesFitPlugin">ResourcesFitPlugin</a>) Name() <a href="http://localhost:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ResourcesFitPlugin.PreFilter">func (*ResourcesFitPlugin) <a href="http://localhost:8080/src/framework/plugins/resourcesfit/resources_fit_plugin.go?s=2694:2805#L74">PreFilter</a>
+					<a class="permalink" href="index.html#ResourcesFitPlugin.PreFilter">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (*<a href="index.html#ResourcesFitPlugin">ResourcesFitPlugin</a>) PreFilter(ctx <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#SchedulingContext">SchedulingContext</a>, podInfo *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#PodInfo">PodInfo</a>) <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#Status">Status</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ResourcesFitPlugin.Score">func (*ResourcesFitPlugin) <a href="http://localhost:8080/src/framework/plugins/resourcesfit/resources_fit_plugin.go?s=3578:3726#L100">Score</a>
+					<a class="permalink" href="index.html#ResourcesFitPlugin.Score">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (rf *<a href="index.html#ResourcesFitPlugin">ResourcesFitPlugin</a>) Score(ctx <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#SchedulingContext">SchedulingContext</a>, podInfo *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#PodInfo">PodInfo</a>, nodeInfo *<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#NodeInfo">NodeInfo</a>) (<a href="http://localhost:8080/pkg/builtin/#int64">int64</a>, <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#Status">Status</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ResourcesFitPlugin.ScoreExtensions">func (*ResourcesFitPlugin) <a href="http://localhost:8080/src/framework/plugins/resourcesfit/resources_fit_plugin.go?s=3488:3560#L96">ScoreExtensions</a>
+					<a class="permalink" href="index.html#ResourcesFitPlugin.ScoreExtensions">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (rf *<a href="index.html#ResourcesFitPlugin">ResourcesFitPlugin</a>) ScoreExtensions() <a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/">pipeline</a>.<a href="http://localhost:8080/pkg/polaris-slo-cloud.github.io/polaris-scheduler/v2/framework/pipeline/#ScoreExtensions">ScoreExtensions</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ResourcesFitScoringMode">type <a href="http://localhost:8080/src/framework/plugins/resourcesfit/resources_fit_plugin.go?s=1053:1088#L21">ResourcesFitScoringMode</a>
+				<a class="permalink" href="index.html#ResourcesFitScoringMode">&#xb6;</a>
+				
+				
+			</h2>
+			<p>Used to configure the scoring mode of the ResourcesFitPlugin.
+The possible options are: LeastAllocated (default) and MostAllocated
+
+			<pre>type ResourcesFitScoringMode <a href="http://localhost:8080/pkg/builtin/#string">string</a></pre>
+
+			
+				
+				<pre>const (
+    <span id="LeastAllocated">LeastAllocated</span> <a href="index.html#ResourcesFitScoringMode">ResourcesFitScoringMode</a> = &#34;LeastAllocated&#34;
+    <span id="MostAllocated">MostAllocated</span>  <a href="index.html#ResourcesFitScoringMode">ResourcesFitScoringMode</a> = &#34;MostAllocated&#34;
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.19.9.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:8080/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>
