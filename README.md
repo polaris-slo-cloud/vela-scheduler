@@ -46,8 +46,3 @@ This project is realized in Go 1.19 and relies on Go workspaces to divide code i
 | [`go/scheduler`](https://github.com/polaris-slo-cloud/vela-scheduler/tree/master/go/scheduler) | Vela Scheduler executable module |
 | [`testbed`](https://github.com/polaris-slo-cloud/vela-scheduler/tree/master/testbed) | Scripts and configurations for setting testbeds for experimenting with Vela Scheduler |
 
-
-## Acknowledgement
-
-Vela Scheduler is a fork and evolution of the rainbow-scheduler the [orchestration repository](https://gitlab.com/rainbow-project1/rainbow-orchestration) of the [RAINBOW](https://rainbow-h2020.eu/) project.
-
